@@ -1,31 +1,16 @@
 backend:
   name: github
   repo: ameego/gatsbytest
+  branch: master
+  site_domain: cms.netlify.com
 media_folder: static/assets
 public_folder: /assets
 collections:
-  - name: article
-    label: Article
-    folder: article
-    description: "This is my list of articles"
+  - name: artists
+    label: Artists
+    folder: artists
     create: true
     fields:
-      - { name: path, label: Path }
-      - {
-          name: author,
-          label: Author,
-          widget: relation,
-          collection: "authors",
-          searchFields: ["name"],
-          valueField: "name",
-          multiple: true,
-        }
-      - { name: date, label: Date, widget: datetime }
-      - { name: title, label: Title }
-      - { name: body, label: Body, widget: markdown }
-  - name: authors
-    label: Authors
-    folder: author
-    create: true
-    fields:
-      - { name: name, label: Name }
+      - { name: artistName, label: "Artist name" }
+      - { name: slug, label: "Slug" }
+      - { name: biography, label: "Biography", widget: "text" }
