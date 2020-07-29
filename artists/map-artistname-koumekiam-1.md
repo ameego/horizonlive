@@ -1,4 +1,0 @@
----
-artistName: Koumekiam
-slug: koumekiam
----
