@@ -1,5 +1,8 @@
 ---
 artistName: Buridane
+focus:
+  - Management
+  - Label
 slug: buridane
 biography: "Nulla diam ante, auctor eu laoreet eu, condimentum eget ipsum. Orci
   varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus
