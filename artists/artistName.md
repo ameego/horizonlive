@@ -1,5 +1,5 @@
 ---
-artistName: Robin
+artistName: Robinn
 focus:
   - Management
 slug: robin
