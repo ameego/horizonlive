@@ -1,0 +1,30 @@
+backend:
+  name: test-repo
+media_folder: static/assets
+public_folder: /assets
+collections:
+  - name: article
+    label: Article
+    folder: article
+    description: "This is my list of articles"
+    create: true
+    fields:
+      - { name: path, label: Path }
+      - {
+          name: author,
+          label: Author,
+          widget: relation,
+          collection: "authors",
+          searchFields: ["name"],
+          valueField: "name",
+          multiple: true,
+        }
+      - { name: date, label: Date, widget: datetime }
+      - { name: title, label: Title }
+      - { name: body, label: Body, widget: markdown }
+  - name: authors
+    label: Authors
+    folder: author
+    create: true
+    fields:
+      - { name: name, label: Name }
