@@ -7,10 +7,29 @@ media_folder: static/assets
 public_folder: /assets
 collections:
   - name: artists
+    description: "Les artistes d'Horizon sont listés dans cette collection"
     label: Artists
     folder: artists
     create: true
+    slug: "{{artistName}}"
     fields:
-      - { name: artistName, label: "Artist name" }
+      - { name: artistName, title: artistName, label: "Artist name" }
+      - {
+          name: focus,
+          label: Focus,
+          widget: relation,
+          collection: "focus",
+          multiple: true,
+          searchFields: ["focus"],
+          valueField: "focus",
+        }
       - { name: slug, label: "Slug" }
       - { name: biography, label: "Biography", widget: "text" }
+  - name: focus
+    description: "Les activités d'Horizon sont listées dans cette collection"
+    label: Focus
+    folder: focus
+    create: true
+    slug: "{{artistName}}"
+    fields:
+      - { name: focus, title: focus, label: "Focus" }
