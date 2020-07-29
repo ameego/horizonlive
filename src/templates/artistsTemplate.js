@@ -6,6 +6,11 @@ export default function Template({ data }) {
   return (
     <div>
       <h1>{frontmatter.artistName}</h1>
+      <ul>
+        {frontmatter.focus.map((focus, index) => (
+          <li key={index}>{focus}</li>
+        ))}
+      </ul>
       <p>{frontmatter.biography}</p>
     </div>
   )
@@ -17,6 +22,7 @@ export const pageQuery = graphql`
       frontmatter {
         slug
         artistName
+        focus
         biography
       }
     }
