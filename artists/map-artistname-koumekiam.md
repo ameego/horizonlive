@@ -1,3 +1,4 @@
 ---
 artistName: Buridane
+slug: buridane
 ---
