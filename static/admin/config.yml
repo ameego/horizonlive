@@ -1,5 +1,6 @@
 backend:
-  name: test-repo
+  name: github
+  repo: ameego/gatsbytest
 media_folder: static/assets
 public_folder: /assets
 collections:
