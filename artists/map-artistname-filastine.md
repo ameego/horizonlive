@@ -1,3 +1,4 @@
 ---
 artistName: Filastine
+slug: filatine
 ---
