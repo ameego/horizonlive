@@ -1,7 +1,5 @@
 ---
 artistName: Koumekiam
-focus:
-  - Éditions
 category:
   - Label
   - Éditions

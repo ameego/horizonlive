@@ -1,7 +1,5 @@
 ---
 artistName: Kamal
-focus:
-  - Label
 category:
   - Éditions
 slug: kamal

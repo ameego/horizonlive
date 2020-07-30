@@ -1,9 +1,5 @@
 ---
 artistName: Filastine
-focus:
-  - Label
-  - Management
-  - Éditions
 category:
   - Management
 slug: filatine

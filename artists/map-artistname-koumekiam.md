@@ -1,8 +1,5 @@
 ---
 artistName: Buridane
-focus:
-  - Management
-  - Label
 category:
   - Live
 slug: buridane

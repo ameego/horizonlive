@@ -1,7 +1,5 @@
 ---
 artistName: Robinn
-focus:
-  - Management
 category:
   - Label
   - Management
