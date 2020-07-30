@@ -2,6 +2,9 @@
 artistName: Koumekiam
 focus:
   - Éditions
+category:
+  - Label
+  - Éditions
 slug: koumekiam
 biography: " Pellentesque est augue, dignissim non lorem ut, volutpat fringilla
   orci. Praesent eget mauris a tellus sagittis vehicula a sed diam. Nunc id
