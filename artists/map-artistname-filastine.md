@@ -4,6 +4,8 @@ focus:
   - Label
   - Management
   - Éditions
+category:
+  - Management
 slug: filatine
 biography: " Maecenas sed sapien quis sem vulputate sagittis. Maecenas dapibus
   viverra sagittis. Phasellus sit amet felis bibendum, lacinia ante id, bibendum
