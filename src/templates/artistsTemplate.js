@@ -7,7 +7,7 @@ export default function Template({ data }) {
     <div>
       <h1>{frontmatter.artistName}</h1>
       <ul>
-        {frontmatter.focus.map((focus, index) => (
+        {frontmatter.category.map((focus, index) => (
           <li key={index}>{focus}</li>
         ))}
       </ul>
@@ -22,7 +22,7 @@ export const pageQuery = graphql`
       frontmatter {
         slug
         artistName
-        focus
+        category
         biography
       }
     }

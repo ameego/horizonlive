@@ -15,8 +15,8 @@ collections:
     fields:
       - { name: artistName, title: artistName, label: "Artist name" }
       - {
-          name: focus,
-          label: Focus,
+          name: category,
+          label: Catégories,
           widget: relation,
           collection: "focus",
           multiple: true,
