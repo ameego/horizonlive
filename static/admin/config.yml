@@ -24,7 +24,15 @@ collections:
           searchFields: ["focus"],
           valueField: "focus",
         }
-      - { name: slug, label: "Slug" }
+      - {
+          name: slug,
+          label: "Slug",
+          pattern:
+            [
+              "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+              "A slug can have no spaces or special characters",
+            ],
+        }
       - { name: biography, label: "Biography", widget: "text" }
   - name: focus
     description: "Les activités d'Horizon sont listées dans cette collection"
@@ -35,3 +43,12 @@ collections:
     extension: json
     fields:
       - { name: focus, title: focus, label: "Focus" }
+      - {
+          name: slug,
+          label: "Slug",
+          pattern:
+            [
+              "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+              "A slug can have no spaces or special characters",
+            ],
+        }
