@@ -3,9 +3,16 @@ const path = require("path")
 
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions
-  const artistsTemplate = require.resolve(`./src/templates/artistsTemplate.js`)
   const result = await graphql(`
     {
+      allFocusJson {
+        edges {
+          node {
+            slug
+            focus
+          }
+        }
+      }
       allArtistsJson {
         edges {
           node {
@@ -23,10 +30,20 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
   result.data.allArtistsJson.edges.forEach(item => {
     createPage({
-      path: item.node.slug,
-      component: artistsTemplate,
+      path: `artists/${item.node.slug}`,
+      component: require.resolve(`./src/templates/artistsTemplate.js`),
       context: {
         slug: item.node.slug,
+      },
+    })
+  })
+
+  result.data.allFocusJson.edges.forEach(item => {
+    createPage({
+      path: item.node.slug,
+      component: require.resolve(`./src/templates/focusTemplate.js`),
+      context: {
+        slug: item.node.focus,
       },
     })
   })

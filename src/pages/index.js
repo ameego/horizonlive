@@ -9,7 +9,7 @@ export const PureHome = ({
   <>
     {edges.map((artist, index) => (
       <p key={index}>
-        <Link to={artist.node.slug}>{artist.node.artistName}</Link>
+        <Link to={`artists/${artist.node.slug}`}>{artist.node.artistName}</Link>
       </p>
     ))}
   </>
