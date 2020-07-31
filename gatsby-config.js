@@ -8,5 +8,11 @@ module.exports = {
         path: `./artists/`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `./focus/`,
+      },
+    },
   ],
 }
