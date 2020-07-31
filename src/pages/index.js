@@ -3,15 +3,13 @@ import { graphql, useStaticQuery, Link } from "gatsby"
 
 export const PureHome = ({
   data: {
-    allMarkdownRemark: { nodes },
+    allArtists: { edges },
   },
 }) => (
   <>
-    {nodes.map((artist, index) => (
+    {edges.map((artist, index) => (
       <p key={index}>
-        <Link to={artist.frontmatter.slug}>
-          {artist.frontmatter.artistName}
-        </Link>
+        <Link to={artist.node.slug}>{artist.node.artistName}</Link>
       </p>
     ))}
   </>
@@ -20,9 +18,9 @@ export const PureHome = ({
 export const Home = () => {
   const data = useStaticQuery(graphql`
     query Test {
-      allMarkdownRemark {
-        nodes {
-          frontmatter {
+      allArtists {
+        edges {
+          node {
             slug
             artistName
           }

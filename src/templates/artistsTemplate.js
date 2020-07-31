@@ -1,29 +1,32 @@
 import React from "react"
 import { graphql } from "gatsby"
-export default function Template({ data }) {
-  const { markdownRemark } = data
-  const { frontmatter } = markdownRemark
+export default function Template({
+  data: {
+    allArtists: { edges },
+  },
+}) {
   return (
     <div>
-      <h1>{frontmatter.artistName}</h1>
+      <h1>{edges[0].node.artistName}</h1>
       <ul>
-        {frontmatter.category.map((focus, index) => (
-          <li key={index}>{focus}</li>
+        {edges[0].node.category.map((category, index) => (
+          <li key={index}>{category}</li>
         ))}
       </ul>
-      <p>{frontmatter.biography}</p>
+      <p>{edges[0].node.biography}</p>
     </div>
   )
 }
 export const pageQuery = graphql`
   query($slug: String!) {
-    markdownRemark(frontmatter: { slug: { eq: $slug } }) {
-      html
-      frontmatter {
-        slug
-        artistName
-        category
-        biography
+    allArtists(filter: { slug: { eq: $slug } }) {
+      edges {
+        node {
+          slug
+          artistName
+          biography
+          category
+        }
       }
     }
   }

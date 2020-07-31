@@ -12,6 +12,7 @@ collections:
     folder: artists
     create: true
     slug: "{{artistName}}"
+    extension: json
     fields:
       - { name: artistName, title: artistName, label: "Artist name" }
       - {
@@ -30,6 +31,7 @@ collections:
     label: Focus
     folder: focus
     create: true
-    slug: "{{artistName}}"
+    slug: "{{focus}}"
+    extension: json
     fields:
       - { name: focus, title: focus, label: "Focus" }
