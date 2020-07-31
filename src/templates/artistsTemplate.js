@@ -2,7 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 export default function Template({
   data: {
-    allArtists: { edges },
+    allArtistsJson: { edges },
   },
 }) {
   return (
@@ -19,7 +19,7 @@ export default function Template({
 }
 export const pageQuery = graphql`
   query($slug: String!) {
-    allArtists(filter: { slug: { eq: $slug } }) {
+    allArtistsJson(filter: { slug: { eq: $slug } }) {
       edges {
         node {
           slug

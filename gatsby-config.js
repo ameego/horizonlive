@@ -1,13 +1,12 @@
 module.exports = {
   plugins: [
     `gatsby-plugin-netlify-cms`,
+    `gatsby-transformer-json`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `markdown-pages`,
-        path: `${__dirname}/artists`,
+        path: `./artists/`,
       },
     },
-    `gatsby-transformer-remark`,
   ],
 }

@@ -3,7 +3,7 @@ import { graphql, useStaticQuery, Link } from "gatsby"
 
 export const PureHome = ({
   data: {
-    allArtists: { edges },
+    allArtistsJson: { edges },
   },
 }) => (
   <>
@@ -18,7 +18,7 @@ export const PureHome = ({
 export const Home = () => {
   const data = useStaticQuery(graphql`
     query Test {
-      allArtists {
+      allArtistsJson {
         edges {
           node {
             slug
