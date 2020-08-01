@@ -17,6 +17,14 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         edges {
           node {
             slug
+            artistName
+          }
+        }
+      }
+      allAgendaJson {
+        edges {
+          node {
+            category
           }
         }
       }
@@ -34,6 +42,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       component: require.resolve(`./src/templates/artistsTemplate.js`),
       context: {
         slug: item.node.slug,
+        artistName: item.node.artistName,
       },
     })
   })

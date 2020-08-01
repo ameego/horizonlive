@@ -2,25 +2,34 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout/layout"
 
-export default function Template({
-  data: {
-    allArtistsJson: { edges },
-  },
-}) {
+export default function Template({ data }) {
+  var aristData = data.allArtistsJson.edges[0].node
+  var agendaData = data.allAgendaJson.edges
+
   return (
     <Layout>
-      <h1>{edges[0].node.artistName}</h1>
+      <h1>{aristData.artistName}</h1>
+      <p>{aristData.biography}</p>
       <ul>
-        {edges[0].node.category.map((category, index) => (
+        {aristData.category.map((category, index) => (
           <li key={index}>{category}</li>
         ))}
       </ul>
-      <p>{edges[0].node.biography}</p>
+      <h2>Agenda</h2>
+      <ul>
+        {agendaData.map((date, index) => (
+          <li key={index}>
+            <p>
+              {date.node.evenement} | {date.node.eventdate}
+            </p>
+          </li>
+        ))}
+      </ul>
     </Layout>
   )
 }
 export const pageQuery = graphql`
-  query($slug: String!) {
+  query($slug: String!, $artistName: String!) {
     allArtistsJson(filter: { slug: { eq: $slug } }) {
       edges {
         node {
@@ -28,6 +37,15 @@ export const pageQuery = graphql`
           artistName
           biography
           category
+        }
+      }
+    }
+    allAgendaJson(filter: { category: { eq: $artistName } }) {
+      edges {
+        node {
+          evenement
+          category
+          eventdate
         }
       }
     }
