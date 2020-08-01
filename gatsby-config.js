@@ -56,5 +56,11 @@ module.exports = {
         path: `./focus/`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `./agenda/`,
+      },
+    },
   ],
 }

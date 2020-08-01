@@ -9,12 +9,13 @@ collections:
   - name: artists
     description: "Les artistes d'Horizon sont listés dans cette collection"
     label: Artists
+    label_singular: artist
     folder: artists
     create: true
     slug: "{{artistName}}"
     extension: json
     fields:
-      - { name: artistName, title: artistName, label: "Artist name" }
+      - { name: artistName, label: "Artist name" }
       - {
           name: category,
           label: Catégories,
@@ -37,12 +38,14 @@ collections:
   - name: focus
     description: "Les activités d'Horizon sont listées dans cette collection"
     label: Focus
+    label_singular: focus
     folder: focus
     create: true
     slug: "{{focus}}"
+    identifier_field: focus
     extension: json
     fields:
-      - { name: focus, title: focus, label: "Focus" }
+      - { name: focus, label: "Focus" }
       - {
           name: slug,
           label: "Slug",
@@ -51,4 +54,32 @@ collections:
               "^[a-z0-9]+(?:-[a-z0-9]+)*$",
               "A slug can have no spaces or special characters",
             ],
+        }
+  - name: agenda
+    description: "Les dates des artistes sont listées dans cette collection"
+    label: Agenda
+    label_singular: date
+    folder: agenda
+    create: true
+    summary: "[{{category}}] {{evenement}} ({{eventdate}})"
+    sortableFields: ["category"]
+    slug: "{{evenement}}-{{category}}-{{eventdate}}"
+    extension: json
+    fields:
+      - {
+          name: "eventdate",
+          label: "Date de l'événement",
+          widget: "datetime",
+          default: "",
+          format: "MM-DD-YYYY",
+          dateFormat: "MM-DD-YYYY",
+        }
+      - { name: evenement, label: "Evenement" }
+      - {
+          name: category,
+          label: Artistes,
+          widget: relation,
+          collection: "artists",
+          searchFields: ["artistName"],
+          valueField: "artistName",
         }
