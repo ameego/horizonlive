@@ -1,12 +1,14 @@
 import React from "react"
 import { graphql } from "gatsby"
+import Layout from "../components/layout/layout"
+
 export default function Template({
   data: {
     allArtistsJson: { edges },
   },
 }) {
   return (
-    <div>
+    <Layout>
       <h1>{edges[0].node.artistName}</h1>
       <ul>
         {edges[0].node.category.map((category, index) => (
@@ -14,7 +16,7 @@ export default function Template({
         ))}
       </ul>
       <p>{edges[0].node.biography}</p>
-    </div>
+    </Layout>
   )
 }
 export const pageQuery = graphql`

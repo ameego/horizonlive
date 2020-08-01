@@ -7,6 +7,10 @@ module.exports = {
         link: "/",
       },
       {
+        name: "Artists",
+        link: "/artists",
+      },
+      {
         name: "Live",
         link: "/live",
       },
@@ -15,8 +19,8 @@ module.exports = {
         link: "/label",
       },
       {
-        name: "Edition",
-        link: "/edition",
+        name: "Publishing",
+        link: "/publishing",
       },
       {
         name: "Management",

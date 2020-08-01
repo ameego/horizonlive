@@ -10,7 +10,9 @@ export const PureHome = ({
   <>
     {edges.map((artist, index) => (
       <p key={index}>
-        <Link to={`artists/${artist.node.slug}`}>{artist.node.artistName}</Link>
+        <Link to={`../artists/${artist.node.slug}`} isPartiallyCurrent={true}>
+          {artist.node.artistName}
+        </Link>
       </p>
     ))}
   </>
@@ -18,7 +20,7 @@ export const PureHome = ({
 
 export const Home = () => {
   const data = useStaticQuery(graphql`
-    query Test {
+    query Artist {
       allArtistsJson {
         edges {
           node {
