@@ -39,7 +39,7 @@ const Header = ({ siteTitle, menuLinks }) => (
         <div>
           <nav>
             <ul style={{ display: "flex", flex: 1 }}>
-              {menuLinks.map(link => (
+              {menuLinks.map((link, index) => (
                 <li
                   key={link.name}
                   style={{
@@ -50,6 +50,7 @@ const Header = ({ siteTitle, menuLinks }) => (
                   <Link
                     style={{ color: `white` }}
                     to={link.link}
+                    partiallyActive={index !== 0 ? true : false}
                     activeStyle={{ color: "tomato" }}
                   >
                     {link.name}
