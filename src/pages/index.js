@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql, useStaticQuery, Link } from "gatsby"
+import Layout from "../components/layout/layout.js"
 
 export const PureHome = ({
   data: {
@@ -29,7 +30,11 @@ export const Home = () => {
     }
   `)
 
-  return <PureHome data={data} />
+  return (
+    <Layout>
+      <PureHome data={data} />
+    </Layout>
+  )
 }
 
 export default Home
