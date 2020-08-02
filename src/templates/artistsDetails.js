@@ -33,11 +33,11 @@ export default function Template({ data }) {
           ? aristData.edges[0].node.galleryImages.map((image, index) => {
               return (
                 <li key={index}>
-                  <p>
+                  <div>
                     <Img
-                      fluid={Utils.getCurrentImage(allImageContent, image)}
+                      fixed={Utils.getCurrentImage(allImageContent, image)}
                     />
-                  </p>
+                  </div>
                 </li>
               )
             })
@@ -65,9 +65,9 @@ export const pageQuery = graphql`
     allImageContent: allImageSharp {
       edges {
         node {
-          fluid(maxWidth: 500) {
+          fixed(width: 500, height: 300) {
             originalName
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFixed
           }
         }
       }

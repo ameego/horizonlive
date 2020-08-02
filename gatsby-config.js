@@ -52,7 +52,13 @@ module.exports = {
     `gatsby-plugin-netlify-cms`,
     `gatsby-transformer-json`,
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        stripMetadata: true,
+        defaultQuality: 70,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
