@@ -6,5 +6,8 @@
   "slug": "buridane",
   "biography": "This is the bio",
   "thumbnail": "/assets/buridane.jpg",
-  "slug,": "buridane"
+  "slug,": "buridane",
+  "galleryImages": [
+    "/assets/buridane.jpg"
+  ]
 }
