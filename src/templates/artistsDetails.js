@@ -1,23 +1,25 @@
 import React from "react"
 import { graphql } from "gatsby"
+import Img from "gatsby-image"
 import Layout from "../components/layout/layout"
+import Utils from "../utils/utils"
+// console.log(Utils)
 
 export default function Template({ data }) {
-  var aristData = data.allArtistsJson.edges[0].node
-  var agendaData = data.allAgendaJson.edges
+  const { aristData, agendaData, allImageContent } = data
 
   return (
     <Layout>
-      <h1>{aristData.artistName}</h1>
-      <p>{aristData.biography}</p>
+      <h1>{aristData.edges[0].node.artistName}</h1>
+      <p>{aristData.edges[0].node.biography}</p>
       <ul>
-        {aristData.category.map((category, index) => (
+        {aristData.edges[0].node.category.map((category, index) => (
           <li key={index}>{category}</li>
         ))}
       </ul>
       <h2>Agenda</h2>
       <ul>
-        {agendaData.map((date, index) => (
+        {agendaData.edges.map((date, index) => (
           <li key={index}>
             <p>
               {date.node.evenement} | {date.node.eventdate}
@@ -27,14 +29,18 @@ export default function Template({ data }) {
       </ul>
 
       <ul>
-        {aristData.galleryImages
-          ? aristData.galleryImages.map((image, index) => (
-              <li key={index}>
-                <p>
-                  <img width="300" src={image} alt="Image" />
-                </p>
-              </li>
-            ))
+        {aristData.edges[0].node.galleryImages
+          ? aristData.edges[0].node.galleryImages.map((image, index) => {
+              return (
+                <li key={index}>
+                  <p>
+                    <Img
+                      fluid={Utils.getCurrentImage(allImageContent, image)}
+                    />
+                  </p>
+                </li>
+              )
+            })
           : null}
       </ul>
     </Layout>
@@ -42,17 +48,27 @@ export default function Template({ data }) {
 }
 export const pageQuery = graphql`
   query($slug: String!, $artistName: String!) {
-    allArtistsJson(filter: { slug: { eq: $slug } }) {
+    aristData: allArtistsJson(filter: { slug: { eq: $slug } }) {
       edges {
         node {
           ...ArtistsFragment
         }
       }
     }
-    allAgendaJson(filter: { category: { eq: $artistName } }) {
+    agendaData: allAgendaJson(filter: { category: { eq: $artistName } }) {
       edges {
         node {
           ...AgendaFragment
+        }
+      }
+    }
+    allImageContent: allImageSharp {
+      edges {
+        node {
+          fluid(maxWidth: 500) {
+            originalName
+            ...GatsbyImageSharpFluid
+          }
         }
       }
     }
