@@ -6,6 +6,7 @@ export const query = graphql`
     biography
     category
     slug
+    galleryImages
   }
 
   fragment AgendaFragment on AgendaJson {
