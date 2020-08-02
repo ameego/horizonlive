@@ -8,6 +8,7 @@ public_folder: /assets
 collections:
   - label: Artists
     name: artists
+    summary: "{{artistName}}"
     description: "Les artistes d'Horizon sont listés dans cette collection"
     label_singular: artist
     folder: artists
@@ -34,12 +35,13 @@ collections:
       - label: "Biography"
         name: biography
         widget: "text"
-      - label: "Featured Image"
-        name: "thumbnail"
-        widget: "image"
-        media_library:
-          config:
-            multiple: true
+      - label: "Photos"
+        label_singular: "photo"
+        name: "galleryImages"
+        widget: "list"
+        summary: "{{fields.image}}"
+        minimize_collapsed: true
+        field: { label: Image, name: image, widget: image }
   - label: Focus
     name: focus
     description: "Les activités d'Horizon sont listées dans cette collection"
