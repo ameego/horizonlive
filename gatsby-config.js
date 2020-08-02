@@ -11,20 +11,26 @@ module.exports = {
         link: "/artists",
       },
       {
-        name: "Live",
-        link: "/live",
-      },
-      {
-        name: "Label",
-        link: "/label",
-      },
-      {
-        name: "Publishing",
-        link: "/publishing",
-      },
-      {
-        name: "Management",
-        link: "/management",
+        name: "Focus",
+        link: "#",
+        submenu: [
+          {
+            name: "Live",
+            link: "/live",
+          },
+          {
+            name: "Label",
+            link: "/label",
+          },
+          {
+            name: "Publishing",
+            link: "/publishing",
+          },
+          {
+            name: "Management",
+            link: "/management",
+          },
+        ],
       },
       {
         name: "Agenda",
@@ -41,6 +47,7 @@ module.exports = {
     ],
   },
   plugins: [
+    `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-netlify-cms`,
     `gatsby-transformer-json`,

@@ -6,14 +6,10 @@ import Header from "../header/header.js"
 const Layout = ({ children }) => (
   <StaticQuery
     query={graphql`
-      query SiteTitleQuery {
+      query SiteMeta {
         site {
           siteMetadata {
             title
-            menuLinks {
-              name
-              link
-            }
           }
         }
       }

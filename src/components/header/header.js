@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
+import Navigation from "../navigation/navigation"
 
 const Header = ({ siteTitle, menuLinks }) => (
   <header
@@ -37,28 +38,7 @@ const Header = ({ siteTitle, menuLinks }) => (
           </Link>
         </h1>
         <div>
-          <nav>
-            <ul style={{ display: "flex", flex: 1 }}>
-              {menuLinks.map((link, index) => (
-                <li
-                  key={link.name}
-                  style={{
-                    listStyleType: `none`,
-                    padding: `1rem`,
-                  }}
-                >
-                  <Link
-                    style={{ color: `white` }}
-                    to={link.link}
-                    partiallyActive={index !== 0 ? true : false}
-                    activeStyle={{ color: "tomato" }}
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </nav>
+          <Navigation />
         </div>
       </div>
     </div>
