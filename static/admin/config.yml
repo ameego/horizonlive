@@ -6,19 +6,19 @@ backend:
 media_folder: static/assets
 public_folder: /assets
 collections:
-  - name: artists
+  - label: Artists
+    name: artists
     description: "Les artistes d'Horizon sont listés dans cette collection"
-    label: Artists
     label_singular: artist
     folder: artists
     create: true
     slug: "{{artistName}}"
     extension: json
     fields:
-      - name: artistName
-        label: "Artist name"
-      - name: category
-        label: Catégories
+      - label: "Artist name"
+        name: artistName
+      - label: Catégories
+        name: category
         widget: relation
         collection: "focus"
         multiple: true
@@ -31,12 +31,18 @@ collections:
             "^[a-z0-9]+(?:-[a-z0-9]+)*$",
             "A slug can have no spaces or special characters",
           ]
-      - name: biography
-        label: "Biography"
+      - label: "Biography"
+        name: biography
         widget: "text"
-  - name: focus
+      - label: "Featured Image"
+        name: "thumbnail"
+        widget: "image"
+        media_library:
+          config:
+            multiple: true
+  - label: Focus
+    name: focus
     description: "Les activités d'Horizon sont listées dans cette collection"
-    label: Focus
     label_singular: focus
     folder: focus
     create: true
@@ -44,18 +50,18 @@ collections:
     identifier_field: focus
     extension: json
     fields:
-      - name: focus
-        label: "Focus"
-      - name: slug,
-        label: "Slug"
+      - label: "Focus"
+        name: focus
+      - label: "Slug"
+        name: slug,
         pattern:
           [
             "^[a-z0-9]+(?:-[a-z0-9]+)*$",
             "A slug can have no spaces or special characters",
           ]
-  - name: agenda
+  - label: Agenda
+    name: agenda
     description: "Les dates des artistes sont listées dans cette collection"
-    label: Agenda
     label_singular: date
     folder: agenda
     create: true
