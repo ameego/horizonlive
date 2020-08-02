@@ -25,6 +25,18 @@ export default function Template({ data }) {
           </li>
         ))}
       </ul>
+
+      <ul>
+        {aristData.galleryImages
+          ? aristData.galleryImages.map((image, index) => (
+              <li key={index}>
+                <p>
+                  <img width="300" src={image} alt="Image" />
+                </p>
+              </li>
+            ))
+          : null}
+      </ul>
     </Layout>
   )
 }
