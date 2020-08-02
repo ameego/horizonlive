@@ -22,8 +22,7 @@ export const Home = () => {
       allArtistsJson {
         edges {
           node {
-            slug
-            artistName
+            ...ArtistsFragment
           }
         }
       }

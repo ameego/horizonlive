@@ -22,9 +22,7 @@ export const Home = () => {
       allAgendaJson(sort: { fields: eventdate }) {
         edges {
           node {
-            evenement
-            category
-            eventdate
+            ...AgendaFragment
           }
         }
       }

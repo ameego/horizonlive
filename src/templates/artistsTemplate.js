@@ -33,19 +33,14 @@ export const pageQuery = graphql`
     allArtistsJson(filter: { slug: { eq: $slug } }) {
       edges {
         node {
-          slug
-          artistName
-          biography
-          category
+          ...ArtistsFragment
         }
       }
     }
     allAgendaJson(filter: { category: { eq: $artistName } }) {
       edges {
         node {
-          evenement
-          category
-          eventdate
+          ...AgendaFragment
         }
       }
     }

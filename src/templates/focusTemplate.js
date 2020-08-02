@@ -24,8 +24,7 @@ export const pageQuery = graphql`
     allArtistsJson(filter: { category: { eq: $slug } }) {
       edges {
         node {
-          slug
-          artistName
+          ...ArtistsFragment
         }
       }
     }
