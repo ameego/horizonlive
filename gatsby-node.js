@@ -39,7 +39,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   result.data.allArtistsJson.edges.forEach(item => {
     createPage({
       path: `artists/${item.node.slug}`,
-      component: require.resolve(`./src/templates/artistsTemplate.js`),
+      component: require.resolve(`./src/templates/artistsDetails.js`),
       context: {
         slug: item.node.slug,
         artistName: item.node.artistName,
@@ -50,7 +50,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   result.data.allFocusJson.edges.forEach(item => {
     createPage({
       path: item.node.slug,
-      component: require.resolve(`./src/templates/focusTemplate.js`),
+      component: require.resolve(`./src/templates/focusDetails.js`),
       context: {
         slug: item.node.focus,
       },
