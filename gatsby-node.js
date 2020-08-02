@@ -1,6 +1,3 @@
-const fs = require("fs-extra")
-const path = require("path")
-
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions
   const result = await graphql(`

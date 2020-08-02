@@ -26,9 +26,7 @@
     "react-helmet": "^6.1.0"
   },
   "devDependencies": {
-    "fs-extra": "^9.0.1",
     "gatsby-plugin-sass": "^2.3.12",
-    "path": "^0.12.7",
     "prettier": "2.0.5"
   },
   "bugs": {
