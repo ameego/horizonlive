@@ -1,14 +1,7 @@
 {
   "artistName": "Lonnie",
-  "category": [
-    "Publishing",
-    "Live",
-    "Label",
-    "Management"
-  ],
-  "slug,": "lonnie",
+  "category": ["Publishing", "Live", "Label", "Management"],
+  "slug": "lonnie",
   "biography": "Lonny",
-  "galleryImages": [
-    "/assets/buridane.jpg"
-  ]
+  "galleryImages": ["/assets/buridane.jpg"]
 }

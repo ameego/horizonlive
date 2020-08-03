@@ -25,7 +25,7 @@ collections:
         multiple: true
         searchFields: ["focus"]
         valueField: "focus"
-      - name: slug,
+      - name: slug
         label: "Slug"
         pattern:
           [

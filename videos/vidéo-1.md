@@ -1,3 +1,0 @@
----
-description: Vidéo 1
----
