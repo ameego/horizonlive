@@ -1,0 +1,14 @@
+{
+  "galleryImages": [
+    {
+      "image": "/assets/buridane.jpg",
+      "altText": "altText for Test"
+    }
+  ],
+  "artistName": "Test",
+  "category": [
+    "Label"
+  ],
+  "slug,": "test",
+  "biography": "This is the bio"
+}
