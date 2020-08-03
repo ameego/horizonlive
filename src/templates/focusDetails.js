@@ -1,21 +1,12 @@
 import React from "react"
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
 import Layout from "../components/layout/layout"
+import ArtistList from "../components/artist-list/artist-list"
 
-export default function Template({
-  data: {
-    allArtistsJson: { edges },
-  },
-}) {
+export default function Template({ data }) {
   return (
     <Layout>
-      {edges.map((artist, index) => (
-        <p key={index}>
-          <Link to={`../artists/${artist.node.slug}`}>
-            {artist.node.artistName}
-          </Link>
-        </p>
-      ))}
+      <ArtistList data={data} />
     </Layout>
   )
 }

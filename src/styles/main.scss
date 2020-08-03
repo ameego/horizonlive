@@ -1,0 +1,162 @@
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.formatted-content {
+  padding: 0 1rem;
+
+  & + & {
+    margin-top: 5rem;
+  }
+
+  > * + * {
+    margin-top: 2rem;
+  }
+
+  p {
+    color: #323232;
+  }
+
+  p:empty {
+    display: none;
+  }
+
+  p + p {
+    margin-top: 0.75em;
+  }
+
+  p + ul {
+    margin-top: 1rem;
+  }
+
+  p a {
+    font-weight: bold;
+  }
+
+  h1 + ul {
+    margin-top: 0;
+  }
+
+  .title-1,
+  h1 {
+    font-weight: bold;
+    margin-bottom: 0.4em;
+    padding-bottom: 0.25em;
+    letter-spacing: -1px;
+    font-size: 1.8rem;
+    letter-spacing: -0.5px;
+  }
+
+  .title-1:empty,
+  h1:empty {
+    display: none;
+  }
+
+  .title-2,
+  h2 {
+    font-size: 1.7rem;
+    margin-bottom: 0.25em;
+    letter-spacing: -0.5px;
+  }
+
+  .title-2:empty,
+  h2:empty {
+    display: none;
+  }
+
+  .title-3,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: 1.6rem;
+    margin-bottom: 0.15em;
+    letter-spacing: -0.5px;
+  }
+
+  .title-3:empty,
+  h3:empty,
+  h4:empty,
+  h5:empty,
+  h6:empty {
+    display: none;
+  }
+
+  > * + .title-1,
+  > * + h1 {
+    margin-top: 3.5rem;
+  }
+
+  > * + .title-2,
+  > * + h2 {
+    margin-top: 1.5rem;
+  }
+
+  > * + table,
+  > * + .title-3,
+  > * + h3,
+  > * + h4,
+  > * + h5,
+  > * + h6 {
+    margin-top: 1rem;
+  }
+
+  ul {
+    list-style-type: disc;
+  }
+
+  > ul,
+  > ol {
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-size: inherit;
+    color: inherit;
+  }
+
+  > ul li:empty,
+  > ol li:empty {
+    display: none;
+  }
+
+  > ul li + li,
+  > ol li + li {
+    margin-top: 0.35rem;
+  }
+
+  > ul li > ul,
+  > ul li > ol,
+  > ol li > ul,
+  > ol li > ol {
+    margin-left: 2rem;
+    list-style-type: disc;
+  }
+
+  blockquote {
+    margin: 2rem 0;
+    padding: 0.5rem 0 0.5rem 1rem;
+    font-size: 1.6rem;
+    border-left: 4px solid;
+    font-style: italic;
+    font-weight: bold;
+  }
+
+  blockquote:empty {
+    display: none;
+  }
+
+  blockquote p {
+    margin-bottom: 0;
+  }
+
+  iframe {
+    width: 100%;
+  }
+}

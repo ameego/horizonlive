@@ -7,10 +7,6 @@ module.exports = {
         link: "/",
       },
       {
-        name: "Artists",
-        link: "/artists",
-      },
-      {
         name: "Focus",
         link: "#",
         submenu: [
@@ -35,14 +31,6 @@ module.exports = {
       {
         name: "Agenda",
         link: "/agenda",
-      },
-      {
-        name: "Vidéos",
-        link: "/videos",
-      },
-      {
-        name: "Contact",
-        link: "/contact",
       },
     ],
   },

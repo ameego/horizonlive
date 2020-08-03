@@ -1,33 +1,26 @@
 import React from "react"
-import { Link, useStaticQuery } from "gatsby"
+import { Link } from "gatsby"
+import style from "./artist-list.module.scss"
 
-const PureArtistList = ({
+const ArtistList = ({
   data: {
     allArtistsJson: { edges },
   },
 }) => (
-  <ul>
+  <ul className={style.list}>
     {edges.map((artist, index) => (
-      <p key={index}>
-        <Link to={`artists/${artist.node.slug}`}>{artist.node.artistName}</Link>
-      </p>
+      <li className={style.list__item} key={index}>
+        <Link to={`artists/${artist.node.slug}`}>
+          <h2 className={style.title}>{artist.node.artistName}</h2>
+          <div className={style.tag_container}>
+            {artist.node.category.map((category, index) => (
+              <span key={index}>{category}</span>
+            ))}
+          </div>
+        </Link>
+      </li>
     ))}
   </ul>
 )
-
-export const ArtistList = () => {
-  const data = useStaticQuery(graphql`
-    query Test {
-      allArtistsJson {
-        edges {
-          node {
-            ...ArtistsFragment
-          }
-        }
-      }
-    }
-  `)
-  return <PureArtistList data={data} />
-}
 
 export default ArtistList
