@@ -1,0 +1,17 @@
+{
+  "artistName": "Bubu",
+  "category": [
+    "Publishing",
+    "Label",
+    "Live",
+    "Management"
+  ],
+  "slug": "bubu",
+  "biography": "Bubu",
+  "galleryImages": [
+    {
+      "image": "/assets/buridane.jpg",
+      "altText": "Alt3"
+    }
+  ]
+}
