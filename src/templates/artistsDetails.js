@@ -3,7 +3,6 @@ import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import Layout from "../components/layout/layout"
 import Utils from "../utils/utils"
-// console.log(Utils)
 
 export default function Template({ data }) {
   const { aristData, agendaData, allImageContent } = data
@@ -34,11 +33,9 @@ export default function Template({ data }) {
               console.log(item)
               return (
                 <li key={index}>
-                  <div>
-                    <Img
-                      fixed={Utils.getCurrentImage(allImageContent, item.image)}
-                    />
-                  </div>
+                  <Img
+                    fixed={Utils.getCurrentImage(allImageContent, item.image)}
+                  />
                 </li>
               )
             })
@@ -66,10 +63,7 @@ export const pageQuery = graphql`
     allImageContent: allImageSharp {
       edges {
         node {
-          fixed(width: 500, height: 300) {
-            originalName
-            ...GatsbyImageSharpFixed
-          }
+          ...ArtistGallery
         }
       }
     }

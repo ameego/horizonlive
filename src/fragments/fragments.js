@@ -17,4 +17,11 @@ export const query = graphql`
     category
     eventdate
   }
+
+  fragment ArtistGallery on ImageSharp {
+    fixed(width: 500, height: 300) {
+      originalName
+      ...GatsbyImageSharpFixed
+    }
+  }
 `
