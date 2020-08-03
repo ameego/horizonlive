@@ -1,0 +1,14 @@
+{
+  "artistName": "One more",
+  "category": [
+    "Live"
+  ],
+  "slug": "one-more",
+  "biography": "Test",
+  "galleryImages": [
+    {
+      "image": "/assets/buridane.jpg",
+      "altText": "Alt7"
+    }
+  ]
+}
