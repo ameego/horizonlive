@@ -1,0 +1,15 @@
+{
+  "artistName": "Filastine",
+  "category": [
+    "Publishing",
+    "Management"
+  ],
+  "slug": "filastine",
+  "biography": "This is Filastine",
+  "galleryImages": [
+    {
+      "image": "/assets/buridane.jpg",
+      "altText": "Alt5"
+    }
+  ]
+}
