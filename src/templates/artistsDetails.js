@@ -9,38 +9,39 @@ export default function Template({ data }) {
 
   return (
     <Layout>
-      <h1>{aristData.edges[0].node.artistName}</h1>
-      <p>{aristData.edges[0].node.biography}</p>
-      <ul>
-        {aristData.edges[0].node.category.map((category, index) => (
-          <li key={index}>{category}</li>
-        ))}
-      </ul>
-      <h2>Agenda</h2>
-      <ul>
-        {agendaData.edges.map((date, index) => (
-          <li key={index}>
-            <p>
-              {date.node.evenement} | {date.node.eventdate}
-            </p>
-          </li>
-        ))}
-      </ul>
+      <div class="formatted-content">
+        <h1>{aristData.edges[0].node.artistName}</h1>
+        <p>{aristData.edges[0].node.biography}</p>
+        <ul>
+          {aristData.edges[0].node.category.map((category, index) => (
+            <li key={index}>{category}</li>
+          ))}
+        </ul>
+        <h2>Agenda</h2>
+        <ul>
+          {agendaData.edges.map((date, index) => (
+            <li key={index}>
+              <p>
+                {date.node.evenement} | {date.node.eventdate}
+              </p>
+            </li>
+          ))}
+        </ul>
 
-      <ul>
-        {aristData.edges[0].node.galleryImages
-          ? aristData.edges[0].node.galleryImages.map((item, index) => {
-              console.log(item)
-              return (
-                <li key={index}>
-                  <Img
-                    fixed={Utils.getCurrentImage(allImageContent, item.image)}
-                  />
-                </li>
-              )
-            })
-          : null}
-      </ul>
+        <ul>
+          {aristData.edges[0].node.galleryImages
+            ? aristData.edges[0].node.galleryImages.map((item, index) => {
+                return (
+                  <li key={index}>
+                    <Img
+                      fixed={Utils.getCurrentImage(allImageContent, item.image)}
+                    />
+                  </li>
+                )
+              })
+            : null}
+        </ul>
+      </div>
     </Layout>
   )
 }

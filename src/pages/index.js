@@ -15,7 +15,6 @@ export const Home = () => {
       }
     }
   `)
-  console.log(data)
   return (
     <Layout>
       <ArtistList data={data} />
