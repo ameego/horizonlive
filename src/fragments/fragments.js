@@ -6,7 +6,10 @@ export const query = graphql`
     biography
     category
     slug
-    galleryImages
+    galleryImages {
+      image
+      altText
+    }
   }
 
   fragment AgendaFragment on AgendaJson {

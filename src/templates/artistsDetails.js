@@ -30,12 +30,13 @@ export default function Template({ data }) {
 
       <ul>
         {aristData.edges[0].node.galleryImages
-          ? aristData.edges[0].node.galleryImages.map((image, index) => {
+          ? aristData.edges[0].node.galleryImages.map((item, index) => {
+              console.log(item)
               return (
                 <li key={index}>
                   <div>
                     <Img
-                      fixed={Utils.getCurrentImage(allImageContent, image)}
+                      fixed={Utils.getCurrentImage(allImageContent, item.image)}
                     />
                   </div>
                 </li>

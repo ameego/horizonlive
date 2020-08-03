@@ -41,7 +41,12 @@ collections:
         widget: "list"
         summary: "{{fields.image}}"
         minimize_collapsed: true
-        field: { label: Image, name: image, widget: image }
+        fields:
+          - label: Image
+            name: image
+            widget: image
+          - label: "Text alternatif"
+            name: altText
   - label: Focus
     name: focus
     description: "Les activités d'Horizon sont listées dans cette collection"
