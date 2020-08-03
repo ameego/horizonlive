@@ -1,0 +1,17 @@
+{
+  "artistName": "Buridane",
+  "category": [
+    "Publishing",
+    "Label",
+    "Live",
+    "Management"
+  ],
+  "slug": "buridane",
+  "biography": "This is Buridane",
+  "galleryImages": [
+    {
+      "image": "/assets/buridane.jpg",
+      "artistName": "Alt1"
+    }
+  ]
+}
