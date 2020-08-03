@@ -1,0 +1,17 @@
+{
+  "artistName": "Lonny",
+  "category": [
+    "Label",
+    "Publishing",
+    "Live",
+    "Management"
+  ],
+  "slug": "lonny",
+  "biography": "This is Lonny.",
+  "galleryImages": [
+    {
+      "image": "/assets/buridane.jpg",
+      "artistName": "Alt1"
+    }
+  ]
+}
