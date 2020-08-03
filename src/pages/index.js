@@ -1,39 +1,11 @@
 import React from "react"
-import { graphql, useStaticQuery, Link } from "gatsby"
 import Layout from "../components/layout/layout"
+import ArtistList from "../components/artist-list/artist-list"
 
-export const PureHome = ({
-  data: {
-    allArtistsJson: { edges },
-  },
-}) => (
-  <>
-    {edges.map((artist, index) => (
-      <p key={index}>
-        <Link to={`artists/${artist.node.slug}`}>{artist.node.artistName}</Link>
-      </p>
-    ))}
-  </>
+export const Home = () => (
+  <Layout>
+    <ArtistList />
+  </Layout>
 )
-
-export const Home = () => {
-  const data = useStaticQuery(graphql`
-    query Test {
-      allArtistsJson {
-        edges {
-          node {
-            ...ArtistsFragment
-          }
-        }
-      }
-    }
-  `)
-
-  return (
-    <Layout>
-      <PureHome data={data} />
-    </Layout>
-  )
-}
 
 export default Home
