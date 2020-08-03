@@ -12,6 +12,10 @@
     {
       "image": "/assets/buridane.jpg",
       "altText": "Alt3"
+    },
+    {
+      "image": "/assets/screenshot-2020-07-05-at-11.17.05-am.png",
+      "altText": "Alt4"
     }
   ]
 }
