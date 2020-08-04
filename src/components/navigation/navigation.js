@@ -31,10 +31,9 @@ const nestedNavigation = (link, index) => (
           return (
             <div key={index}>
               <Link
-                style={{ color: `white` }}
                 to={item.link}
                 partiallyActive={index !== 0 ? true : false}
-                activeStyle={{ color: "tomato" }}
+                activeClassName={style.active}
               >
                 {item.name}
               </Link>
