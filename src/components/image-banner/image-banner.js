@@ -5,7 +5,7 @@ import style from "./image-banner.module.scss"
 const ImageBanner = ({ data }) => (
   <div className={style.banner}>
     <div className={style.banner__img}>
-      <Img fluid={data} fadeIn={true} />
+      <Img fluid={data} />
     </div>
   </div>
 )

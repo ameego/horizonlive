@@ -30,6 +30,15 @@ collections:
         widget: "markdown"
       - label: "Introduction"
         name: introduction
+      - label: "Citation"
+        name: citation
+        widget: object
+        fields:
+          - label: "Citation"
+            name: quote
+          - label: "Image"
+            name: quoteImage
+            widget: image
       - label: Bannière
         name: banner
         widget: image

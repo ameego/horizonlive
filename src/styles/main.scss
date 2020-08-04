@@ -15,7 +15,7 @@ body {
 }
 
 .formatted-content {
-  width: 60%;
+  // width: 60%;
   color: #fff;
   padding: 0 3rem;
 
@@ -177,5 +177,41 @@ body {
 
   h3 {
     margin-top: 1rem;
+  }
+}
+
+.something {
+  display: grid;
+  grid-gap: 10rem;
+  grid-template-columns: 2fr 1fr;
+  list-style-type: none;
+  margin: 0;
+}
+
+.quote {
+  padding: 0 3rem 3rem 3rem;
+  background-color: rgba(255, 255, 255, 0.15);
+
+  .gatsby-image-wrapper {
+    position: relative;
+    top: -3rem;
+
+    &::after {
+      position: absolute;
+      bottom: -2rem;
+      content: "“";
+      width: 100%;
+      text-align: center;
+      color: #fff;
+      font-size: 10rem;
+      line-height: 0;
+    }
+  }
+
+  p {
+    font-size: 1.8rem;
+    color: #fff;
+    line-height: 1.5;
+    font-style: italic;
   }
 }

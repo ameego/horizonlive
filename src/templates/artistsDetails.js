@@ -23,21 +23,41 @@ export default function Template({ data }) {
     )
   }
 
+  if (data.aristData.edges[0].node.citation.quoteImage) {
+    var quoteImage = data.allImageContent.edges.find(
+      x =>
+        x.node.fluid.originalName ===
+        data.aristData.edges[0].node.citation.quoteImage.split("/")[2]
+    )
+  }
+
   return (
     <>
       {bannerImage ? <ImageBanner data={bannerImage.node.fluid} /> : null}
       <Layout>
-        <div className="formatted-content">
-          <div className="formatted-content__introduction">
-            <h2>{aristData.edges[0].node.artistName}</h2>
-            <Tags data={aristData.edges[0].node.category} />
-            <h3>{aristData.edges[0].node.introduction}</h3>
+        <div class="something">
+          <div className="formatted-content">
+            <div className="formatted-content__introduction">
+              <h2>{aristData.edges[0].node.artistName}</h2>
+              <Tags data={aristData.edges[0].node.category} />
+              <h3>{aristData.edges[0].node.introduction}</h3>
+            </div>
+            <div
+              dangerouslySetInnerHTML={rawMarkup(
+                aristData.edges[0].node.biography
+              )}
+            />
           </div>
-          <div
-            dangerouslySetInnerHTML={rawMarkup(
-              aristData.edges[0].node.biography
-            )}
-          />
+          <div>
+            <div class="quote">
+              <div>
+                <Img fluid={quoteImage.node.fluid} />
+                <p>{aristData.edges[0].node.citation.quote}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="formatted-content">
           <h2>Agenda</h2>
           <ul>
             {agendaData.edges.map((date, index) => (

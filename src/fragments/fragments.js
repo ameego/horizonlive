@@ -5,6 +5,10 @@ export const query = graphql`
     artistName
     biography
     introduction
+    citation {
+      quote
+      quoteImage
+    }
     category
     slug
     banner
