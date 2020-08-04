@@ -26,7 +26,7 @@ const Header = ({ siteTitle, menuLinks }) => (
           alignItems: "center",
         }}
       >
-        <h1 style={{ margin: 0, flex: 1 }}>
+        <h1 style={{ margin: 0, flex: 1, fontSize: 18 }}>
           <Link
             to="/"
             style={{
