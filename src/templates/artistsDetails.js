@@ -29,6 +29,11 @@ export default function Template({ data }) {
         <div className="formatted-content">
           <div className="formatted-content__introduction">
             <h2>{aristData.edges[0].node.artistName}</h2>
+            <ul className="tags">
+              {aristData.edges[0].node.category.map((category, index) => (
+                <li key={index}>{category}</li>
+              ))}
+            </ul>
             <h3>{aristData.edges[0].node.introduction}</h3>
           </div>
           <div
@@ -36,11 +41,6 @@ export default function Template({ data }) {
               aristData.edges[0].node.biography
             )}
           />
-          <ul>
-            {aristData.edges[0].node.category.map((category, index) => (
-              <li key={index}>{category}</li>
-            ))}
-          </ul>
           <h2>Agenda</h2>
           <ul>
             {agendaData.edges.map((date, index) => (
