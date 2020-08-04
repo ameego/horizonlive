@@ -4,6 +4,7 @@ export const query = graphql`
   fragment ArtistsFragment on ArtistsJson {
     artistName
     biography
+    introduction
     category
     slug
     banner

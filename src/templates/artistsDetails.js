@@ -4,6 +4,12 @@ import Img from "gatsby-image"
 import Layout from "../components/layout/layout"
 import ImageBanner from "../components/image-banner/image-banner"
 import Utils from "../utils/utils"
+import marked from "marked"
+
+function rawMarkup(data) {
+  let rawMarkup = marked(data)
+  return { __html: rawMarkup }
+}
 
 export default function Template({ data }) {
   const { aristData, agendaData, allImageContent } = data
@@ -21,14 +27,21 @@ export default function Template({ data }) {
       {bannerImage ? <ImageBanner data={bannerImage.node.fluid} /> : null}
       <Layout>
         <div className="formatted-content">
-          <h2>{aristData.edges[0].node.artistName}</h2>
-          <p>{aristData.edges[0].node.biography}</p>
-          {/* <ul>
+          <div className="formatted-content__introduction">
+            <h2>{aristData.edges[0].node.artistName}</h2>
+            <h3>{aristData.edges[0].node.introduction}</h3>
+          </div>
+          <div
+            dangerouslySetInnerHTML={rawMarkup(
+              aristData.edges[0].node.biography
+            )}
+          />
+          <ul>
             {aristData.edges[0].node.category.map((category, index) => (
               <li key={index}>{category}</li>
             ))}
-          </ul> */}
-          {/* <h2>Agenda</h2> */}
+          </ul>
+          <h2>Agenda</h2>
           <ul>
             {agendaData.edges.map((date, index) => (
               <li key={index}>

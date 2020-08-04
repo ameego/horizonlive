@@ -16,7 +16,7 @@ body {
 
 .formatted-content {
   color: #fff;
-  // padding: 0 1rem;
+  padding: 0 3rem;
 
   & + & {
     margin-top: 5rem;
@@ -70,8 +70,7 @@ body {
 
   .title-2,
   h3 {
-    font-size: 1.7rem;
-    margin-bottom: 0.25em;
+    font-size: 3rem;
     letter-spacing: -0.5px;
   }
 
@@ -162,6 +161,15 @@ body {
 
   iframe {
     width: 100%;
+  }
+}
+
+.formatted-content__introduction {
+  padding-left: 2.5rem;
+  border-left: 1px solid #fff;
+
+  h3 {
+    margin-top: 1rem;
   }
 }
 

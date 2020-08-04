@@ -25,6 +25,11 @@ collections:
         multiple: true
         searchFields: ["focus"]
         valueField: "focus"
+      - label: "Biography"
+        name: biography
+        widget: "markdown"
+      - label: "Introduction"
+        name: introduction
       - label: Bannière
         name: banner
         widget: image
@@ -35,9 +40,6 @@ collections:
             "^[a-z0-9]+(?:-[a-z0-9]+)*$",
             "A slug can have no spaces or special characters",
           ]
-      - label: "Biography"
-        name: biography
-        widget: "text"
       - label: "Photos"
         label_singular: "photo"
         name: "galleryImages"
