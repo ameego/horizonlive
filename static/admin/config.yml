@@ -77,12 +77,14 @@ collections:
     slug: "{{evenement}}-{{category}}-{{eventdate}}"
     extension: json
     fields:
-      - name: "eventdate"
-        label: "Date de l'événement"
+      - label: "Date de l'événement"
+        name: "eventdate"
         widget: "datetime"
         default: ""
-        format: "MM-DD-YYYY"
-        dateFormat: "MM-DD-YYYY"
+        dateFormat: "DD MMM YYYY"
+        timeFormat: "HH:mm"
+        format: "LLL"
+        pickerUtc: false
       - name: evenement
         label: "Evenement"
       - name: category
