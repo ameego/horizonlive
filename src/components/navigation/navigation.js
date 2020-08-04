@@ -2,16 +2,6 @@ import React from "react"
 import { graphql, StaticQuery, Link } from "gatsby"
 import style from "./navigation.module.scss"
 
-function isNavActive() {
-  // let path = window.location.pathname
-  // return (
-  //   path === "/live" ||
-  //   path === "/label" ||
-  //   path === "/publishing" ||
-  //   path === "/management"
-  // )
-}
-
 const flatNavigation = (link, index) => (
   <li
     key={link.name}
@@ -40,39 +30,31 @@ const nestedNavigation = (link, index) => (
       padding: `1rem`,
     }}
   >
-    <div>
-      <div
-        className={
-          isNavActive()
-            ? `${style.navigation__item} active`
-            : style.navigation__item
-        }
+    <div className={style.navigation__item}>
+      <Link
+        className={(style.navigation__item, style.navigation__disabled)}
+        style={{ color: `white` }}
+        to={link.link}
+        partiallyActive={index !== 0 ? true : false}
+        activeStyle={{ color: "tomato" }}
       >
-        <Link
-          className={(style.navigation__item, style.navigation__disabled)}
-          style={{ color: `white` }}
-          to={link.link}
-          partiallyActive={index !== 0 ? true : false}
-          activeStyle={{ color: "tomato" }}
-        >
-          {link.name}
-        </Link>
-        <div className={style.subnavigation}>
-          {link.submenu.map((item, index) => {
-            return (
-              <div key={index}>
-                <Link
-                  style={{ color: `white` }}
-                  to={item.link}
-                  partiallyActive={index !== 0 ? true : false}
-                  activeStyle={{ color: "tomato" }}
-                >
-                  {item.name}
-                </Link>
-              </div>
-            )
-          })}
-        </div>
+        {link.name}
+      </Link>
+      <div className={style.subnavigation}>
+        {link.submenu.map((item, index) => {
+          return (
+            <div key={index}>
+              <Link
+                style={{ color: `white` }}
+                to={item.link}
+                partiallyActive={index !== 0 ? true : false}
+                activeStyle={{ color: "tomato" }}
+              >
+                {item.name}
+              </Link>
+            </div>
+          )
+        })}
       </div>
     </div>
   </li>
