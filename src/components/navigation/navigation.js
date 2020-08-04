@@ -3,13 +3,15 @@ import { graphql, StaticQuery, Link } from "gatsby"
 import style from "./navigation.module.scss"
 
 function isNavActive() {
-  let path = window.location.pathname
-  return (
-    path === "/live" ||
-    path === "/label" ||
-    path === "/publishing" ||
-    path === "/management"
-  )
+  if (window) {
+    let path = window.location.pathname
+    return (
+      path === "/live" ||
+      path === "/label" ||
+      path === "/publishing" ||
+      path === "/management"
+    )
+  }
 }
 
 const flatNavigation = (link, index) => (
