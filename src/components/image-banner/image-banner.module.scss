@@ -10,6 +10,7 @@
 
   &::after,
   &::before {
+    display: none;
     content: "";
     position: absolute;
     z-index: 1;
@@ -34,6 +35,13 @@
       rgba(0, 0, 0, 0.01),
       #1a2423 90%
     );
+  }
+
+  @media (min-width: 1280px) {
+    &::before,
+    &::after {
+      display: block;
+    }
   }
 }
 
