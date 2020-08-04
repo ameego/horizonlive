@@ -21,14 +21,14 @@ export default function Template({ data }) {
       {bannerImage ? <ImageBanner data={bannerImage.node.fluid} /> : null}
       <Layout>
         <div className="formatted-content">
-          <h1>{aristData.edges[0].node.artistName}</h1>
+          <h2>{aristData.edges[0].node.artistName}</h2>
           <p>{aristData.edges[0].node.biography}</p>
-          <ul>
+          {/* <ul>
             {aristData.edges[0].node.category.map((category, index) => (
               <li key={index}>{category}</li>
             ))}
-          </ul>
-          <h2>Agenda</h2>
+          </ul> */}
+          {/* <h2>Agenda</h2> */}
           <ul>
             {agendaData.edges.map((date, index) => (
               <li key={index}>

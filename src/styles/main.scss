@@ -15,7 +15,8 @@ body {
 }
 
 .formatted-content {
-  padding: 0 1rem;
+  color: #fff;
+  // padding: 0 1rem;
 
   & + & {
     margin-top: 5rem;
@@ -26,7 +27,8 @@ body {
   }
 
   p {
-    color: #323232;
+    font-size: 1.8rem;
+    line-height: 2.5rem;
   }
 
   p:empty {
@@ -50,34 +52,34 @@ body {
   }
 
   .title-1,
-  h1 {
-    font-weight: bold;
-    margin-bottom: 0.4em;
-    padding-bottom: 0.25em;
-    letter-spacing: -1px;
-    font-size: 1.8rem;
-    letter-spacing: -0.5px;
+  h2 {
+    font-weight: 800;
+    font-size: 4.5rem;
+    text-transform: uppercase;
+    // margin-bottom: 0.4em;
+    // padding-bottom: 0.25em;
+    letter-spacing: -2px;
+    // font-size: 1.8rem;
+    // letter-spacing: -0.5px;
   }
 
   .title-1:empty,
-  h1:empty {
+  h2:empty {
     display: none;
   }
 
   .title-2,
-  h2 {
+  h3 {
     font-size: 1.7rem;
     margin-bottom: 0.25em;
     letter-spacing: -0.5px;
   }
 
   .title-2:empty,
-  h2:empty {
+  h3:empty {
     display: none;
   }
 
-  .title-3,
-  h3,
   h4,
   h5,
   h6 {
@@ -86,8 +88,6 @@ body {
     letter-spacing: -0.5px;
   }
 
-  .title-3:empty,
-  h3:empty,
   h4:empty,
   h5:empty,
   h6:empty {
