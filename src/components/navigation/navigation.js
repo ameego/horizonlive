@@ -2,6 +2,16 @@ import React from "react"
 import { graphql, StaticQuery, Link } from "gatsby"
 import style from "./navigation.module.scss"
 
+function isNavActive() {
+  let path = window.location.pathname
+  return (
+    path === "/live" ||
+    path === "/label" ||
+    path === "/publishing" ||
+    path === "/management"
+  )
+}
+
 const flatNavigation = (link, index) => (
   <li
     key={link.name}
@@ -31,7 +41,13 @@ const nestedNavigation = (link, index) => (
     }}
   >
     <div>
-      <div className={style.navigation__item}>
+      <div
+        className={
+          isNavActive()
+            ? `${style.navigation__item} active`
+            : style.navigation__item
+        }
+      >
         {link.name}
         <div className={style.subnavigation}>
           {link.submenu.map((item, index) => {
