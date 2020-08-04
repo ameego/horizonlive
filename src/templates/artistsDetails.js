@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import Layout from "../components/layout/layout"
 import ImageBanner from "../components/image-banner/image-banner"
+import Tags from "../components/tags/tags"
 import Utils from "../utils/utils"
 import marked from "marked"
 
@@ -29,11 +30,7 @@ export default function Template({ data }) {
         <div className="formatted-content">
           <div className="formatted-content__introduction">
             <h2>{aristData.edges[0].node.artistName}</h2>
-            <ul className="tags">
-              {aristData.edges[0].node.category.map((category, index) => (
-                <li key={index}>{category}</li>
-              ))}
-            </ul>
+            <Tags data={aristData.edges[0].node.category} />
             <h3>{aristData.edges[0].node.introduction}</h3>
           </div>
           <div
