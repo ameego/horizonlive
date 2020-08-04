@@ -24,4 +24,10 @@ export const query = graphql`
       ...GatsbyImageSharpFixed
     }
   }
+
+  fragment ArtistBanner on ImageSharp {
+    fixed(width: 750) {
+      ...GatsbyImageSharpFixed
+    }
+  }
 `

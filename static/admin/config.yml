@@ -25,6 +25,9 @@ collections:
         multiple: true
         searchFields: ["focus"]
         valueField: "focus"
+      - label: Bannière
+        name: banner
+        widget: image
       - name: slug
         label: "Slug"
         pattern:
