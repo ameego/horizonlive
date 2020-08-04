@@ -28,7 +28,7 @@ export const query = graphql`
   }
 
   fragment ArtistFixed on ImageSharp {
-    fluid(maxWidth: 750) {
+    fluid(maxWidth: 750, quality: 40) {
       originalName
       ...GatsbyImageSharpFluid
     }
