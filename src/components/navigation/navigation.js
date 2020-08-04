@@ -3,19 +3,12 @@ import { graphql, StaticQuery, Link } from "gatsby"
 import style from "./navigation.module.scss"
 
 const flatNavigation = (link, index) => (
-  <li
-    key={link.name}
-    style={{
-      listStyleType: `none`,
-      padding: `1rem`,
-    }}
-  >
+  <li key={link.name} className={style.navigation__item}>
     <Link
       className={style.navigation__item}
-      style={{ color: `white` }}
       to={link.link}
       partiallyActive={index !== 0 ? true : false}
-      activeStyle={{ color: "tomato" }}
+      activeClassName={style.active}
     >
       {link.name}
     </Link>
@@ -23,20 +16,13 @@ const flatNavigation = (link, index) => (
 )
 
 const nestedNavigation = (link, index) => (
-  <li
-    key={link.name}
-    style={{
-      listStyleType: `none`,
-      padding: `1rem`,
-    }}
-  >
+  <li key={link.name} className={style.navigation__item}>
     <div className={style.navigation__item}>
       <Link
         className={(style.navigation__item, style.navigation__disabled)}
-        style={{ color: `white` }}
         to={link.link}
         partiallyActive={index !== 0 ? true : false}
-        activeStyle={{ color: "tomato" }}
+        activeClassName={style.active}
       >
         {link.name}
       </Link>
