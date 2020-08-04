@@ -8,23 +8,23 @@ module.exports = {
       },
       {
         name: "Focus",
-        link: "#",
+        link: "/focus",
         submenu: [
           {
             name: "Live",
-            link: "/live",
+            link: "/focus/live",
           },
           {
             name: "Label",
-            link: "/label",
+            link: "/focus/label",
           },
           {
             name: "Publishing",
-            link: "/publishing",
+            link: "/focus/publishing",
           },
           {
             name: "Management",
-            link: "/management",
+            link: "/focus/management",
           },
         ],
       },

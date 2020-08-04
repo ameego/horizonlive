@@ -48,7 +48,15 @@ const nestedNavigation = (link, index) => (
             : style.navigation__item
         }
       >
-        {link.name}
+        <Link
+          className={(style.navigation__item, style.navigation__disabled)}
+          style={{ color: `white` }}
+          to={link.link}
+          partiallyActive={index !== 0 ? true : false}
+          activeStyle={{ color: "tomato" }}
+        >
+          {link.name}
+        </Link>
         <div className={style.subnavigation}>
           {link.submenu.map((item, index) => {
             return (

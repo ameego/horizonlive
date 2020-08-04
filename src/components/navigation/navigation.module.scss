@@ -18,6 +18,10 @@
   }
 }
 
+.navigation__disabled {
+  pointer-events: none;
+}
+
 .subnavigation {
   display: none;
   position: absolute;

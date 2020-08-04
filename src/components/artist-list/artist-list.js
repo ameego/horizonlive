@@ -10,7 +10,7 @@ const ArtistList = ({
   <ul className={style.list}>
     {edges.map((artist, index) => (
       <li className={style.list__item} key={index}>
-        <Link to={`../artists/${artist.node.slug}`}>
+        <Link to={`../../artists/${artist.node.slug}`}>
           <h2 className={style.title}>{artist.node.artistName}</h2>
           <div className={style.tag_container}>
             {artist.node.category.map((category, index) => (
