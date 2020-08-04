@@ -6,10 +6,19 @@ import ImageBanner from "../components/image-banner/image-banner"
 import Utils from "../utils/utils"
 
 export default function Template({ data }) {
-  const { aristData, agendaData, allImageContent, allBannerContent } = data
+  const { aristData, agendaData, allImageContent } = data
+
+  if (data.aristData.edges[0].node.banner) {
+    var bannerImage = data.allImageContent.edges.find(
+      x =>
+        x.node.fluid.originalName ===
+        data.aristData.edges[0].node.banner.split("/")[2]
+    )
+  }
+
   return (
     <>
-      <ImageBanner data={allBannerContent.edges[0].node.fluid} />
+      {bannerImage ? <ImageBanner data={bannerImage.node.fluid} /> : null}
       <Layout>
         <div className="formatted-content">
           <h1>{aristData.edges[0].node.artistName}</h1>
@@ -70,24 +79,8 @@ export const pageQuery = graphql`
     allImageContent: allImageSharp {
       edges {
         node {
-          ...ArtistGallery
-        }
-      }
-    }
-    allBannerContent: allImageSharp(
-      filter: {
-        fluid: {
-          originalName: {
-            eq: "67234102_10156420124736723_840629476122427392_o.jpg"
-          }
-        }
-      }
-    ) {
-      edges {
-        node {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
+          ...ArtistFixed
+          ...ArtistFluid
         }
       }
     }

@@ -6,6 +6,7 @@ export const query = graphql`
     biography
     category
     slug
+    banner
     galleryImages {
       image
       altText
@@ -18,16 +19,17 @@ export const query = graphql`
     eventdate
   }
 
-  fragment ArtistGallery on ImageSharp {
+  fragment ArtistFluid on ImageSharp {
     fixed(width: 500, height: 300) {
       originalName
       ...GatsbyImageSharpFixed
     }
   }
 
-  fragment ArtistBanner on ImageSharp {
-    fixed(width: 750) {
-      ...GatsbyImageSharpFixed
+  fragment ArtistFixed on ImageSharp {
+    fluid(maxWidth: 750) {
+      originalName
+      ...GatsbyImageSharpFluid
     }
   }
 `

@@ -6,13 +6,11 @@ import Navigation from "../navigation/navigation"
 const Header = ({ siteTitle, menuLinks }) => (
   <header
     style={{
-      background: "rebeccapurple",
       marginBottom: "1.45rem",
     }}
   >
     <div
       style={{
-        background: "rebeccapurple",
         marginBottom: "1.45rem",
       }}
     >
