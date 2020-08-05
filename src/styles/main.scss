@@ -195,17 +195,6 @@ body {
   .gatsby-image-wrapper {
     position: relative;
     top: -3rem;
-
-    &::after {
-      position: absolute;
-      bottom: -2rem;
-      content: "“";
-      width: 100%;
-      text-align: center;
-      color: #fff;
-      font-size: 10rem;
-      line-height: 0;
-    }
   }
 
   p {
@@ -213,6 +202,21 @@ body {
     color: #fff;
     line-height: 1.5;
     font-style: italic;
+  }
+}
+
+.quote__char {
+  position: relative;
+
+  &::after {
+    content: "\201C";
+    position: absolute;
+    bottom: 0.5rem;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 13rem;
+    line-height: 0;
   }
 }
 

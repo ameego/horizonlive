@@ -51,7 +51,9 @@ export default function Template({ data }) {
           <div>
             <div className="quote">
               <div>
-                <Img fluid={quoteImage.node.fluid} />
+                <div class="quote__char">
+                  <Img fluid={quoteImage.node.fluid} />
+                </div>
                 <p>{aristData.edges[0].node.citation.quote}</p>
               </div>
             </div>
