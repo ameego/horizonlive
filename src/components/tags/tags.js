@@ -4,7 +4,9 @@ import style from "./tags.module.scss"
 const Tags = ({ data }) => (
   <ul className={style.tags}>
     {data.map((category, index) => (
-      <li key={index}>{category}</li>
+      <li className={category} key={index}>
+        {category}
+      </li>
     ))}
   </ul>
 )

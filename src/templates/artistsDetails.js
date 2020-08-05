@@ -35,7 +35,7 @@ export default function Template({ data }) {
     <>
       {bannerImage ? <ImageBanner data={bannerImage.node.fluid} /> : null}
       <Layout>
-        <div class="something">
+        <div className="something">
           <div className="formatted-content">
             <div className="formatted-content__introduction">
               <h2>{aristData.edges[0].node.artistName}</h2>
@@ -49,7 +49,7 @@ export default function Template({ data }) {
             />
           </div>
           <div>
-            <div class="quote">
+            <div className="quote">
               <div>
                 <Img fluid={quoteImage.node.fluid} />
                 <p>{aristData.edges[0].node.citation.quote}</p>
@@ -57,7 +57,7 @@ export default function Template({ data }) {
             </div>
           </div>
         </div>
-        <div class="formatted-content">
+        <div className="formatted-content">
           <h2>Agenda</h2>
           <ul>
             {agendaData.edges.map((date, index) => (
