@@ -25,16 +25,16 @@ export const query = graphql`
   }
 
   fragment ArtistFluid on ImageSharp {
-    fixed(width: 500, height: 300) {
+    fluid(maxWidth: 500, maxHeight: 300, quality: 40) {
       originalName
-      ...GatsbyImageSharpFixed
+      ...GatsbyImageSharpFluid
     }
   }
 
   fragment ArtistFixed on ImageSharp {
-    fluid(maxWidth: 750, quality: 40) {
+    fixed(width: 500, height: 300) {
       originalName
-      ...GatsbyImageSharpFluid
+      ...GatsbyImageSharpFixed
     }
   }
 `

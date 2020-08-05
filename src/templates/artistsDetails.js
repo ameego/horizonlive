@@ -5,7 +5,7 @@ import Layout from "../components/layout/layout"
 import ImageBanner from "../components/image-banner/image-banner"
 import Tags from "../components/tags/tags"
 import EventListing from "../components/event-listing/event-listing"
-import Utils from "../utils/utils"
+import PhotoGallery from "../components/photo-gallery/photo-gallery"
 import marked from "marked"
 
 function rawMarkup(data) {
@@ -14,21 +14,21 @@ function rawMarkup(data) {
 }
 
 export default function Template({ data }) {
-  const { aristData, agendaData, allImageContent } = data
+  const { artistData, agendaData, allImageContent } = data
 
-  if (data.aristData.edges[0].node.banner) {
+  if (data.artistData.edges[0].node.banner) {
     var bannerImage = data.allImageContent.edges.find(
       x =>
         x.node.fluid.originalName ===
-        data.aristData.edges[0].node.banner.split("/")[2]
+        data.artistData.edges[0].node.banner.split("/")[2]
     )
   }
 
-  if (data.aristData.edges[0].node.citation.quoteImage) {
+  if (data.artistData.edges[0].node.citation.quoteImage) {
     var quoteImage = data.allImageContent.edges.find(
       x =>
         x.node.fluid.originalName ===
-        data.aristData.edges[0].node.citation.quoteImage.split("/")[2]
+        data.artistData.edges[0].node.citation.quoteImage.split("/")[2]
     )
   }
 
@@ -39,31 +39,21 @@ export default function Template({ data }) {
         <div className="something">
           <div className="formatted-content">
             <div className="formatted-content__introduction">
-              <h2>{aristData.edges[0].node.artistName}</h2>
-              <Tags data={aristData.edges[0].node.category} />
-              <h3>{aristData.edges[0].node.introduction}</h3>
+              <h2>{artistData.edges[0].node.artistName}</h2>
+              <Tags data={artistData.edges[0].node.category} />
+              <h3>{artistData.edges[0].node.introduction}</h3>
             </div>
             <div
               dangerouslySetInnerHTML={rawMarkup(
-                aristData.edges[0].node.biography
+                artistData.edges[0].node.biography
               )}
             />
-            <ul>
-              {aristData.edges[0].node.galleryImages
-                ? aristData.edges[0].node.galleryImages.map((item, index) => {
-                    return (
-                      <li key={index}>
-                        <Img
-                          fixed={Utils.getCurrentImage(
-                            allImageContent,
-                            item.image
-                          )}
-                        />
-                      </li>
-                    )
-                  })
-                : null}
-            </ul>
+            <PhotoGallery
+              data={{
+                galleryImages: artistData.edges[0].node.galleryImages,
+                allImageContent: allImageContent,
+              }}
+            />
           </div>
           <div className="sidebar">
             <div className="quote">
@@ -71,7 +61,7 @@ export default function Template({ data }) {
                 <div className="quote__char">
                   <Img fluid={quoteImage.node.fluid} />
                 </div>
-                <p>{aristData.edges[0].node.citation.quote}</p>
+                <p>{artistData.edges[0].node.citation.quote}</p>
               </div>
             </div>
             <EventListing data={agendaData} />
@@ -83,7 +73,7 @@ export default function Template({ data }) {
 }
 export const pageQuery = graphql`
   query($slug: String!, $artistName: String!) {
-    aristData: allArtistsJson(filter: { slug: { eq: $slug } }) {
+    artistData: allArtistsJson(filter: { slug: { eq: $slug } }) {
       edges {
         node {
           ...ArtistsFragment
