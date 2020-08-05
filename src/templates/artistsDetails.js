@@ -4,6 +4,7 @@ import Img from "gatsby-image"
 import Layout from "../components/layout/layout"
 import ImageBanner from "../components/image-banner/image-banner"
 import Tags from "../components/tags/tags"
+import EventListing from "../components/event-listing/event-listing"
 import Utils from "../utils/utils"
 import marked from "marked"
 
@@ -47,46 +48,34 @@ export default function Template({ data }) {
                 aristData.edges[0].node.biography
               )}
             />
+            <ul>
+              {aristData.edges[0].node.galleryImages
+                ? aristData.edges[0].node.galleryImages.map((item, index) => {
+                    return (
+                      <li key={index}>
+                        <Img
+                          fixed={Utils.getCurrentImage(
+                            allImageContent,
+                            item.image
+                          )}
+                        />
+                      </li>
+                    )
+                  })
+                : null}
+            </ul>
           </div>
-          <div>
+          <div className="sidebar">
             <div className="quote">
               <div>
-                <div class="quote__char">
+                <div className="quote__char">
                   <Img fluid={quoteImage.node.fluid} />
                 </div>
                 <p>{aristData.edges[0].node.citation.quote}</p>
               </div>
             </div>
+            <EventListing data={agendaData} />
           </div>
-        </div>
-        <div className="formatted-content">
-          <h2>Agenda</h2>
-          <ul>
-            {agendaData.edges.map((date, index) => (
-              <li key={index}>
-                <p>
-                  {date.node.evenement} | {date.node.eventdate}
-                </p>
-              </li>
-            ))}
-          </ul>
-
-          <ul>
-            {aristData.edges[0].node.galleryImages
-              ? aristData.edges[0].node.galleryImages.map((item, index) => {
-                  return (
-                    <li key={index}>
-                      <Img
-                        fixed={Utils.getCurrentImage(
-                          allImageContent,
-                          item.image
-                        )}
-                      />
-                    </li>
-                  )
-                })
-              : null}
-          </ul>
         </div>
       </Layout>
     </>

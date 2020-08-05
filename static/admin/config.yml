@@ -95,7 +95,7 @@ collections:
         name: "eventdate"
         widget: "datetime"
         default: ""
-        dateFormat: "DD MMM YYYY"
+        dateFormat: "DD/MMM/YYYY"
         timeFormat: "HH:mm"
         format: "LLL"
         pickerUtc: false

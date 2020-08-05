@@ -235,3 +235,9 @@ body {
 .Label {
   background-color: rgba(#e7bacf, 0.75);
 }
+
+.sidebar {
+  > * + * {
+    margin-top: 6rem;
+  }
+}
