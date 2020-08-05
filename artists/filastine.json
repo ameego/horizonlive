@@ -12,5 +12,10 @@
       "altText": "Alt5"
     }
   ],
-  "banner": "/assets/7090484017_8393bcf824_k.jpg"
+  "banner": "/assets/7090484017_8393bcf824_k.jpg",
+  "introduction": "Hello",
+  "citation": {
+    "quote": "Oui oui",
+    "quoteImage": "/assets/67704863_10156430387776723_1649174850759032832_o.jpg"
+  }
 }
