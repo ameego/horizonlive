@@ -12,5 +12,9 @@
     }
   ],
   "banner": "/assets/img_0835.jpg",
-  "introduction": "Hello hello!"
+  "introduction": "Hello hello!",
+  "citation": {
+    "quote": "Oui oui !",
+    "quoteImage": "/assets/buridane.jpg"
+  }
 }
