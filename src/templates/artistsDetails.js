@@ -6,6 +6,7 @@ import ImageBanner from "../components/image-banner/image-banner"
 import Tags from "../components/tags/tags"
 import EventListing from "../components/event-listing/event-listing"
 import PhotoGallery from "../components/photo-gallery/photo-gallery"
+import Quote from "../components/quote/quote"
 import marked from "marked"
 
 function rawMarkup(data) {
@@ -36,35 +37,37 @@ export default function Template({ data }) {
     <>
       {bannerImage ? <ImageBanner data={bannerImage.node.fluid} /> : null}
       <Layout>
-        <div className="something">
-          <div className="formatted-content">
+        <div>
+          <div className="formatted-content" style={{ width: "60%" }}>
             <div className="formatted-content__introduction">
-              <h2>{artistData.edges[0].node.artistName}</h2>
+              <h2 class="title-1">{artistData.edges[0].node.artistName}</h2>
               <Tags data={artistData.edges[0].node.category} />
               <h3>{artistData.edges[0].node.introduction}</h3>
             </div>
-            <div
-              dangerouslySetInnerHTML={rawMarkup(
-                artistData.edges[0].node.biography
-              )}
-            />
-            <PhotoGallery
-              data={{
-                galleryImages: artistData.edges[0].node.galleryImages,
-                allImageContent: allImageContent,
-              }}
-            />
           </div>
-          <div className="sidebar">
-            <div className="quote">
-              <div>
-                <div className="quote__char">
-                  <Img fluid={quoteImage.node.fluid} />
-                </div>
-                <p>{artistData.edges[0].node.citation.quote}</p>
-              </div>
+          <div className="something">
+            <div className="formatted-content">
+              <div
+                dangerouslySetInnerHTML={rawMarkup(
+                  artistData.edges[0].node.biography
+                )}
+              />
+              <PhotoGallery
+                data={{
+                  galleryImages: artistData.edges[0].node.galleryImages,
+                  allImageContent: allImageContent,
+                }}
+              />
             </div>
-            <EventListing data={agendaData} />
+            <div className="sidebar">
+              <Quote
+                data={{
+                  quoteImage: quoteImage,
+                  quoteData: artistData.edges[0].node.citation.quote,
+                }}
+              />
+              <EventListing data={agendaData} />
+            </div>
           </div>
         </div>
       </Layout>
