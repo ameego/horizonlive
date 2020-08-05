@@ -6,7 +6,7 @@ function splitDate(date) {
   return moment(date).format("DD/MMM/YY").split("/")
 }
 
-const ImageBanner = ({ data }) => {
+const EventListing = ({ data }) => {
   return (
     <div>
       <ul className={style.eventlisting}>
@@ -34,4 +34,4 @@ const ImageBanner = ({ data }) => {
   )
 }
 
-export default ImageBanner
+export default EventListing
