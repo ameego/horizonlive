@@ -7,7 +7,6 @@ import EventListing from "../components/event-listing/event-listing"
 import PhotoGallery from "../components/photo-gallery/photo-gallery"
 import Quote from "../components/quote/quote"
 import marked from "marked"
-import Utils from "../utils/utils"
 
 function rawMarkup(data) {
   let rawMarkup = marked(data)
@@ -15,16 +14,11 @@ function rawMarkup(data) {
 }
 
 export default function Template({ data }) {
-  const { artistData, agendaData, allImageContent } = data
+  const { artistData, agendaData } = data
 
   return (
     <>
-      <ImageBanner
-        data={Utils.getCurrentImage(
-          data.allImageContent,
-          data.artistData.edges[0].node.banner
-        )}
-      />
+      <ImageBanner data={data.artistData.edges[0].node.banner} />
       <Layout>
         <div>
           <div className="formatted-content" style={{ width: "60%" }}>
@@ -44,17 +38,13 @@ export default function Template({ data }) {
               <PhotoGallery
                 data={{
                   galleryImages: artistData.edges[0].node.galleryImages,
-                  allImageContent: allImageContent,
                 }}
               />
             </div>
             <div className="sidebar">
               <Quote
                 data={{
-                  quoteImage: Utils.getCurrentImage(
-                    data.allImageContent,
-                    data.artistData.edges[0].node.citation.quoteImage
-                  ),
+                  quoteImage: data.artistData.edges[0].node.citation.quoteImage,
                   quoteData: artistData.edges[0].node.citation.quote,
                 }}
               />
@@ -79,14 +69,6 @@ export const pageQuery = graphql`
       edges {
         node {
           ...AgendaFragment
-        }
-      }
-    }
-    allImageContent: allImageSharp {
-      edges {
-        node {
-          ...ArtistFixed
-          ...ArtistFluid
         }
       }
     }

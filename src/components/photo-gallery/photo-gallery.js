@@ -1,7 +1,6 @@
 import React from "react"
-import Img from "gatsby-image"
 import style from "./photo-gallery.module.scss"
-import Utils from "../../utils/utils"
+import FluidImg from "../fluid-img/fluid-img"
 
 const PhotoGallery = ({ data }) => (
   <div>
@@ -10,12 +9,7 @@ const PhotoGallery = ({ data }) => (
         ? data.galleryImages.map((item, index) => {
             return (
               <li key={index}>
-                <Img
-                  fluid={Utils.getCurrentImage(
-                    data.allImageContent,
-                    item.image
-                  )}
-                />
+                <FluidImg data={item.image} />
               </li>
             )
           })

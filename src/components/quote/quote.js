@@ -1,5 +1,5 @@
 import React from "react"
-import Img from "gatsby-image"
+import FluidImg from "../fluid-img/fluid-img"
 import style from "./quote.module.scss"
 
 const Quote = ({ data }) => (
@@ -7,7 +7,7 @@ const Quote = ({ data }) => (
     <div className={style.quote}>
       <div>
         <div className={style.quote__char}>
-          <Img fluid={data.quoteImage} />
+          <FluidImg data={data.quoteImage} />
         </div>
         <p>{data.quoteData}</p>
       </div>
