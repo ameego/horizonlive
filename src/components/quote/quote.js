@@ -7,7 +7,7 @@ const Quote = ({ data }) => (
     <div className={style.quote}>
       <div>
         <div className={style.quote__char}>
-          <Img fluid={data.quoteImage.node.fluid} />
+          <Img fluid={data.quoteImage} />
         </div>
         <p>{data.quoteData}</p>
       </div>
