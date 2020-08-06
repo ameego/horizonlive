@@ -18,7 +18,7 @@ export default function Template({ data }) {
 
   return (
     <>
-      <ImageBanner data={data.artistData.edges[0].node.banner} />
+      <ImageBanner data={artistData.edges[0].node.banner} />
       <Layout>
         <div>
           <div className="formatted-content" style={{ width: "60%" }}>
@@ -44,7 +44,7 @@ export default function Template({ data }) {
             <div className="sidebar">
               <Quote
                 data={{
-                  quoteImage: data.artistData.edges[0].node.citation.quoteImage,
+                  quoteImage: artistData.edges[0].node.citation.quoteImage,
                   quoteData: artistData.edges[0].node.citation.quote,
                 }}
               />

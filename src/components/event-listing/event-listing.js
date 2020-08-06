@@ -3,7 +3,7 @@ import style from "./event-listing.module.scss"
 import moment from "moment"
 
 function splitDate(date) {
-  return moment(date).format("DD/MMM/YY").split("/")
+  return moment(date, "MMMM-DD-YYYY").format("DD/MMM/YY").split("/")
 }
 
 const EventListing = ({ data }) => {
