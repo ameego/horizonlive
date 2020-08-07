@@ -3,7 +3,7 @@ import { graphql, StaticQuery } from "gatsby"
 import Img from "gatsby-image"
 import Utils from "../../utils/utils"
 
-const FluidImg = ({ data }) => (
+const FluidImg = ({ data, loading }) => (
   <StaticQuery
     query={graphql`
       query AllImagesQuery {
@@ -18,7 +18,10 @@ const FluidImg = ({ data }) => (
     `}
     render={gqlData => (
       <>
-        <Img fluid={Utils.getCurrentImage(gqlData.allImageContent, data)} />
+        <Img
+          loading={loading ? loading : "lazy"}
+          fluid={Utils.getCurrentImage(gqlData.allImageContent, data)}
+        />
       </>
     )}
   />
