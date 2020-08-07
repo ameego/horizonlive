@@ -27,14 +27,14 @@ export const query = graphql`
   fragment ArtistFluid on ImageSharp {
     fluid(maxWidth: 500, maxHeight: 300, quality: 40) {
       originalName
-      ...GatsbyImageSharpFluid
+      ...GatsbyImageSharpFluid_withWebp
     }
   }
 
   fragment ArtistFixed on ImageSharp {
     fixed(width: 500, height: 300) {
       originalName
-      ...GatsbyImageSharpFixed
+      ...GatsbyImageSharpFixed_withWebp
     }
   }
 `
