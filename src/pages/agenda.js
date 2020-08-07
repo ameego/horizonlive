@@ -1,22 +1,9 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import Layout from "../components/layout/layout"
+import EventListing from "../components/event-listing/event-listing"
 
-export const PureHome = ({
-  data: {
-    allAgendaJson: { edges },
-  },
-}) => (
-  <>
-    {edges.map((date, index) => (
-      <p key={index}>
-        {date.node.category} | {date.node.evenement} | {date.node.eventdate}
-      </p>
-    ))}
-  </>
-)
-
-export const Home = () => {
+export const Agenda = () => {
   const data = useStaticQuery(graphql`
     query Agenda {
       allAgendaJson(sort: { fields: eventdate }) {
@@ -31,9 +18,9 @@ export const Home = () => {
 
   return (
     <Layout>
-      <PureHome data={data} />
+      <EventListing data={data.allAgendaJson} isArtistNameProminent={true} />
     </Layout>
   )
 }
 
-export default Home
+export default Agenda
