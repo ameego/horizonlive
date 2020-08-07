@@ -6,9 +6,18 @@ function splitDate(date) {
   return moment(date, "MMMM-DD-YYYY").format("DD/MMM/YY").split("/")
 }
 
-const EventListing = ({ data }) => {
+function displayPrimaryInfo(date, isArtistNameProminent) {
+  return isArtistNameProminent ? date.node.category : date.node.evenement
+}
+
+function displaySecondaryInfo(date, isArtistNameProminent) {
+  return isArtistNameProminent ? date.node.evenement : date.node.category
+}
+
+const EventListing = ({ data, isArtistNameProminent }) => {
   return (
     <div>
+      {console.log(data)}
       <ul className={style.eventlisting}>
         {data.edges.map((date, index) => (
           <li key={index} className={style.eventlisting__container}>
@@ -22,9 +31,11 @@ const EventListing = ({ data }) => {
               </div>
             </div>
             <div className={style.eventlisting__information}>
-              <p className={style.eventlisting__title}>{date.node.evenement}</p>
+              <p className={style.eventlisting__title}>
+                {displayPrimaryInfo(date, isArtistNameProminent)}
+              </p>
               <p className={style.eventlisting__subtitle}>
-                {date.node.category}
+                {displaySecondaryInfo(date, isArtistNameProminent)}
               </p>
             </div>
           </li>
