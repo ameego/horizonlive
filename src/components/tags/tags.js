@@ -1,14 +1,20 @@
 import React from "react"
 import style from "./tags.module.scss"
 
-const Tags = ({ data }) => (
-  <ul className={style.tags}>
-    {data.map((category, index) => (
-      <li className={category} key={index}>
-        {category}
-      </li>
-    ))}
-  </ul>
-)
+const Tags = ({ data, isCentered }) => {
+  console.log(isCentered)
+  var classNames = isCentered
+    ? `${style.tags} justify-content--centered`
+    : style.tags
+  return (
+    <ul className={classNames}>
+      {data.map((category, index) => (
+        <li className={category} key={index}>
+          {category}
+        </li>
+      ))}
+    </ul>
+  )
+}
 
 export default Tags

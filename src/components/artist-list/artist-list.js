@@ -1,6 +1,8 @@
 import React from "react"
 import { Link } from "gatsby"
 import style from "./artist-list.module.scss"
+import FluidImg from "../fluid-img/fluid-img"
+import Tags from "../tags/tags"
 
 const ArtistList = ({
   data: {
@@ -11,11 +13,10 @@ const ArtistList = ({
     {edges.map((artist, index) => (
       <li className={style.list__item} key={index}>
         <Link to={`../../artists/${artist.node.slug}`}>
-          <h2 className={style.title}>{artist.node.artistName}</h2>
-          <div className={style.tag_container}>
-            {artist.node.category.map((category, index) => (
-              <span key={index}>{category}</span>
-            ))}
+          <FluidImg data={artist.node.banner} />
+          <div className={style.list__information}>
+            <h2 className={style.title}>{artist.node.artistName}</h2>
+            <Tags data={artist.node.category} isCentered={true} />
           </div>
         </Link>
       </li>

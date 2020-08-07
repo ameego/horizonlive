@@ -184,7 +184,7 @@ body {
 .something {
   display: grid;
   grid-gap: 5rem;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 2.5fr minmax(300px, 1fr);
   list-style-type: none;
   margin: 0;
 }
@@ -209,4 +209,8 @@ body {
   > * + * {
     margin-top: 6rem;
   }
+}
+
+.justify-content--centered {
+  justify-content: center;
 }
