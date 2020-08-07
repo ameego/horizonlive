@@ -2,7 +2,6 @@ import React from "react"
 import style from "./tags.module.scss"
 
 const Tags = ({ data, isCentered }) => {
-  console.log(isCentered)
   var classNames = isCentered
     ? `${style.tags} justify-content--centered`
     : style.tags

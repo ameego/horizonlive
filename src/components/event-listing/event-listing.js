@@ -17,7 +17,6 @@ function displaySecondaryInfo(date, isArtistNameProminent) {
 const EventListing = ({ data, isArtistNameProminent }) => {
   return (
     <div>
-      {console.log(data)}
       <ul className={style.eventlisting}>
         {data.edges.map((date, index) => (
           <li key={index} className={style.eventlisting__container}>
