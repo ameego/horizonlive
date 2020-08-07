@@ -48,7 +48,7 @@ export default function Template({ data }) {
                   quoteData: artistData.edges[0].node.citation.quote,
                 }}
               />
-              <EventListing data={agendaData} />
+              {agendaData ? <EventListing data={agendaData} /> : null}
             </div>
           </div>
         </div>
