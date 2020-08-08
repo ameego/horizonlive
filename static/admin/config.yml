@@ -6,6 +6,18 @@ backend:
 media_folder: static/assets
 public_folder: /assets
 collections:
+  - name: "settings"
+    label: "Settings"
+    extension: "json"
+    editor:
+      preview: false
+    files:
+      - file: "collections/pages/home.json"
+        label: Home
+        name: home
+        fields:
+          - { name: title }
+          - { name: url }
   - label: Artists
     name: artists
     summary: "{{artistName}}"

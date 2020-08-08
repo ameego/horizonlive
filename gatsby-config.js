@@ -61,19 +61,19 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `./artists/`,
+        path: `./collections/artists/`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `./focus/`,
+        path: `./collections/focus/`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `./agenda/`,
+        path: `./collections/agenda/`,
       },
     },
   ],
