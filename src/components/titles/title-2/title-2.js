@@ -1,5 +1,5 @@
 import React from "react"
-import style from "./subtitle.module.scss"
+import style from "./title.module.scss"
 
 const Title = ({ text }) => {
   return <h3 className={style.title}>{text}</h3>

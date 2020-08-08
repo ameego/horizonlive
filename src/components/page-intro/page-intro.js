@@ -1,6 +1,6 @@
 import React from "react"
-import Title from "../title/title"
-import Subtitle from "../subtitle/subtitle"
+import Title from "../titles/title-1/title-1"
+import Subtitle from "../titles/title-2/title-2"
 import style from "./page-intro.module.scss"
 
 const PageIntro = ({ title, subtitle, children }) => (

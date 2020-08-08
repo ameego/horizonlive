@@ -8,6 +8,7 @@
 .videogallery__item {
   border-radius: 10px;
   overflow: hidden;
+  position: relative;
 
   iframe {
     width: 100%;
@@ -16,6 +17,6 @@
 }
 
 .videogallery__information {
-  background: white;
   padding: 1.25rem 1rem 1.75rem;
+  background: white;
 }

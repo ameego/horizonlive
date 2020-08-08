@@ -25,7 +25,7 @@ const VideoList = ({
             title={video.node.title}
           ></iframe>
           <div className={style.videogallery__information}>
-            <Title3 text={video.node.title} />
+            <Title3 isSmaller={true} text={video.node.title} />
           </div>
         </li>
       )
