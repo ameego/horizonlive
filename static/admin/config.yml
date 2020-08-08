@@ -16,8 +16,9 @@ collections:
         label: Accueil
         name: home
         fields:
-          - { name: title }
-          - { name: url }
+          - { label: "Titre", name: title, widget: text }
+          - { label: "Sous-titre", name: subtitle, widget: text }
+          - { label: "Bannière", name: banner, widget: image }
   - label: Artists
     name: artists
     summary: "{{artistName}}"
