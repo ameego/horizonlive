@@ -2,7 +2,7 @@
   position: absolute;
   width: 100%;
   z-index: -1;
-  opacity: 0.4;
+  opacity: 0.5;
   top: 0;
   margin-left: 50%;
   transform: translateX(-50%);
@@ -37,7 +37,7 @@
     );
   }
 
-  @media (min-width: 1280px) {
+  @media (min-width: 1200px) {
     &::before,
     &::after {
       display: block;
