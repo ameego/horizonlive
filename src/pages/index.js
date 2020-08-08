@@ -4,6 +4,7 @@ import Layout from "../components/layout/layout"
 import PageIntro from "../components/page-intro/page-intro"
 import ArtistList from "../components/artist-list/artist-list"
 import ImageBanner from "../components/image-banner/image-banner"
+import Subtitle from "../components/subtitle/subtitle"
 
 export const Home = () => {
   const data = useStaticQuery(graphql`
@@ -35,6 +36,7 @@ export const Home = () => {
           subtitle={data.allHomeJson.edges[0].node.subtitle}
         />
         <ArtistList data={data} />
+        <Subtitle text="Vidéothèque" />
       </Layout>
     </>
   )
