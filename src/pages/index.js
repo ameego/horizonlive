@@ -1,6 +1,7 @@
 import React from "react"
 import { useStaticQuery } from "gatsby"
 import Layout from "../components/layout/layout"
+import Spreader from "../components/spreader/spreader"
 import PageIntro from "../components/page-intro/page-intro"
 import ArtistList from "../components/artist-list/artist-list"
 import ImageBanner from "../components/image-banner/image-banner"
@@ -45,10 +46,10 @@ export const Home = () => {
           subtitle={data.allHomeJson.edges[0].node.subtitle}
         />
         <ArtistList data={data} />
-        <div className="regular-spacing">
+        <Spreader>
           <Subtitle text="Vidéothèque" />
           <VideoList data={data} />
-        </div>
+        </Spreader>
       </Layout>
     </>
   )
