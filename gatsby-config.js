@@ -76,5 +76,11 @@ module.exports = {
         path: `./collections/agenda/`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `./collections/pages/home/`,
+      },
+    },
   ],
 }
