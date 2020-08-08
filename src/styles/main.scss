@@ -197,3 +197,9 @@ body {
 .justify-content--centered {
   justify-content: center;
 }
+
+.regular-spacing {
+  > * + * {
+    margin-top: 2rem;
+  }
+}

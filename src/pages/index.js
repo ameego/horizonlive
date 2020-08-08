@@ -45,8 +45,10 @@ export const Home = () => {
           subtitle={data.allHomeJson.edges[0].node.subtitle}
         />
         <ArtistList data={data} />
-        <Subtitle text="Vidéothèque" />
-        <VideoList data={data} />
+        <div className="regular-spacing">
+          <Subtitle text="Vidéothèque" />
+          <VideoList data={data} />
+        </div>
       </Layout>
     </>
   )

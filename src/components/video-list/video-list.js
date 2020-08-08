@@ -21,7 +21,7 @@ const VideoList = ({
             frameBorder="0"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
-            title="The Dark Knight Rises: What Went Wrong? – Wisecrack Edition"
+            title={video.title}
           ></iframe>
         </li>
       )
