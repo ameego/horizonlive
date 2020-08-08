@@ -5,6 +5,7 @@ import PageIntro from "../components/page-intro/page-intro"
 import ArtistList from "../components/artist-list/artist-list"
 import ImageBanner from "../components/image-banner/image-banner"
 import Subtitle from "../components/subtitle/subtitle"
+import VideoList from "../components/video-list/video-list"
 
 export const Home = () => {
   const data = useStaticQuery(graphql`
@@ -25,6 +26,14 @@ export const Home = () => {
           }
         }
       }
+      allVideosJson {
+        edges {
+          node {
+            title
+            url
+          }
+        }
+      }
     }
   `)
   return (
@@ -37,6 +46,7 @@ export const Home = () => {
         />
         <ArtistList data={data} />
         <Subtitle text="Vidéothèque" />
+        <VideoList data={data} />
       </Layout>
     </>
   )

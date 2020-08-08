@@ -24,10 +24,12 @@ collections:
     summary: "{{artistName}}"
     description: "Les artistes d'Horizon sont listés dans cette collection"
     label_singular: artist
-    folder: artists
+    folder: "collections/artists"
     create: true
     slug: "{{artistName}}"
     extension: json
+    editor:
+      preview: false
     fields:
       - label: "Artist name"
         name: artistName
@@ -78,11 +80,13 @@ collections:
     name: focus
     description: "Les activités d'Horizon sont listées dans cette collection"
     label_singular: focus
-    folder: focus
+    folder: "collections/focus"
     create: true
     slug: "{{focus}}"
     identifier_field: focus
     extension: json
+    editor:
+      preview: false
     fields:
       - label: "Focus"
         name: focus
@@ -97,12 +101,14 @@ collections:
     name: agenda
     description: "Les dates des artistes sont listées dans cette collection"
     label_singular: date
-    folder: agenda
+    folder: "collections/agenda"
     create: true
     summary: "[{{category}}] {{evenement}} ({{eventdate}})"
     sortableFields: ["category"]
     slug: "{{evenement}}-{{category}}-{{eventdate}}"
     extension: json
+    editor:
+      preview: false
     fields:
       - label: "Date de l'événement"
         name: "eventdate"
@@ -120,3 +126,19 @@ collections:
         collection: "artists"
         searchFields: ["artistName"]
         valueField: "artistName"
+  - label: Vidéos
+    name: video
+    description: "La vidéothèque est maintenue dans cette collection"
+    label_singular: vidéos
+    folder: "collections/videos"
+    create: true
+    slug: "{{title}}"
+    identifier_field: focus
+    extension: json
+    editor:
+      preview: false
+    fields:
+      - label: "Video title"
+        name: title
+      - label: "Youtube url"
+        name: url

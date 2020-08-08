@@ -82,5 +82,11 @@ module.exports = {
         path: `./collections/pages/home/`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `./collections/videos/`,
+      },
+    },
   ],
 }
