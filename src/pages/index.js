@@ -23,6 +23,7 @@ export const Home = () => {
             title
             subtitle
             banner
+            videos
           }
         }
       }
@@ -36,6 +37,17 @@ export const Home = () => {
       }
     }
   `)
+
+  let filteredVideos = []
+  var videoData = data.allHomeJson.edges[0].node.videos
+  data.allVideosJson.edges.map(video => {
+    for (let i = 0; i < videoData.length; i++) {
+      if (videoData[i] === video.node.title) {
+        filteredVideos.push(video)
+      }
+    }
+  })
+
   return (
     <>
       <ImageBanner data={data.allHomeJson.edges[0].node.banner} />
@@ -51,7 +63,7 @@ export const Home = () => {
             isSmaller={true}
             lessBottomSpace={true}
           />
-          <VideoList data={data} />
+          <VideoList data={filteredVideos} />
         </Spreader>
       </Layout>
     </>

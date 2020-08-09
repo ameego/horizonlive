@@ -19,6 +19,15 @@ collections:
           - { label: "Titre", name: title, widget: text }
           - { label: "Sous-titre", name: subtitle, widget: text }
           - { label: "Bannière", name: banner, widget: image }
+          - {
+              label: "Vitrine de vidéos",
+              name: videos,
+              widget: relation,
+              collection: video,
+              searchFields: ["title"],
+              valueField: "title",
+              multiple: true,
+            }
   - label: Artists
     name: artists
     summary: "{{artistName}}"
