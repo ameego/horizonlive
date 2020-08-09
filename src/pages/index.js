@@ -40,7 +40,7 @@ export const Home = () => {
 
   let filteredVideos = []
   var videoData = data.allHomeJson.edges[0].node.videos
-  data.allVideosJson.edges.map(video => {
+  data.allVideosJson.edges.forEach(video => {
     for (let i = 0; i < videoData.length; i++) {
       if (videoData[i] === video.node.title) {
         filteredVideos.push(video)
