@@ -11,6 +11,10 @@ module.exports = {
         link: "/artists",
       },
       {
+        name: "Vidéos",
+        link: "/videos",
+      },
+      {
         name: "Focus",
         link: "/focus",
         submenu: [
@@ -74,6 +78,12 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `./collections/agenda/`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `./collections/news/`,
       },
     },
     {

@@ -28,6 +28,7 @@ collections:
               valueField: "title",
               multiple: true,
             }
+
   - label: Artists
     name: artists
     summary: "{{artistName}}"
@@ -85,6 +86,7 @@ collections:
             widget: image
           - label: "Text alternatif"
             name: altText
+
   - label: Focus
     name: focus
     description: "Les activités d'Horizon sont listées dans cette collection"
@@ -106,6 +108,7 @@ collections:
             "^[a-z0-9]+(?:-[a-z0-9]+)*$",
             "A slug can have no spaces or special characters",
           ]
+
   - label: Agenda
     name: agenda
     description: "Les dates des artistes sont listées dans cette collection"
@@ -135,6 +138,7 @@ collections:
         collection: "artists"
         searchFields: ["artistName"]
         valueField: "artistName"
+
   - label: Vidéos
     name: video
     description: "La vidéothèque est maintenue dans cette collection"
@@ -151,3 +155,27 @@ collections:
         name: title
       - label: "Youtube url"
         name: url
+
+  - label: Actualités
+    name: news
+    description: "Les actualités sont listées dans cette collection"
+    label_singular: actualité
+    folder: "collections/news"
+    create: true
+    slug: "{{title}}"
+    identifier_field: news
+    extension: json
+    editor:
+      preview: false
+    fields:
+      - label: "News title"
+        name: title
+      - name: artist
+        label: Artistes
+        widget: relation
+        collection: "artists"
+        searchFields: ["artistName"]
+        valueField: "artistName"
+      - label: "Corps de texte"
+        name: text
+        widget: text
