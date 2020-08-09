@@ -1,6 +1,11 @@
 module.exports = {
   siteMetadata: {
     title: "Horizon",
+    titleTemplate: "%s · Produit des artistes libres",
+    description:
+      "Horizon produit des artistes libres et sans frontières. Horizon repère puis développe des artistes dès leurs tous premiers pas sur scène.",
+    url: "https://www.doe.com",
+    image: "",
     menuLinks: [
       {
         name: "Home",
