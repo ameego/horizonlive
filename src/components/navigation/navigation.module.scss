@@ -38,6 +38,20 @@
   }
 }
 
+:global(.nav-container-sticky) {
+  .navigation__item > a {
+    color: #000;
+
+    &:hover {
+      color: #dd7c7c;
+    }
+  }
+
+  .navigation__item > .active {
+    color: #dd7c7c;
+  }
+}
+
 .navigation__disabled {
   &:active {
     pointer-events: none;
