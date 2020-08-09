@@ -3,6 +3,10 @@
   margin-bottom: 7.5rem;
   padding-left: 2.5rem;
   border-left: 1px solid #fff;
+
+  > * + * {
+    margin-top: 1.5rem;
+  }
 }
 
 .less_spacing {
