@@ -5,7 +5,7 @@ import Spreader from "../components/spreader/spreader"
 import PageIntro from "../components/page-intro/page-intro"
 import ArtistList from "../components/artist-list/artist-list"
 import ImageBanner from "../components/image-banner/image-banner"
-import Subtitle from "../components/subtitle/subtitle"
+import Subtitle from "../components/titles/title-2/title-2"
 import VideoList from "../components/video-list/video-list"
 
 export const Home = () => {
@@ -47,7 +47,11 @@ export const Home = () => {
         />
         <ArtistList data={data} />
         <Spreader>
-          <Subtitle text="Vidéothèque" />
+          <PageIntro
+            title="Vidéothèque"
+            isSmaller={true}
+            lessBottomSpace={true}
+          />
           <VideoList data={data} />
         </Spreader>
       </Layout>
