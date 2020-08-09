@@ -1,5 +1,6 @@
 import React from "react"
 import { useStaticQuery } from "gatsby"
+import SEO from "../components/seo/seo"
 import Layout from "../components/layout/layout"
 import ArtistList from "../components/artist-list/artist-list"
 
@@ -16,9 +17,12 @@ export const Home = () => {
     }
   `)
   return (
-    <Layout>
-      <ArtistList data={data} />
-    </Layout>
+    <>
+      <SEO />
+      <Layout>
+        <ArtistList data={data} />
+      </Layout>
+    </>
   )
 }
 

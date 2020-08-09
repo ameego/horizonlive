@@ -1,10 +1,9 @@
 import React from "react"
 import { graphql, StaticQuery } from "gatsby"
 import Header from "../header/header"
-import SEO from "../seo/seo"
 import style from "./layout.module.scss"
 
-const Layout = ({ children }) => (
+const Layout = ({ children, seo }) => (
   <StaticQuery
     query={graphql`
       query SiteMeta {
@@ -21,7 +20,6 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <>
-        <SEO />
         <Header
           menuLinks={data.site.siteMetadata.menuLinks}
           siteTitle={data.site.siteMetadata.title}

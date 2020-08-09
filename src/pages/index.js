@@ -1,5 +1,6 @@
 import React from "react"
 import { useStaticQuery } from "gatsby"
+import SEO from "../components/seo/seo"
 import Layout from "../components/layout/layout"
 import Spreader from "../components/spreader/spreader"
 import PageIntro from "../components/page-intro/page-intro"
@@ -50,6 +51,7 @@ export const Home = () => {
 
   return (
     <>
+      <SEO />
       <ImageBanner data={data.allHomeJson.edges[0].node.banner} />
       <Layout>
         <PageIntro

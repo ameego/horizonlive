@@ -1,8 +1,9 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Layout from "../components/layout/layout"
+import SEO from "../components/seo/seo"
 import Tags from "../components/tags/tags"
 import Quote from "../components/quote/quote"
+import Layout from "../components/layout/layout"
 import PageIntro from "../components/page-intro/page-intro"
 import EventListing from "../components/event-listing/event-listing"
 import PhotoGallery from "../components/photo-gallery/photo-gallery"
@@ -19,6 +20,7 @@ export default function Template({ data }) {
 
   return (
     <>
+      <SEO />
       <ImageBanner data={artistData.edges[0].node.banner} />
       <Layout>
         <PageIntro
