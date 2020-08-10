@@ -4,6 +4,7 @@ import SEO from "../components/seo/seo"
 import Layout from "../components/layout/layout"
 import Spreader from "../components/spreader/spreader"
 import PageIntro from "../components/page-intro/page-intro"
+import NewsList from "../components/news-list/news-list"
 import ArtistList from "../components/artist-list/artist-list"
 import ImageBanner from "../components/image-banner/image-banner"
 import VideoList from "../components/video-list/video-list"
@@ -33,6 +34,14 @@ export const Home = () => {
           node {
             title
             url
+          }
+        }
+      }
+      allNewsJson {
+        edges {
+          node {
+            text
+            title
           }
         }
       }
@@ -67,6 +76,15 @@ export const Home = () => {
             lessBottomSpace={true}
           />
           <VideoList data={filteredVideos} />
+        </Spreader>
+        <Spreader>
+          <PageIntro
+            title="Actualités"
+            subtitle="Vestibulum mollis nulla sed quam sagittis lobortis. Aliquam posuere consequat tortor, sed consectetur erat."
+            isSmaller={true}
+            lessBottomSpace={true}
+          />
+          <NewsList data={data.allNewsJson.edges} />
         </Spreader>
       </Layout>
     </>
