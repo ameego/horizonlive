@@ -28,8 +28,6 @@ export const Videos = () => {
     }
   `)
 
-  console.log(data.allVideosJson)
-
   return (
     <>
       <SEO />

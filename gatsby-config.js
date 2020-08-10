@@ -11,10 +11,10 @@ module.exports = {
         name: "Home",
         link: "/",
       },
-      {
-        name: "Artists",
-        link: "/artists",
-      },
+      // {
+      //   name: "Artists",
+      //   link: "/artists",
+      // },
       {
         name: "Vidéos",
         link: "/videos",

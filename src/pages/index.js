@@ -62,6 +62,7 @@ export const Home = () => {
         <Spreader>
           <PageIntro
             title="Vidéothèque"
+            subtitle="Vestibulum mollis nulla sed quam sagittis lobortis. Aliquam posuere consequat tortor, sed consectetur erat."
             isSmaller={true}
             lessBottomSpace={true}
           />

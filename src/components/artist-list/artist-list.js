@@ -17,7 +17,7 @@ const ArtistList = ({
           <FluidImg data={artist.node.banner} />
           <div className={style.list__information}>
             <Title3 text={artist.node.artistName} />
-            <Tags data={artist.node.category} isCentered={true} />
+            <Tags data={artist.node.category} />
           </div>
         </Link>
       </li>
