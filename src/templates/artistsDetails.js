@@ -21,31 +21,29 @@ export default function Template({ data }) {
   return (
     <>
       <SEO />
-      <ImageBanner data={artistData.edges[0].node.banner} />
+      <ImageBanner data={artistData.nodes[0].banner} />
       <Layout>
         <PageIntro
-          title={artistData.edges[0].node.artistName}
-          subtitle={artistData.edges[0].node.introduction}
-          children={<Tags data={artistData.edges[0].node.category} />}
+          title={artistData.nodes[0].artistName}
+          subtitle={artistData.nodes[0].introduction}
+          children={<Tags data={artistData.nodes[0].category} />}
         />
         <div className="something">
           <div className="formatted-content">
             <div
-              dangerouslySetInnerHTML={rawMarkup(
-                artistData.edges[0].node.biography
-              )}
+              dangerouslySetInnerHTML={rawMarkup(artistData.nodes[0].biography)}
             />
             <PhotoGallery
               data={{
-                galleryImages: artistData.edges[0].node.galleryImages,
+                galleryImages: artistData.nodes[0].galleryImages,
               }}
             />
           </div>
           <div className="sidebar">
             <Quote
               data={{
-                quoteImage: artistData.edges[0].node.citation.quoteImage,
-                quoteData: artistData.edges[0].node.citation.quote,
+                quoteImage: artistData.nodes[0].citation.quoteImage,
+                quoteData: artistData.nodes[0].citation.quote,
               }}
             />
             {agendaData ? <EventListing data={agendaData} /> : null}
@@ -58,17 +56,13 @@ export default function Template({ data }) {
 export const pageQuery = graphql`
   query($slug: String!, $artistName: String!) {
     artistData: allArtistsJson(filter: { slug: { eq: $slug } }) {
-      edges {
-        node {
-          ...ArtistsFragment
-        }
+      nodes {
+        ...ArtistsFragment
       }
     }
     agendaData: allAgendaJson(filter: { category: { eq: $artistName } }) {
-      edges {
-        node {
-          ...AgendaFragment
-        }
+      nodes {
+        ...AgendaFragment
       }
     }
   }

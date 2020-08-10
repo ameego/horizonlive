@@ -8,10 +8,8 @@ export const Agenda = () => {
   const data = useStaticQuery(graphql`
     query Agenda {
       allAgendaJson(sort: { fields: eventdate }) {
-        edges {
-          node {
-            ...AgendaFragment
-          }
+        nodes {
+          ...AgendaFragment
         }
       }
     }

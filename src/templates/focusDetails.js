@@ -17,10 +17,8 @@ export default function Template({ data }) {
 export const pageQuery = graphql`
   query($slug: String!) {
     allArtistsJson(filter: { category: { eq: $slug } }) {
-      edges {
-        node {
-          ...ArtistsFragment
-        }
+      nodes {
+        ...ArtistsFragment
       }
     }
   }

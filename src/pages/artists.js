@@ -8,10 +8,8 @@ export const Home = () => {
   const data = useStaticQuery(graphql`
     query ArtistQuery {
       allArtistsJson {
-        edges {
-          node {
-            ...ArtistsFragment
-          }
+        nodes {
+          ...ArtistsFragment
         }
       }
     }

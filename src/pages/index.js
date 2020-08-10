@@ -13,41 +13,33 @@ export const Home = () => {
   const data = useStaticQuery(graphql`
     query HomeQuery {
       allArtistsJson {
-        edges {
-          node {
-            ...ArtistsFragment
-          }
+        nodes {
+          ...ArtistsFragment
         }
       }
       allHomeJson {
-        edges {
-          node {
-            ...HomeFragment
-          }
+        nodes {
+          ...HomeFragment
         }
       }
       allVideosJson {
-        edges {
-          node {
-            ...VideosFragment
-          }
+        nodes {
+          ...VideosFragment
         }
       }
       allNewsJson {
-        edges {
-          node {
-            ...NewsFragment
-          }
+        nodes {
+          ...NewsFragment
         }
       }
     }
   `)
 
   let filteredVideos = []
-  var videoData = data.allHomeJson.edges[0].node.videos
-  data.allVideosJson.edges.forEach(video => {
+  var videoData = data.allHomeJson.nodes[0].videos
+  data.allVideosJson.nodes.forEach(video => {
     for (let i = 0; i < videoData.length; i++) {
-      if (videoData[i] === video.node.title) {
+      if (videoData[i] === video.title) {
         filteredVideos.push(video)
       }
     }
@@ -56,11 +48,11 @@ export const Home = () => {
   return (
     <>
       <SEO />
-      <ImageBanner data={data.allHomeJson.edges[0].node.banner} />
+      <ImageBanner data={data.allHomeJson.nodes[0].banner} />
       <Layout>
         <PageIntro
-          title={data.allHomeJson.edges[0].node.title}
-          subtitle={data.allHomeJson.edges[0].node.subtitle}
+          title={data.allHomeJson.nodes[0].title}
+          subtitle={data.allHomeJson.nodes[0].subtitle}
         />
         <ArtistList data={data} />
         <Spreader>
@@ -79,7 +71,7 @@ export const Home = () => {
             isSmaller={true}
             lessBottomSpace={true}
           />
-          <NewsList data={data.allNewsJson.edges} />
+          <NewsList data={data.allNewsJson.nodes} />
         </Spreader>
       </Layout>
     </>

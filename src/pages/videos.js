@@ -11,18 +11,14 @@ export const Videos = () => {
   const data = useStaticQuery(graphql`
     query VideosQuery {
       allHomeJson {
-        edges {
-          node {
-            banner
-          }
+        nodes {
+          banner
         }
       }
       allVideosJson {
-        edges {
-          node {
-            title
-            url
-          }
+        nodes {
+          title
+          url
         }
       }
     }
@@ -31,14 +27,14 @@ export const Videos = () => {
   return (
     <>
       <SEO />
-      <ImageBanner data={data.allHomeJson.edges[0].node.banner} />
+      <ImageBanner data={data.allHomeJson.nodes[0].banner} />
       <Layout>
         <Spreader>
           <PageIntro
             title="Horizon produit ses propres contenus vidéos"
             subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce venenatis elit vel mi molestie, et vehicula ligula luctus. Vestibulum aliquam dui eget dui elementum."
           />
-          <VideoList data={data.allVideosJson.edges} />
+          <VideoList data={data.allVideosJson.nodes} />
         </Spreader>
       </Layout>
     </>

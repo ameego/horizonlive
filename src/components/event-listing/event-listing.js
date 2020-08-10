@@ -7,26 +7,25 @@ function splitDate(date) {
 }
 
 function displayPrimaryInfo(date, isArtistNameProminent) {
-  return isArtistNameProminent ? date.node.category : date.node.evenement
+  return isArtistNameProminent ? date.category : date.evenement
 }
 
 function displaySecondaryInfo(date, isArtistNameProminent) {
-  return isArtistNameProminent ? date.node.evenement : date.node.category
+  return isArtistNameProminent ? date.evenement : date.category
 }
 
 const EventListing = ({ data, isArtistNameProminent }) => {
   return (
     <div>
       <ul className={style.eventlisting}>
-        {data.edges.map((date, index) => (
+        {data.nodes.map((date, index) => (
           <li key={index} className={style.eventlisting__container}>
             <div className={style.eventlisting__date}>
               <div className={style.eventlisting__date1}>
-                {splitDate(date.node.eventdate)[0]}
+                {splitDate(date.eventdate)[0]}
               </div>
               <div className={style.eventlisting__date2}>
-                {splitDate(date.node.eventdate)[1]}{" "}
-                {splitDate(date.node.eventdate)[2]}
+                {splitDate(date.eventdate)[1]} {splitDate(date.eventdate)[2]}
               </div>
             </div>
             <div className={style.eventlisting__information}>

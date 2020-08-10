@@ -7,17 +7,17 @@ import Tags from "../tags/tags"
 
 const ArtistList = ({
   data: {
-    allArtistsJson: { edges },
+    allArtistsJson: { nodes },
   },
 }) => (
   <ul className={style.list}>
-    {edges.map((artist, index) => (
+    {nodes.map((artist, index) => (
       <li className={style.list__item} key={index}>
-        <Link to={`../../artists/${artist.node.slug}`}>
-          <FluidImg data={artist.node.banner} />
+        <Link to={`../../artists/${artist.slug}`}>
+          <FluidImg data={artist.banner} />
           <div className={style.list__information}>
-            <Title3 text={artist.node.artistName} />
-            <Tags data={artist.node.category} />
+            <Title3 text={artist.artistName} />
+            <Tags data={artist.category} />
           </div>
         </Link>
       </li>
