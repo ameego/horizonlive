@@ -35,6 +35,7 @@ export const query = graphql`
     title
     artist
     text
+    date(formatString: "Do MMM YY", locale: "fr")
   }
 
   fragment VideosFragment on VideosJson {
