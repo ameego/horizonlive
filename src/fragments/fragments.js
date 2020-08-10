@@ -21,7 +21,7 @@ export const query = graphql`
   fragment AgendaFragment on AgendaJson {
     evenement
     category
-    eventdate
+    eventdate(formatString: "Do/MMM/YY", locale: "fr")
   }
 
   fragment HomeFragment on HomeJson {

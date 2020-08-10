@@ -3,7 +3,7 @@ import style from "./event-listing.module.scss"
 import moment from "moment"
 
 function splitDate(date) {
-  return moment(date, "MMMM-DD-YYYY").format("DD/MMM/YY").split("/")
+  return date.split("/")
 }
 
 function displayPrimaryInfo(date, isArtistNameProminent) {
