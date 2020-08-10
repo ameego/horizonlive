@@ -22,26 +22,21 @@ export const Home = () => {
       allHomeJson {
         edges {
           node {
-            title
-            subtitle
-            banner
-            videos
+            ...HomeFragment
           }
         }
       }
       allVideosJson {
         edges {
           node {
-            title
-            url
+            ...VideosFragment
           }
         }
       }
       allNewsJson {
         edges {
           node {
-            text
-            title
+            ...NewsFragment
           }
         }
       }

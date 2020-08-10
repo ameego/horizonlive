@@ -6,8 +6,8 @@ const NewsList = ({ data }) => {
     <ul className={style.newlist}>
       {data.map((news, index) => (
         <li className={style.newslist__item} key={index}>
-          <p>{news.node.title}</p>
-          <p>{news.node.text}</p>
+          <h1>{news.node.title}</h1>
+          <p>{news.node.artist}</p>
         </li>
       ))}
     </ul>

@@ -24,6 +24,24 @@ export const query = graphql`
     eventdate
   }
 
+  fragment HomeFragment on HomeJson {
+    title
+    subtitle
+    banner
+    videos
+  }
+
+  fragment NewsFragment on NewsJson {
+    title
+    artist
+    text
+  }
+
+  fragment VideosFragment on VideosJson {
+    title
+    url
+  }
+
   fragment ArtistFluid on ImageSharp {
     fluid(maxWidth: 500, maxHeight: 300, quality: 40) {
       originalName
