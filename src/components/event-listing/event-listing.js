@@ -1,10 +1,5 @@
 import React from "react"
 import style from "./event-listing.module.scss"
-import moment from "moment"
-
-function splitDate(date) {
-  return date.split("/")
-}
 
 function displayPrimaryInfo(date, isArtistNameProminent) {
   return isArtistNameProminent ? date.category : date.evenement
@@ -22,11 +17,11 @@ const EventListing = ({ data, isArtistNameProminent }) => {
           <li key={index} className={style.eventlisting__container}>
             <div className={style.eventlisting__date}>
               <div className={style.eventlisting__date1}>
-                {splitDate(date.eventdate)[0]}
+                {date.eventdate.split("/")[0]}
               </div>
               <div className={style.eventlisting__date2}>
-                <span>{splitDate(date.eventdate)[1]}</span>
-                <span>{splitDate(date.eventdate)[2]}</span>
+                <span>{date.eventdate.split("/")[1]}</span>
+                <span>{date.eventdate.split("/")[2]}</span>
               </div>
             </div>
             <div className={style.eventlisting__information}>
