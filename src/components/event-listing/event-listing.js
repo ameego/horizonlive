@@ -1,5 +1,6 @@
 import React from "react"
 import style from "./event-listing.module.scss"
+import Title from "../titles/title-1/title-1"
 
 function displayPrimaryInfo(date, isArtistNameProminent) {
   return isArtistNameProminent ? date.category : date.evenement
@@ -12,6 +13,7 @@ function displaySecondaryInfo(date, isArtistNameProminent) {
 const EventListing = ({ data, isArtistNameProminent }) => {
   return (
     <div>
+      <Title text="Agenda" isSmaller />
       <ul className={style.eventlisting}>
         {data.nodes.map((date, index) => (
           <li key={index} className={style.eventlisting__container}>
