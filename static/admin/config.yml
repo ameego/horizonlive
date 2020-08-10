@@ -127,7 +127,7 @@ collections:
         widget: "datetime"
         default: ""
         dateFormat: "DD/MMM/YYYY"
-        timeFormat: "HH:mm"
+        timeFormat: false
         format: "LLL"
         pickerUtc: false
       - name: evenement
@@ -170,6 +170,13 @@ collections:
     fields:
       - label: "News title"
         name: title
+      - label: "Date de publications"
+        name: "date"
+        widget: "datetime"
+        dateFormat: "DD/MMM/YYYY"
+        timeFormat: false
+        format: "LLL"
+        pickerUtc: false
       - name: artist
         label: Artistes
         widget: relation
