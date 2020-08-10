@@ -1,5 +1,7 @@
 .eventlisting {
   padding: 0;
+  border-radius: 5px;
+  overflow: hidden;
 }
 
 .eventlisting li {
@@ -7,7 +9,7 @@
 }
 
 .eventlisting li + li {
-  margin-top: 1rem;
+  margin-top: 1px;
 }
 
 .eventlisting__container {
