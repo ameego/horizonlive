@@ -25,7 +25,8 @@ const EventListing = ({ data, isArtistNameProminent }) => {
                 {splitDate(date.eventdate)[0]}
               </div>
               <div className={style.eventlisting__date2}>
-                {splitDate(date.eventdate)[1]} {splitDate(date.eventdate)[2]}
+                <span>{splitDate(date.eventdate)[1]}</span>
+                <span>{splitDate(date.eventdate)[2]}</span>
               </div>
             </div>
             <div className={style.eventlisting__information}>
