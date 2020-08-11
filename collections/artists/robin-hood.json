@@ -1,0 +1,20 @@
+{
+  "artistName": "Robin Hood",
+  "category": [
+    "Label"
+  ],
+  "biography": "wefwef",
+  "introduction": "wefwef",
+  "citation": {
+    "quote": "wefwef",
+    "quoteImage": "static/assets/test/robin-hood/67704863_10156430387776723_1649174850759032832_o.jpg"
+  },
+  "banner": "static/assets/test/robin-hood/67704863_10156430387776723_1649174850759032832_o.jpg",
+  "slug": "robin-hood",
+  "galleryImages": [
+    {
+      "image": "static/assets/test/robin-hood/67704863_10156430387776723_1649174850759032832_o.jpg",
+      "altText": "wefwef"
+    }
+  ]
+}
