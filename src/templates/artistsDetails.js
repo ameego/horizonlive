@@ -33,11 +33,7 @@ export default function Template({ data }) {
             <div
               dangerouslySetInnerHTML={rawMarkup(artistData.nodes[0].biography)}
             />
-            <PhotoGallery
-              data={{
-                galleryImages: artistData.nodes[0].galleryImages,
-              }}
-            />
+            <PhotoGallery />
           </div>
           <div className="sidebar">
             <Quote

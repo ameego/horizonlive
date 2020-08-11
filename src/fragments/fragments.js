@@ -50,6 +50,17 @@ export const query = graphql`
     }
   }
 
+  fragment ArtistGalleryFluid on ImageSharp {
+    thumb: fluid(maxWidth: 250, maxHeight: 150, quality: 40) {
+      originalName
+      ...GatsbyImageSharpFluid_withWebp
+    }
+    full: fluid(maxWidth: 1280, maxHeight: 700, quality: 60) {
+      originalName
+      ...GatsbyImageSharpFluid_withWebp
+    }
+  }
+
   fragment ArtistFixed on ImageSharp {
     fixed(width: 500, height: 300) {
       originalName
