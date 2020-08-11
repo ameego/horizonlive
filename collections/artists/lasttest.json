@@ -1,0 +1,20 @@
+{
+  "artistName": "lasttest",
+  "category": [
+    "Publishing"
+  ],
+  "biography": "wef",
+  "introduction": "wef",
+  "citation": {
+    "quote": "wef",
+    "quoteImage": "static/assets/test/lasttest/67704863_10156430387776723_1649174850759032832_o.jpg"
+  },
+  "banner": "static/assets/test/lasttest/67704863_10156430387776723_1649174850759032832_o.jpg",
+  "slug": "lasttest",
+  "galleryImages": [
+    {
+      "image": "static/assets/test/lasttest/67704863_10156430387776723_1649174850759032832_o.jpg",
+      "altText": "wefwf"
+    }
+  ]
+}
