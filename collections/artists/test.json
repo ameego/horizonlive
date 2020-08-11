@@ -1,0 +1,20 @@
+{
+  "category": [
+    "Live"
+  ],
+  "artistName": "test",
+  "biography": "wef",
+  "introduction": "wef",
+  "citation": {
+    "quote": "wef",
+    "quoteImage": "static/assets/map-category-list-live-artistname-test-biography-wef-introduction-wef-citation-map-quote-wef-public_folder-assets/67234102_10156420124736723_840629476122427392_o.jpg"
+  },
+  "banner": "static/assets/map-category-list-live-artistname-test-biography-wef-introduction-wef-citation-map-quote-wef-quoteimage-static-assets-map-category-list-live-artistname-test-biography-wef-introduction-wef-citation-map-quote-wef/67234102_10156420124736723_840629476122427392_o.jpg",
+  "slug": "test",
+  "galleryImages": [
+    {
+      "image": "static/assets/map-public_folder-assets-citation-map-quote-wef-quoteimage-static-assets-map-category-list-live-artistname-test-biography-wef-introduction-wef-citation-map-quote-wef-public_folder-assets-67234102_10156420124736723_84062947612242739/67234102_10156420124736723_840629476122427392_o.jpg",
+      "altText": "wefwef"
+    }
+  ]
+}
