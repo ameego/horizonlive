@@ -1,0 +1,20 @@
+{
+  "artistName": "fred",
+  "category": [
+    "Publishing"
+  ],
+  "biography": "wefewf",
+  "introduction": "wefwef",
+  "citation": {
+    "quote": "wefwef",
+    "quoteImage": "static/assets/test/fred/67245178_10156430388886723_3206695258335215616_o.jpg"
+  },
+  "banner": "static/assets/test/fred/67245178_10156430388886723_3206695258335215616_o.jpg",
+  "slug": "fred",
+  "galleryImages": [
+    {
+      "image": "static/assets/test/fred/67245178_10156430388886723_3206695258335215616_o.jpg",
+      "altText": "wefwef"
+    }
+  ]
+}
