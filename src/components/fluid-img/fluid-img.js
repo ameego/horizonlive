@@ -1,7 +1,5 @@
 import React from "react"
-import { graphql, StaticQuery } from "gatsby"
 import Img from "gatsby-image"
-import Utils from "../../utils/utils"
 
 const FluidImg = ({ src, loading, durationFadeIn }) => (
   <>
