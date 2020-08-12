@@ -47,13 +47,13 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     })
   })
 
-  // result.data.allFocusJson.edges.forEach(item => {
-  //   createPage({
-  //     path: `focus/${item.node.slug}`,
-  //     component: require.resolve(`./src/templates/focusDetails.js`),
-  //     context: {
-  //       slug: item.node.focus,
-  //     },
-  //   })
-  // })
+  result.data.allFocusJson.edges.forEach(item => {
+    createPage({
+      path: `focus/${item.node.slug}`,
+      component: require.resolve(`./src/templates/focusDetails.js`),
+      context: {
+        slug: item.node.focus,
+      },
+    })
+  })
 }
