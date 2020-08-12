@@ -3,17 +3,12 @@ import { graphql, StaticQuery } from "gatsby"
 import Img from "gatsby-image"
 import Utils from "../../utils/utils"
 
-const FluidImg = ({
-  imageSources,
-  imageToDisplay,
-  loading,
-  durationFadeIn,
-}) => (
+const FluidImg = ({ src, loading, durationFadeIn }) => (
   <>
     <Img
       durationFadeIn={durationFadeIn ? durationFadeIn : 1500}
       loading={loading ? loading : "lazy"}
-      fluid={Utils.getCurrentImage(imageSources, imageToDisplay)}
+      fluid={src}
     />
   </>
 )

@@ -43,7 +43,7 @@ export const query = graphql`
     url
   }
 
-  fragment ArtistImages on ImageSharp {
+  fragment ArtistBannerImage on ImageSharp {
     fluid(maxWidth: 500, maxHeight: 300, quality: 40) {
       originalName
       ...GatsbyImageSharpFluid_withWebp

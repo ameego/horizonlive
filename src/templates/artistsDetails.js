@@ -16,15 +16,12 @@ function rawMarkup(data) {
 }
 
 export default function Template({ data }) {
-  const { artistData, agendaData, artistImages, galleryImages } = data
+  const { artistData, agendaData, bannerImage, galleryImages } = data
 
   return (
     <>
       <SEO />
-      <ImageBanner
-        imageToDisplay={artistData.nodes[0].banner}
-        imageSources={artistImages.nodes}
-      />
+      <ImageBanner src={bannerImage.nodes[0].childImageSharp.fluid} />
       <Layout>
         <PageIntro
           title={artistData.nodes[0].artistName}
@@ -32,7 +29,7 @@ export default function Template({ data }) {
           children={<Tags data={artistData.nodes[0].category} />}
         />
 
-        <div className="something">
+        {/* <div className="something">
           <div className="formatted-content">
             <div
               dangerouslySetInnerHTML={rawMarkup(artistData.nodes[0].biography)}
@@ -47,13 +44,19 @@ export default function Template({ data }) {
             />
             {agendaData ? <EventListing data={agendaData} /> : null}
           </div>
-        </div>
+        </div> */}
       </Layout>
     </>
   )
 }
 export const pageQuery = graphql`
-  query($slug: String!, $artistName: String!, $galleryPath: String!) {
+  query(
+    $slug: String!
+    $artistName: String!
+    # $galleryImagePath: String!
+    # $quoteImagePath: String!
+    $bannerImagePath: String!
+  ) {
     artistData: allArtistsJson(filter: { slug: { eq: $slug } }) {
       nodes {
         ...ArtistsFragment
@@ -64,31 +67,41 @@ export const pageQuery = graphql`
         ...AgendaFragment
       }
     }
-    artistImages: allFile(
+    bannerImage: allFile(
       filter: {
         extension: { regex: "/(jpg)|(jpeg)|(png)/" }
-        relativeDirectory: { eq: $slug }
-        sourceInstanceName: { ne: "img" }
+        relativeDirectory: { eq: $bannerImagePath }
       }
     ) {
       nodes {
         childImageSharp {
-          ...ArtistImages
+          ...ArtistBannerImage
         }
       }
     }
-    galleryImages: allFile(
-      filter: {
-        extension: { regex: "/(jpg)|(jpeg)|(png)/" }
-        relativeDirectory: { eq: $galleryPath }
-        sourceInstanceName: { ne: "img" }
-      }
-    ) {
-      nodes {
-        childImageSharp {
-          ...ArtistGalleryFluid
-        }
-      }
-    }
+    # quoteImage: allFile(
+    #   filter: {
+    #     extension: { regex: "/(jpg)|(jpeg)|(png)/" }
+    #     relativeDirectory: { eq: $quoteImagePath }
+    #   }
+    # ) {
+    #   nodes {
+    #     childImageSharp {
+    #       ...ArtistImages
+    #     }
+    #   }
+    # }
+    # galleryImages: allFile(
+    #   filter: {
+    #     extension: { regex: "/(jpg)|(jpeg)|(png)/" }
+    #     relativeDirectory: { eq: $galleryImagePath }
+    #   }
+    # ) {
+    #   nodes {
+    #     childImageSharp {
+    #       ...ArtistGalleryFluid
+    #     }
+    #   }
+    # }
   }
 `

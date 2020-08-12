@@ -40,7 +40,9 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       context: {
         slug: item.node.slug,
         artistName: item.node.artistName,
-        galleryPath: `${item.node.slug}/gallery`,
+        bannerImagePath: `${item.node.slug}/banner`,
+        quoteImagePath: `${item.node.slug}/quote`,
+        galleryImagePath: `${item.node.slug}/gallery`,
       },
     })
   })

@@ -55,15 +55,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `img`,
-        path: `${__dirname}/static/assets/`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
         name: `artists`,
-        path: `${__dirname}/collections/artists/static/assets/`,
+        path: `${__dirname}/collections/artists/images/`,
       },
     },
     {
