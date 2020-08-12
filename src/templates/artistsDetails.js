@@ -49,30 +49,6 @@ export default function Template({ data }) {
           </div>
         </div>
       </Layout>
-      {/* <Layout>
-        <PageIntro
-          title={artistData.nodes[0].artistName}
-          subtitle={artistData.nodes[0].introduction}
-          children={<Tags data={artistData.nodes[0].category} />}
-        />
-        <div className="something">
-          <div className="formatted-content">
-            <div
-              dangerouslySetInnerHTML={rawMarkup(artistData.nodes[0].biography)}
-            />
-            <PhotoGallery />
-          </div>
-          <div className="sidebar">
-            <Quote
-              data={{
-                quoteImage: artistData.nodes[0].citation.quoteImage,
-                quoteData: artistData.nodes[0].citation.quote,
-              }}
-            />
-            {agendaData ? <EventListing data={agendaData} /> : null}
-          </div>
-        </div>
-      </Layout> */}
     </>
   )
 }
@@ -97,10 +73,7 @@ export const pageQuery = graphql`
     ) {
       nodes {
         childImageSharp {
-          fluid(maxWidth: 500, maxHeight: 300, quality: 40) {
-            originalName
-            ...GatsbyImageSharpFluid_withWebp
-          }
+          ...ArtistImages
         }
       }
     }
@@ -113,14 +86,7 @@ export const pageQuery = graphql`
     ) {
       nodes {
         childImageSharp {
-          thumb: fluid(maxWidth: 250, maxHeight: 150, quality: 40) {
-            originalName
-            ...GatsbyImageSharpFluid_withWebp
-          }
-          full: fluid(maxWidth: 1280, maxHeight: 700, quality: 60) {
-            originalName
-            ...GatsbyImageSharpFluid_withWebp
-          }
+          ...ArtistGalleryFluid
         }
       }
     }
