@@ -21,17 +21,34 @@ export default function Template({ data }) {
   return (
     <>
       <SEO />
-      <PageIntro
-        title={artistData.nodes[0].artistName}
-        subtitle={artistData.nodes[0].introduction}
-        children={<Tags data={artistData.nodes[0].category} />}
-      />
-
       <ImageBanner
         imageToDisplay={artistData.nodes[0].banner}
         imageSources={artistImages.nodes}
       />
-      <PhotoGallery data={galleryImages.nodes} />
+      <Layout>
+        <PageIntro
+          title={artistData.nodes[0].artistName}
+          subtitle={artistData.nodes[0].introduction}
+          children={<Tags data={artistData.nodes[0].category} />}
+        />
+
+        <div className="something">
+          <div className="formatted-content">
+            <div
+              dangerouslySetInnerHTML={rawMarkup(artistData.nodes[0].biography)}
+            />
+            <PhotoGallery data={galleryImages.nodes} />
+          </div>
+          <div className="sidebar">
+            <Quote
+              quote={artistData.nodes[0].citation.quote}
+              imageSources={artistImages.nodes}
+              imageToDisplay={artistData.nodes[0].citation.quoteImage}
+            />
+            {agendaData ? <EventListing data={agendaData} /> : null}
+          </div>
+        </div>
+      </Layout>
       {/* <Layout>
         <PageIntro
           title={artistData.nodes[0].artistName}
