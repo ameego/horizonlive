@@ -16,7 +16,7 @@ function rawMarkup(data) {
 }
 
 export default function Template({ data }) {
-  const { artistData, agendaData, artistImages } = data
+  const { artistData, agendaData, artistImages, galleryImages } = data
 
   return (
     <>
@@ -31,6 +31,7 @@ export default function Template({ data }) {
         imageToDisplay={artistData.nodes[0].banner}
         imageSources={artistImages.nodes}
       />
+      <PhotoGallery data={galleryImages.nodes} />
       {/* <Layout>
         <PageIntro
           title={artistData.nodes[0].artistName}
@@ -59,7 +60,7 @@ export default function Template({ data }) {
   )
 }
 export const pageQuery = graphql`
-  query($slug: String!, $artistName: String!) {
+  query($slug: String!, $artistName: String!, $galleryPath: String!) {
     artistData: allArtistsJson(filter: { slug: { eq: $slug } }) {
       nodes {
         ...ArtistsFragment
@@ -80,6 +81,26 @@ export const pageQuery = graphql`
       nodes {
         childImageSharp {
           fluid(maxWidth: 500, maxHeight: 300, quality: 40) {
+            originalName
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+    }
+    galleryImages: allFile(
+      filter: {
+        extension: { regex: "/(jpg)|(jpeg)|(png)/" }
+        relativeDirectory: { eq: $galleryPath }
+        sourceInstanceName: { ne: "img" }
+      }
+    ) {
+      nodes {
+        childImageSharp {
+          thumb: fluid(maxWidth: 250, maxHeight: 150, quality: 40) {
+            originalName
+            ...GatsbyImageSharpFluid_withWebp
+          }
+          full: fluid(maxWidth: 1280, maxHeight: 700, quality: 60) {
             originalName
             ...GatsbyImageSharpFluid_withWebp
           }
