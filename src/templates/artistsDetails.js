@@ -29,13 +29,15 @@ export default function Template({ data }) {
           children={<Tags data={artistData.nodes[0].category} />}
         />
 
-        {/* <div className="something">
+        <div className="something">
           <div className="formatted-content">
             <div
               dangerouslySetInnerHTML={rawMarkup(artistData.nodes[0].biography)}
             />
             <PhotoGallery data={galleryImages.nodes} />
           </div>
+        </div>
+        {/* 
           <div className="sidebar">
             <Quote
               quote={artistData.nodes[0].citation.quote}
@@ -53,7 +55,7 @@ export const pageQuery = graphql`
   query(
     $slug: String!
     $artistName: String!
-    # $galleryImagePath: String!
+    $galleryImagePath: String!
     # $quoteImagePath: String!
     $bannerImagePath: String!
   ) {
@@ -91,17 +93,17 @@ export const pageQuery = graphql`
     #     }
     #   }
     # }
-    # galleryImages: allFile(
-    #   filter: {
-    #     extension: { regex: "/(jpg)|(jpeg)|(png)/" }
-    #     relativeDirectory: { eq: $galleryImagePath }
-    #   }
-    # ) {
-    #   nodes {
-    #     childImageSharp {
-    #       ...ArtistGalleryFluid
-    #     }
-    #   }
-    # }
+    galleryImages: allFile(
+      filter: {
+        extension: { regex: "/(jpg)|(jpeg)|(png)/" }
+        relativeDirectory: { eq: $galleryImagePath }
+      }
+    ) {
+      nodes {
+        childImageSharp {
+          ...ArtistGalleryFluid
+        }
+      }
+    }
   }
 `
