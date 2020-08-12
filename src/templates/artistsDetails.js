@@ -16,13 +16,22 @@ function rawMarkup(data) {
 }
 
 export default function Template({ data }) {
-  const { artistData, agendaData } = data
+  const { artistData, agendaData, artistImages } = data
 
   return (
     <>
       <SEO />
-      <ImageBanner data={artistData.nodes[0].banner} />
-      <Layout>
+      <PageIntro
+        title={artistData.nodes[0].artistName}
+        subtitle={artistData.nodes[0].introduction}
+        children={<Tags data={artistData.nodes[0].category} />}
+      />
+
+      <ImageBanner
+        imageToDisplay={artistData.nodes[0].banner}
+        imageSources={artistImages.nodes}
+      />
+      {/* <Layout>
         <PageIntro
           title={artistData.nodes[0].artistName}
           subtitle={artistData.nodes[0].introduction}
@@ -45,7 +54,7 @@ export default function Template({ data }) {
             {agendaData ? <EventListing data={agendaData} /> : null}
           </div>
         </div>
-      </Layout>
+      </Layout> */}
     </>
   )
 }
@@ -59,6 +68,22 @@ export const pageQuery = graphql`
     agendaData: allAgendaJson(filter: { category: { eq: $artistName } }) {
       nodes {
         ...AgendaFragment
+      }
+    }
+    artistImages: allFile(
+      filter: {
+        extension: { regex: "/(jpg)|(jpeg)|(png)/" }
+        relativeDirectory: { eq: $slug }
+        sourceInstanceName: { ne: "img" }
+      }
+    ) {
+      nodes {
+        childImageSharp {
+          fluid(maxWidth: 500, maxHeight: 300, quality: 40) {
+            originalName
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
       }
     }
   }

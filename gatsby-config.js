@@ -52,19 +52,18 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-netlify-cms`,
     `gatsby-transformer-json`,
-    `gatsby-transformer-sharp`,
-    {
-      resolve: `gatsby-plugin-sharp`,
-      options: {
-        stripMetadata: true,
-        defaultQuality: 70,
-      },
-    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `img`,
         path: `${__dirname}/static/assets/`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `artists`,
+        path: `${__dirname}/collections/artists/static/assets/`,
       },
     },
     {
@@ -103,5 +102,7 @@ module.exports = {
         path: `./collections/videos/`,
       },
     },
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
   ],
 }

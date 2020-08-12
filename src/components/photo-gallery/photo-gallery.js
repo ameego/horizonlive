@@ -21,7 +21,6 @@ const PhotoGallery = ({ data }) => {
       render={data => {
         return (
           <>
-            {console.log(data)}
             <div>
               <Gallery images={data.images.nodes} />
             </div>

@@ -1,6 +1,9 @@
 const getCurrentImage = (data, image) => {
-  return data.edges.find(x => x.node.fluid.originalName === image.split("/")[2])
-    .node.fluid
+  console.log(data, image)
+  var src = image.split("/")
+  return data.find(
+    x => x.childImageSharp.fluid.originalName === src[src.length - 1]
+  ).childImageSharp.fluid
 }
 
 export default { getCurrentImage }

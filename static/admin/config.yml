@@ -38,6 +38,7 @@ collections:
     create: true
     slug: "{{artistName}}"
     extension: json
+    media_folder: "/collections/artists/static/assets/{{fields.slug}}"
     editor:
       preview: false
     fields:
