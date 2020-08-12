@@ -80,6 +80,7 @@ collections:
         name: "galleryImages"
         widget: "list"
         summary: "{{fields.image}}"
+        media_folder: "/collections/artists/static/assets/{{fields.slug}}/gallery"
         minimize_collapsed: true
         fields:
           - label: Image
