@@ -16,7 +16,13 @@ function rawMarkup(data) {
 }
 
 export default function Template({ data }) {
-  const { artistData, agendaData, bannerImage, galleryImages } = data
+  const {
+    artistData,
+    agendaData,
+    bannerImage,
+    galleryImages,
+    quoteImage,
+  } = data
 
   return (
     <>
@@ -36,17 +42,14 @@ export default function Template({ data }) {
             />
             <PhotoGallery data={galleryImages.nodes} />
           </div>
-        </div>
-        {/* 
           <div className="sidebar">
             <Quote
               quote={artistData.nodes[0].citation.quote}
-              imageSources={artistImages.nodes}
-              imageToDisplay={artistData.nodes[0].citation.quoteImage}
+              src={quoteImage.nodes[0].childImageSharp.fluid}
             />
             {agendaData ? <EventListing data={agendaData} /> : null}
           </div>
-        </div> */}
+        </div>
       </Layout>
     </>
   )
@@ -56,7 +59,7 @@ export const pageQuery = graphql`
     $slug: String!
     $artistName: String!
     $galleryImagePath: String!
-    # $quoteImagePath: String!
+    $quoteImagePath: String!
     $bannerImagePath: String!
   ) {
     artistData: allArtistsJson(filter: { slug: { eq: $slug } }) {
@@ -81,18 +84,18 @@ export const pageQuery = graphql`
         }
       }
     }
-    # quoteImage: allFile(
-    #   filter: {
-    #     extension: { regex: "/(jpg)|(jpeg)|(png)/" }
-    #     relativeDirectory: { eq: $quoteImagePath }
-    #   }
-    # ) {
-    #   nodes {
-    #     childImageSharp {
-    #       ...ArtistImages
-    #     }
-    #   }
-    # }
+    quoteImage: allFile(
+      filter: {
+        extension: { regex: "/(jpg)|(jpeg)|(png)/" }
+        relativeDirectory: { eq: $quoteImagePath }
+      }
+    ) {
+      nodes {
+        childImageSharp {
+          ...ArtistQuoteImage
+        }
+      }
+    }
     galleryImages: allFile(
       filter: {
         extension: { regex: "/(jpg)|(jpeg)|(png)/" }
