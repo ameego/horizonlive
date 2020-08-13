@@ -1,0 +1,20 @@
+{
+  "artistName": "Filastine",
+  "category": [
+    "Live"
+  ],
+  "biography": "This is fila",
+  "introduction": "Fewwf",
+  "citation": {
+    "quote": "Hello",
+    "quoteImage": "/static/assets/quote/67234102_10156420124736723_840629476122427392_o.jpg"
+  },
+  "banner": "/static/assets/banner/73207302_1326782024168354_5383856836808956719_n.jpg",
+  "slug": "filastine",
+  "galleryImages": [
+    {
+      "image": "/static/assets/gallery/filastine/7090484017_8393bcf824_k.jpg",
+      "altText": "Alt62"
+    }
+  ]
+}
