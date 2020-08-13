@@ -55,13 +55,7 @@ export default function Template({ data }) {
   )
 }
 export const pageQuery = graphql`
-  query(
-    $slug: String!
-    $artistName: String!
-    $galleryImagePath: String!
-    $quoteImagePath: String!
-    $bannerImagePath: String!
-  ) {
+  query($slug: String!, $artistName: String!) {
     artistData: allArtistsJson(filter: { slug: { eq: $slug } }) {
       nodes {
         ...ArtistsFragment
@@ -74,8 +68,8 @@ export const pageQuery = graphql`
     }
     bannerImage: allFile(
       filter: {
-        extension: { regex: "/(jpg)|(jpeg)|(png)/" }
-        relativeDirectory: { eq: $bannerImagePath }
+        sourceInstanceName: { eq: "artistsBanner" }
+        relativeDirectory: { eq: $slug }
       }
     ) {
       nodes {
@@ -87,7 +81,8 @@ export const pageQuery = graphql`
     quoteImage: allFile(
       filter: {
         extension: { regex: "/(jpg)|(jpeg)|(png)/" }
-        relativeDirectory: { eq: $quoteImagePath }
+        sourceInstanceName: { eq: "artistsQuote" }
+        relativeDirectory: { eq: $slug }
       }
     ) {
       nodes {
@@ -99,7 +94,8 @@ export const pageQuery = graphql`
     galleryImages: allFile(
       filter: {
         extension: { regex: "/(jpg)|(jpeg)|(png)/" }
-        relativeDirectory: { eq: $galleryImagePath }
+        sourceInstanceName: { eq: "artistsGallery" }
+        relativeDirectory: { eq: $slug }
       }
     ) {
       nodes {

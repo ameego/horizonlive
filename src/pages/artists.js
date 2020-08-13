@@ -7,9 +7,18 @@ import ArtistList from "../components/artist-list/artist-list"
 export const Home = () => {
   const data = useStaticQuery(graphql`
     query ArtistQuery {
-      allArtistsJson {
+      artistData: allArtistsJson {
         nodes {
           ...ArtistsFragment
+        }
+      }
+      bannerImages: allFile(
+        filter: { sourceInstanceName: { eq: "artistsBanner" } }
+      ) {
+        nodes {
+          childImageSharp {
+            ...ArtistBannerImage
+          }
         }
       }
     }
@@ -18,7 +27,7 @@ export const Home = () => {
     <>
       <SEO />
       <Layout>
-        <ArtistList data={data} />
+        <ArtistList data={data.artistData.nodes} banners={data.bannerImages} />
       </Layout>
     </>
   )

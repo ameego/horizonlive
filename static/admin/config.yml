@@ -38,7 +38,6 @@ collections:
     create: true
     slug: "{{artistName}}"
     extension: json
-    media_folder: "/collections/artists/images/{{fields.slug}}"
     editor:
       preview: false
     fields:
@@ -65,11 +64,11 @@ collections:
           - label: "Image"
             name: quoteImage
             widget: image
-            media_folder: "/collections/artists/images/{{fields.slug}}/quote"
+            media_folder: "/static/assets/quote/{{fields.slug}}"
       - label: Bannière
         name: banner
         widget: image
-        media_folder: "/collections/artists/images/{{fields.slug}}/banner"
+        media_folder: "/static/assets/banner/{{fields.slug}}"
       - name: slug
         label: "Slug"
         pattern:
@@ -82,11 +81,11 @@ collections:
         name: "galleryImages"
         widget: "list"
         summary: "{{fields.image}}"
-        media_folder: "/collections/artists/images/{{fields.slug}}/gallery"
         minimize_collapsed: true
         fields:
           - label: Image
             name: image
+            media_folder: "/static/assets/gallery/{{fields.slug}}"
             widget: image
           - label: "Text alternatif"
             name: altText

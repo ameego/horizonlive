@@ -55,8 +55,22 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `artists`,
-        path: `${__dirname}/collections/artists/images/`,
+        name: `artistsBanner`,
+        path: `${__dirname}/static/assets/banner`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `artistsQuote`,
+        path: `${__dirname}/static/assets/quote`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `artistsGallery`,
+        path: `${__dirname}/static/assets/gallery`,
       },
     },
     {

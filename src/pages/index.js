@@ -32,6 +32,15 @@ export const Home = () => {
           ...NewsFragment
         }
       }
+      bannerImages: allFile(
+        filter: { sourceInstanceName: { eq: "artistsBanner" } }
+      ) {
+        nodes {
+          childImageSharp {
+            ...ArtistBannerImage
+          }
+        }
+      }
     }
   `)
 
@@ -54,7 +63,10 @@ export const Home = () => {
           title={data.allHomeJson.nodes[0].title}
           subtitle={data.allHomeJson.nodes[0].subtitle}
         />
-        <ArtistList data={data} />
+        <ArtistList
+          data={data.allArtistsJson.nodes}
+          banners={data.bannerImages}
+        />
         <Spreader>
           <PageIntro
             title="Vidéothèque"

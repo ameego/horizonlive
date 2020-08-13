@@ -40,20 +40,17 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       context: {
         slug: item.node.slug,
         artistName: item.node.artistName,
-        bannerImagePath: `${item.node.slug}/banner`,
-        quoteImagePath: `${item.node.slug}/quote`,
-        galleryImagePath: `${item.node.slug}/gallery`,
       },
     })
   })
 
-  result.data.allFocusJson.edges.forEach(item => {
-    createPage({
-      path: `focus/${item.node.slug}`,
-      component: require.resolve(`./src/templates/focusDetails.js`),
-      context: {
-        slug: item.node.focus,
-      },
-    })
-  })
+  // result.data.allFocusJson.edges.forEach(item => {
+  //   createPage({
+  //     path: `focus/${item.node.slug}`,
+  //     component: require.resolve(`./src/templates/focusDetails.js`),
+  //     context: {
+  //       slug: item.node.focus,
+  //     },
+  //   })
+  // })
 }
