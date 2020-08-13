@@ -3,7 +3,7 @@ import { graphql, StaticQuery } from "gatsby"
 import Header from "../header/header"
 import style from "./layout.module.scss"
 
-const Layout = ({ children, seo }) => (
+const Layout = ({ children }) => (
   <StaticQuery
     query={graphql`
       query SiteMeta {

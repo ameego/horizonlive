@@ -9,7 +9,7 @@ export default function Template({ data }) {
     <>
       <SEO />
       <Layout>
-        <ArtistList data={data.artistData.nodes} banners={data.bannerImages} />
+        <ArtistList data={data.artistData.nodes} />
       </Layout>
     </>
   )
@@ -19,15 +19,6 @@ export const pageQuery = graphql`
     artistData: allArtistsJson(filter: { category: { eq: $slug } }) {
       nodes {
         ...ArtistsFragment
-      }
-    }
-    bannerImages: allFile(
-      filter: { sourceInstanceName: { eq: "artistsBanner" } }
-    ) {
-      nodes {
-        childImageSharp {
-          ...ArtistBannerImage
-        }
       }
     }
   }

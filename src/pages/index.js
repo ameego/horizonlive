@@ -32,15 +32,6 @@ export const Home = () => {
           ...NewsFragment
         }
       }
-      bannerImages: allFile(
-        filter: { sourceInstanceName: { eq: "artistsBanner" } }
-      ) {
-        nodes {
-          childImageSharp {
-            ...ArtistBannerImage
-          }
-        }
-      }
     }
   `)
 

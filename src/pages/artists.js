@@ -12,22 +12,13 @@ export const Home = () => {
           ...ArtistsFragment
         }
       }
-      bannerImages: allFile(
-        filter: { sourceInstanceName: { eq: "artistsBanner" } }
-      ) {
-        nodes {
-          childImageSharp {
-            ...ArtistBannerImage
-          }
-        }
-      }
     }
   `)
   return (
     <>
       <SEO />
       <Layout>
-        <ArtistList data={data.artistData.nodes} banners={data.bannerImages} />
+        <ArtistList data={data.artistData.nodes} />
       </Layout>
     </>
   )
