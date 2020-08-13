@@ -61,7 +61,10 @@ export const pageQuery = graphql`
         ...ArtistsFragment
       }
     }
-    agendaData: allAgendaJson(filter: { category: { eq: $artistName } }) {
+    agendaData: allAgendaJson(
+      filter: { category: { eq: $artistName } }
+      sort: { fields: eventdate, order: ASC }
+    ) {
       nodes {
         ...AgendaFragment
       }
