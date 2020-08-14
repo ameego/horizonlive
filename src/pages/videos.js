@@ -27,7 +27,7 @@ export const Videos = () => {
   return (
     <>
       <SEO />
-      <ImageBanner data={data.allHomeJson.nodes[0].banner} />
+      <ImageBanner />
       <Layout>
         <Spreader>
           <PageIntro

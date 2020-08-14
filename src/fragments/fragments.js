@@ -31,6 +31,12 @@ export const query = graphql`
     videos
   }
 
+  fragment CommonFragment on ImageSharp {
+    fluid(maxWidth: 1280, maxHeight: 700, quality: 60) {
+      ...GatsbyImageSharpFluid_withWebp
+    }
+  }
+
   fragment NewsFragment on NewsJson {
     title
     artist
