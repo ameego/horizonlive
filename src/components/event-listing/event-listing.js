@@ -2,14 +2,6 @@ import React from "react"
 import style from "./event-listing.module.scss"
 import Title from "../titles/title-1/title-1"
 
-function displayPrimaryInfo(date, isArtistNameProminent) {
-  return isArtistNameProminent ? date.category : date.evenement
-}
-
-function displaySecondaryInfo(date, isArtistNameProminent) {
-  return isArtistNameProminent ? date.evenement : date.category
-}
-
 const EventListing = ({ data, isArtistNameProminent }) => {
   return (
     <div>
@@ -28,10 +20,10 @@ const EventListing = ({ data, isArtistNameProminent }) => {
             </div>
             <div className={style.eventlisting__information}>
               <p className={style.eventlisting__title}>
-                {displayPrimaryInfo(date, isArtistNameProminent)}
+                {isArtistNameProminent ? date.category : date.evenement}
               </p>
               <p className={style.eventlisting__subtitle}>
-                {displaySecondaryInfo(date, isArtistNameProminent)}
+                {isArtistNameProminent ? date.evenement : date.category}
               </p>
             </div>
           </li>
