@@ -25,6 +25,7 @@ const ArtistList = ({ data }) => (
           <li className={style.list__item} key={index}>
             <Link to={`../../artists/${artist.slug}`}>
               <FluidImg
+                durationFadeIn={500}
                 src={Utils.getCurrentImage(
                   bannerSet.allFile.nodes,
                   artist.banner
