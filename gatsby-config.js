@@ -76,6 +76,13 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        name: `commonBanner`,
+        path: `${__dirname}/static/assets/common/banner`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         path: `./collections/artists/`,
       },
     },
@@ -95,6 +102,12 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `./collections/news/`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `./collections/common/`,
       },
     },
     {

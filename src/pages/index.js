@@ -22,6 +22,17 @@ export const Home = () => {
           ...HomeFragment
         }
       }
+      homeBanner: allFile(
+        filter: { sourceInstanceName: { eq: "commonBanner" } }
+      ) {
+        nodes {
+          childImageSharp {
+            fluid(maxWidth: 1280, maxHeight: 700, quality: 60) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
+      }
       allVideosJson {
         nodes {
           ...VideosFragment
@@ -48,7 +59,7 @@ export const Home = () => {
   return (
     <>
       <SEO />
-      <ImageBanner data={data.allHomeJson.nodes[0].banner} />
+      <ImageBanner src={data.homeBanner.nodes[0].childImageSharp.fluid} />
       <Layout>
         <PageIntro
           title={data.allHomeJson.nodes[0].title}

@@ -18,7 +18,6 @@ collections:
         fields:
           - { label: "Titre", name: title, widget: text }
           - { label: "Sous-titre", name: subtitle, widget: text }
-          - { label: "Bannière", name: banner, widget: image }
           - {
               label: "Vitrine de vidéos",
               name: videos,
@@ -27,6 +26,16 @@ collections:
               searchFields: ["title"],
               valueField: "title",
               multiple: true,
+            }
+      - file: "collections/common/common.json"
+        label: Informations communes
+        name: common
+        fields:
+          - {
+              label: "Bannière",
+              name: banner,
+              widget: image,
+              media_folder: "/static/assets/common/banner",
             }
 
   - label: Artists
