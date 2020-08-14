@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, StaticQuery } from "gatsby"
+import { graphql, Link, StaticQuery } from "gatsby"
 import style from "./artist-list.module.scss"
 import FluidImg from "../fluid-img/fluid-img"
 import Title3 from "../titles/title-3/title-3"
