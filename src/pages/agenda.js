@@ -19,7 +19,7 @@ export const Agenda = () => {
     <>
       <SEO />
       <Layout>
-        <EventListing data={data.allAgendaJson} isArtistNameProminent={true} />
+        <EventListing data={data.allAgendaJson} isArtistNameProminent />
       </Layout>
     </>
   )
