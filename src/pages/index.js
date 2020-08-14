@@ -46,29 +46,25 @@ export const Home = () => {
     }
   `)
 
+  const { allVideosJson, allHomeJson, allArtistsJson, homeBanner } = data
+
   let filteredVideos = []
-  var videoData = data.allHomeJson.nodes[0].videos
-  data.allVideosJson.nodes.forEach(video => {
-    for (let i = 0; i < videoData.length; i++) {
-      if (videoData[i] === video.title) {
-        filteredVideos.push(video)
-      }
-    }
+  allVideosJson.nodes.forEach(video => {
+    allHomeJson.nodes[0].videos.forEach(vid => {
+      if (vid === video.title) filteredVideos.push(video)
+    })
   })
 
   return (
     <>
       <SEO />
-      <ImageBanner src={data.homeBanner.nodes[0].childImageSharp.fluid} />
+      <ImageBanner src={homeBanner.nodes[0].childImageSharp.fluid} />
       <Layout>
         <PageIntro
-          title={data.allHomeJson.nodes[0].title}
-          subtitle={data.allHomeJson.nodes[0].subtitle}
+          title={allHomeJson.nodes[0].title}
+          subtitle={allHomeJson.nodes[0].subtitle}
         />
-        <ArtistList
-          data={data.allArtistsJson.nodes}
-          banners={data.bannerImages}
-        />
+        <ArtistList data={allArtistsJson.nodes} />
         <Spreader>
           <PageIntro
             title="Vidéothèque"
