@@ -1,5 +1,5 @@
 import React from "react"
-import { useStaticQuery } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 import FluidImg from "../fluid-img/fluid-img"
 import style from "./image-banner.module.scss"
 
