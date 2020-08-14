@@ -9,6 +9,17 @@ import ArtistList from "../components/artist-list/artist-list"
 import ImageBanner from "../components/image-banner/image-banner"
 import VideoList from "../components/video-list/video-list"
 
+function getHomeVideos(allVideosJson, allHomeJson) {
+  let filteredVideos = []
+  allVideosJson.forEach(video => {
+    allHomeJson[0].videos.forEach(vid => {
+      if (vid === video.title) filteredVideos.push(video)
+    })
+  })
+
+  return filteredVideos
+}
+
 export const Home = () => {
   const data = useStaticQuery(graphql`
     query HomeQuery {
@@ -48,13 +59,6 @@ export const Home = () => {
 
   const { allVideosJson, allHomeJson, allArtistsJson, homeBanner } = data
 
-  let filteredVideos = []
-  allVideosJson.nodes.forEach(video => {
-    allHomeJson.nodes[0].videos.forEach(vid => {
-      if (vid === video.title) filteredVideos.push(video)
-    })
-  })
-
   return (
     <>
       <SEO />
@@ -72,7 +76,9 @@ export const Home = () => {
             isSmaller={true}
             lessBottomSpace={true}
           />
-          <VideoList data={filteredVideos} />
+          <VideoList
+            data={getHomeVideos(allVideosJson.nodes, allHomeJson.nodes)}
+          />
         </Spreader>
         <Spreader>
           <PageIntro
