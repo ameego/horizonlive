@@ -88,7 +88,7 @@ collections:
       - label: "Photos"
         label_singular: "photo"
         name: "galleryImages"
-        widget: "list"
+        widget: list
         summary: "{{fields.image}}"
         minimize_collapsed: true
         fields:
@@ -98,6 +98,18 @@ collections:
             widget: image
           - label: "Text alternatif"
             name: altText
+      - label: Playlist
+        name: playlist
+        widget: list
+        summary: "{{fields.musicname}}"
+        minimize_collapsed: true
+        fields:
+          - label: "Nom de la Musique"
+            name: musicname
+          - label: Musique
+            name: music
+            widget: file
+            media_folder: "/static/music/{{fields.slug}}"
 
   - label: Focus
     name: focus

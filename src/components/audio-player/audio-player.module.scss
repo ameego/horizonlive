@@ -1,0 +1,54 @@
+.player {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  z-index: 10;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease-in-out;
+  background-color: white;
+  box-shadow: 0 -6px 4px -4px rgba(0, 0, 0, 0.15);
+
+  :global(.rhap_container) {
+    max-width: 1200px;
+    margin: 0 auto;
+    box-shadow: none !important;
+  }
+
+  :global(.rhap_additional-controls:empty) {
+    display: none;
+  }
+
+  :global(.rhap_volume-controls) {
+    justify-content: center;
+  }
+}
+
+.close {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  text-align: right;
+
+  button {
+    background: none;
+    border: none;
+    position: absolute;
+    left: 50%;
+    transform: translateY(-100%) translateX(-50%);
+    font-size: 2rem;
+    z-index: 10;
+    padding: 0.35rem 1.75rem;
+    background: white;
+    border-radius: 3px 3px 0 0;
+    box-shadow: 0px -3px 4px -4px rgba(0, 0, 0, 0.5);
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+  }
+}
+
+:global(.rhap_play-pause-button) {
+  path {
+    fill: #dd7c7c;
+  }
+}

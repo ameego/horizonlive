@@ -83,6 +83,13 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        name: `artistMusic`,
+        path: `${__dirname}/static/music`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         path: `./collections/artists/`,
       },
     },

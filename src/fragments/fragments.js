@@ -16,6 +16,10 @@ export const query = graphql`
       image
       altText
     }
+    playlist {
+      musicname
+      music
+    }
   }
 
   fragment AgendaFragment on AgendaJson {

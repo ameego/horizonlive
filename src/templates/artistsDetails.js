@@ -107,5 +107,15 @@ export const pageQuery = graphql`
         }
       }
     }
+    artistPlaylist: allFile(
+      filter: {
+        sourceInstanceName: { eq: "artistMusic" }
+        relativeDirectory: { eq: $slug }
+      }
+    ) {
+      nodes {
+        publicURL
+      }
+    }
   }
 `
