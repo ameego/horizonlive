@@ -1,0 +1,26 @@
+{
+  "citation": {
+    "quote": "Buridane, c’est d’abord un grain de voix un peu cassé qui séduit à la première écoute…",
+    "quoteImage": "/static/assets/quote/67704863_10156430387776723_1649174850759032832_o.jpg"
+  },
+  "galleryImages": [
+    {
+      "image": "/static/assets/gallery/test/67704863_10156430387776723_1649174850759032832_o.jpg",
+      "altText": "aewr"
+    }
+  ],
+  "slug": "test",
+  "banner": "/static/assets/banner/7090484017_8393bcf824_k.jpg",
+  "playlist": [
+    {
+      "musicname": "Bubu",
+      "music": "/static/music/test/angels-and-demons-instrumental-by-salt_cinema.mp3"
+    }
+  ],
+  "artistName": "Test",
+  "biography": "Test",
+  "introduction": "test",
+  "category": [
+    "Label"
+  ]
+}
