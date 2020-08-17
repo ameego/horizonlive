@@ -88,7 +88,7 @@ collections:
       - label: "Photos"
         label_singular: "photo"
         name: "galleryImages"
-        widget: list
+        widget: "list"
         summary: "{{fields.image}}"
         minimize_collapsed: true
         fields:
@@ -100,7 +100,7 @@ collections:
             name: altText
       - label: Playlist
         name: playlist
-        widget: list
+        widget: "list"
         summary: "{{fields.musicname}}"
         minimize_collapsed: true
         fields:
