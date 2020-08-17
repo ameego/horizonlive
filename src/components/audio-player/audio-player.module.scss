@@ -1,3 +1,6 @@
+$background: rgba(255, 255, 255, 0.7);
+$frontColor: #4f4f4f;
+
 .player {
   width: 100%;
   position: fixed;
@@ -5,14 +8,21 @@
   z-index: 10;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.5s ease-in-out;
-  background-color: white;
+  transition: opacity 0.35s ease-in-out, transform 0.15s ease-in-out;
+  transform: translateY(100%);
+  background-color: $background;
+  backdrop-filter: blur(10px);
   box-shadow: 0 -6px 4px -4px rgba(0, 0, 0, 0.15);
 
   :global(.rhap_container) {
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0.5rem 1rem;
     box-shadow: none !important;
+  }
+
+  :global(.rhap_container) {
+    background-color: transparent;
   }
 
   :global(.rhap_additional-controls:empty) {
@@ -21,6 +31,43 @@
 
   :global(.rhap_volume-controls) {
     justify-content: center;
+  }
+
+  :global(.rhap_progress-indicator),
+  :global(.rhap_volume-indicator) {
+    background-color: $frontColor;
+    box-shadow: none;
+  }
+
+  :global(.rhap_volume-bar),
+  :global(.rhap_progress-bar-show-download) {
+    background: rgba($frontColor, 0.5);
+  }
+
+  :global(.rhap_time) {
+    font-weight: 600;
+    color: $frontColor;
+  }
+
+  :global(.rhap_download-progress) {
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    background-color: rgba($frontColor, 0.5);
+    border-radius: 2px;
+  }
+
+  :global(.rhap_progress-filled) {
+    background-color: $frontColor;
+  }
+
+  :global(.rhap_play-pause-button) {
+    width: 5rem;
+    height: 5rem;
+    font-size: 5rem;
+    path {
+      fill: #d63b3b;
+    }
   }
 }
 
@@ -39,16 +86,24 @@
     font-size: 2rem;
     z-index: 10;
     padding: 0.35rem 1.75rem;
-    background: white;
     border-radius: 3px 3px 0 0;
     box-shadow: 0px -3px 4px -4px rgba(0, 0, 0, 0.5);
     border-left: 1px solid rgba(0, 0, 0, 0.1);
     border-right: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: $background;
+    backdrop-filter: blur(10px);
   }
 }
 
-:global(.rhap_play-pause-button) {
+:global(.rhap_main-controls-button),
+:global(.rhap_volume-button) {
   path {
-    fill: #dd7c7c;
+    fill: $frontColor;
   }
+}
+
+:global(.active) {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
 }

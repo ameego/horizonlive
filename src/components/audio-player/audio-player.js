@@ -1,4 +1,4 @@
-import React, { useState, createRef } from "react"
+import React, { useState, useEffect, createRef } from "react"
 import AudioPlayer from "react-h5-audio-player"
 import style from "./audio-player.module.scss"
 import "react-h5-audio-player/lib/styles.css"
@@ -6,33 +6,39 @@ import "react-h5-audio-player/lib/styles.css"
 const Player = ({ data, canBeDismissed, isArtistPage }) => {
   const [currentMusicIndex, setCurrentMusicIndex] = useState(0)
   const [isPlayerExpanded, setIsPlayerExpanded] = useState(true)
+  const [musicSrc, setMusicSrc] = useState(data)
+  var player = createRef()
 
-  var playlist = data
+  useEffect(() => {
+    setMusicSrc(data)
+    if (JSON.stringify(data) !== localStorage.getItem("playlist")) {
+      player.current.audio.current.pause()
+      localStorage.removeItem("playlist")
+    }
+  }, [data, player])
 
   const handleClickPrevious = () => {
     setCurrentMusicIndex(
-      currentMusicIndex === 0 ? playlist.length - 1 : currentMusicIndex - 1
+      currentMusicIndex === 0 ? musicSrc.length - 1 : currentMusicIndex - 1
     )
   }
 
   const handleClickNext = () => {
     setCurrentMusicIndex(
-      currentMusicIndex < playlist.length - 1 ? currentMusicIndex + 1 : 0
+      currentMusicIndex < musicSrc.length - 1 ? currentMusicIndex + 1 : 0
     )
   }
 
   const onPlay = () => {
     setIsPlayerExpanded(true)
-    localStorage.setItem("playlist", [JSON.stringify(playlist)])
+    localStorage.setItem("playlist", [JSON.stringify(musicSrc)])
   }
 
   const closePlayer = () => {
+    setIsPlayerExpanded(false)
     localStorage.removeItem("playlist")
     if (isPlayerExpanded) player.current.audio.current.pause()
-    setIsPlayerExpanded(false)
   }
-
-  var player = createRef()
 
   return (
     <div
@@ -56,7 +62,7 @@ const Player = ({ data, canBeDismissed, isArtistPage }) => {
         showJumpControls={false}
         volume={0.75}
         autoPlayAfterSrcChange={false}
-        src={playlist[currentMusicIndex].publicURL}
+        src={musicSrc[currentMusicIndex].publicURL}
         onClickPrevious={handleClickPrevious}
         onClickNext={handleClickNext}
         onPlay={onPlay}
