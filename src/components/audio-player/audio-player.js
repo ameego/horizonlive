@@ -43,7 +43,7 @@ const Player = ({ data, canBeDismissed, isArtistPage }) => {
   return (
     <div
       className={
-        isArtistPage || isPlayerExpanded
+        (isArtistPage && musicSrc) || (isPlayerExpanded && musicSrc)
           ? `${style.player} active`
           : style.player
       }
@@ -62,7 +62,7 @@ const Player = ({ data, canBeDismissed, isArtistPage }) => {
         showJumpControls={false}
         volume={0.75}
         autoPlayAfterSrcChange={false}
-        src={musicSrc[currentMusicIndex].publicURL}
+        src={musicSrc ? musicSrc[currentMusicIndex].publicURL : ""}
         onClickPrevious={handleClickPrevious}
         onClickNext={handleClickNext}
         onPlay={onPlay}

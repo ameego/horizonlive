@@ -16,17 +16,15 @@ export const wrapPageElement = ({ element, props }) => {
 
   return (
     <>
-      {hasPlaystListFromArtistPage || playlistFromStorage ? (
-        <Player
-          isArtistPage={isArtistPage}
-          canBeDismissed={!hasPlaystListFromArtistPage}
-          data={
-            hasPlaystListFromArtistPage
-              ? props.data.artistPlaylist.nodes
-              : JSON.parse(playlistFromStorage)
-          }
-        />
-      ) : null}
+      <Player
+        isArtistPage={isArtistPage}
+        canBeDismissed={!hasPlaystListFromArtistPage}
+        data={
+          hasPlaystListFromArtistPage
+            ? props.data.artistPlaylist.nodes
+            : JSON.parse(playlistFromStorage)
+        }
+      />
       {element}
     </>
   )
