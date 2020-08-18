@@ -16,6 +16,7 @@ export const wrapPageElement = ({ element, props }) => {
 
   return (
     <>
+      {element}
       <Player
         isArtistPage={isArtistPage}
         canBeDismissed={!hasPlaystListFromArtistPage}
@@ -25,7 +26,6 @@ export const wrapPageElement = ({ element, props }) => {
             : JSON.parse(playlistFromStorage)
         }
       />
-      {element}
     </>
   )
 }
