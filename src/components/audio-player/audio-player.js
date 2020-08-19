@@ -11,9 +11,11 @@ const Player = ({ data, canBeDismissed, isArtistPage }) => {
 
   useEffect(() => {
     setMusicSrc(data)
+
+    // reset music when current playlist differs from current artist page
     if (JSON.stringify(data) !== sessionStorage.getItem("playlist")) {
-      player.current.audio.current.pause()
       sessionStorage.removeItem("playlist")
+      player.current.audio.current.pause()
     }
   }, [data, player])
 
@@ -65,7 +67,7 @@ const Player = ({ data, canBeDismissed, isArtistPage }) => {
 
       <div
         className={
-          !isArtistPage && canBeDismissed
+          canBeDismissed || (!isArtistPage && canBeDismissed)
             ? `${style.close} active`
             : style.close
         }
