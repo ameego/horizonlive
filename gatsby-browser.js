@@ -12,7 +12,7 @@ export const wrapPageElement = ({ element, props }) => {
   var isArtistPage =
     props.path.split("/")[1] === "artists" && props.path.split("/")[2] !== ""
 
-  var playlistFromStorage = localStorage.getItem("playlist")
+  var playlistFromStorage = sessionStorage.getItem("playlist")
 
   return (
     <>

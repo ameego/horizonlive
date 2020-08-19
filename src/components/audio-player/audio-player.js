@@ -11,9 +11,9 @@ const Player = ({ data, canBeDismissed, isArtistPage }) => {
 
   useEffect(() => {
     setMusicSrc(data)
-    if (JSON.stringify(data) !== localStorage.getItem("playlist")) {
+    if (JSON.stringify(data) !== sessionStorage.getItem("playlist")) {
       player.current.audio.current.pause()
-      localStorage.removeItem("playlist")
+      sessionStorage.removeItem("playlist")
     }
   }, [data, player])
 
@@ -31,12 +31,12 @@ const Player = ({ data, canBeDismissed, isArtistPage }) => {
 
   const onPlay = () => {
     setIsPlayerExpanded(true)
-    localStorage.setItem("playlist", [JSON.stringify(musicSrc)])
+    sessionStorage.setItem("playlist", [JSON.stringify(musicSrc)])
   }
 
   const closePlayer = () => {
     setIsPlayerExpanded(false)
-    localStorage.removeItem("playlist")
+    sessionStorage.removeItem("playlist")
     if (isPlayerExpanded) player.current.audio.current.pause()
   }
 
