@@ -10,24 +10,29 @@ const Player = ({ data, canBeDismissed, isArtistPage, artistName }) => {
   const [musicSrc, setMusicSrc] = useState(data)
   const [artistTitle, setArtistTitle] = useState(`Playlist de ${name}`)
 
-  var player = createRef()
+  let player = createRef()
+  let storedPlaylist = sessionStorage.getItem("playlist")
 
   const resetStorage = () => {
     sessionStorage.removeItem("playlist")
     sessionStorage.removeItem("artistName")
   }
 
+  const pausePlayer = () => {
+    player.current.audio.current.pause()
+  }
+
   useEffect(() => {
     setMusicSrc(data)
 
     // reset music when current playlist differs from current artist page
-    if (JSON.stringify(data) !== sessionStorage.getItem("playlist")) {
+    if (JSON.stringify(data) !== storedPlaylist) {
       resetStorage()
-      player.current.audio.current.pause()
-      setArtistTitle(`Playlist de ${artistName}`)
+      pausePlayer()
       setIsPlayerExpanded(false)
+      setArtistTitle(`Playlist de ${artistName}`)
     }
-  }, [data, player, artistName])
+  }, [data, player, artistName, storedPlaylist, pausePlayer])
 
   const handleClickPrevious = () => {
     setCurrentMusicIndex(
@@ -42,14 +47,13 @@ const Player = ({ data, canBeDismissed, isArtistPage, artistName }) => {
   }
 
   const onPlay = () => {
-    if (
-      JSON.stringify(data) === sessionStorage.getItem("playlist") ||
-      !sessionStorage.getItem("playlist")
-    ) {
+    if (JSON.stringify(data) === storedPlaylist || !storedPlaylist) {
       setIsPlayerExpanded(true)
       setArtistTitle(`Vous écoutez\n${sessionStorage.getItem("artistName")}`)
     }
+
     if (!canBeDismissed) sessionStorage.setItem("artistName", [artistName])
+
     sessionStorage.setItem("playlist", [JSON.stringify(musicSrc)])
   }
 
@@ -57,7 +61,7 @@ const Player = ({ data, canBeDismissed, isArtistPage, artistName }) => {
     setIsPlayerExpanded(false)
     resetStorage()
     setArtistTitle("")
-    if (isPlayerExpanded) player.current.audio.current.pause()
+    if (isPlayerExpanded) pausePlayer()
   }
 
   return (
