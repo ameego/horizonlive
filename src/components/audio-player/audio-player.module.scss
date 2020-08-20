@@ -7,6 +7,7 @@ $frontColor: #4f4f4f;
   bottom: 0;
   z-index: 10;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   opacity: 0;
@@ -16,6 +17,17 @@ $frontColor: #4f4f4f;
   background-color: $background;
   backdrop-filter: blur(10px);
   box-shadow: 0 -6px 4px -4px rgba(0, 0, 0, 0.15);
+
+  :global(.rhap_header) {
+    margin-bottom: 0.5rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-align: left;
+    line-height: 1.35;
+    margin-left: 1rem;
+    position: relative;
+    top: 0.25rem;
+  }
 
   :global(.rhap_container) {
     max-width: 100rem;
@@ -103,6 +115,15 @@ $frontColor: #4f4f4f;
   }
 }
 
+.information {
+  padding: 0.5rem 1.5rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-align: left;
+  line-height: 1.35;
+  width: 20rem;
+}
+
 :global(.rhap_main-controls-button),
 :global(.rhap_volume-button) {
   path {
@@ -114,4 +135,11 @@ $frontColor: #4f4f4f;
   opacity: 1;
   transform: translateY(0);
   pointer-events: auto;
+}
+
+.playercontainer {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  max-width: 100rem;
 }

@@ -4,10 +4,11 @@ import style from "./audio-player.module.scss"
 import "react-h5-audio-player/lib/styles.css"
 
 const Player = ({ data, canBeDismissed, isArtistPage, artistName }) => {
+  var name = artistName ? artistName : sessionStorage.getItem("artistName")
   const [currentMusicIndex, setCurrentMusicIndex] = useState(0)
-  const [isPlayerExpanded, setIsPlayerExpanded] = useState(true)
+  const [isPlayerExpanded, setIsPlayerExpanded] = useState()
   const [musicSrc, setMusicSrc] = useState(data)
-  const [artistTitle, setArtistTitle] = useState("")
+  const [artistTitle, setArtistTitle] = useState(`Playlist de ${name}`)
 
   var player = createRef()
 
@@ -22,10 +23,11 @@ const Player = ({ data, canBeDismissed, isArtistPage, artistName }) => {
     // reset music when current playlist differs from current artist page
     if (JSON.stringify(data) !== sessionStorage.getItem("playlist")) {
       resetStorage()
-      setArtistTitle("")
       player.current.audio.current.pause()
+      setArtistTitle(`Playlist de ${artistName}`)
+      setIsPlayerExpanded(false)
     }
-  }, [data, player])
+  }, [data, player, artistName])
 
   const handleClickPrevious = () => {
     setCurrentMusicIndex(
@@ -40,10 +42,15 @@ const Player = ({ data, canBeDismissed, isArtistPage, artistName }) => {
   }
 
   const onPlay = () => {
-    setIsPlayerExpanded(true)
+    if (
+      JSON.stringify(data) === sessionStorage.getItem("playlist") ||
+      !sessionStorage.getItem("playlist")
+    ) {
+      setIsPlayerExpanded(true)
+      setArtistTitle(`Vous écoutez\n${sessionStorage.getItem("artistName")}`)
+    }
     if (!canBeDismissed) sessionStorage.setItem("artistName", [artistName])
     sessionStorage.setItem("playlist", [JSON.stringify(musicSrc)])
-    setArtistTitle(`Vous écoutez ${sessionStorage.getItem("artistName")}`)
   }
 
   const closePlayer = () => {
@@ -56,41 +63,43 @@ const Player = ({ data, canBeDismissed, isArtistPage, artistName }) => {
   return (
     <div
       className={
-        (isArtistPage && musicSrc) || (isPlayerExpanded && musicSrc)
+        (isArtistPage && musicSrc && !canBeDismissed) ||
+        (isPlayerExpanded && musicSrc)
           ? `${style.player} active`
           : style.player
       }
     >
-      {artistTitle}
-      <AudioPlayer
-        ref={player}
-        layout="horizontal-reverse"
-        customAdditionalControls={[]}
-        autoPlay={false}
-        showSkipControls={true}
-        showJumpControls={false}
-        volume={0.75}
-        autoPlayAfterSrcChange={false}
-        src={musicSrc ? musicSrc[currentMusicIndex].publicURL : ""}
-        onClickPrevious={handleClickPrevious}
-        onClickNext={handleClickNext}
-        onPlay={onPlay}
-      />
+      <div className={style.information}>{artistTitle}</div>
+      <div className={style.playercontainer}>
+        <AudioPlayer
+          ref={player}
+          layout="horizontal-reverse"
+          customAdditionalControls={[]}
+          autoPlay={false}
+          showSkipControls={true}
+          showJumpControls={false}
+          volume={0.75}
+          src={musicSrc ? musicSrc[currentMusicIndex].publicURL : ""}
+          onClickPrevious={handleClickPrevious}
+          onClickNext={handleClickNext}
+          onPlay={onPlay}
+        />
 
-      <div
-        className={
-          canBeDismissed || (!isArtistPage && canBeDismissed)
-            ? `${style.close} active`
-            : style.close
-        }
-      >
-        <button onClick={closePlayer}>
-          <svg width="32" height="32" viewBox="0 0 32 32">
-            <g transform="scale(0.03125 0.03125)">
-              <path d="M512 928c-229.76 0-416-186.24-416-416s186.24-416 416-416 416 186.24 416 416-186.24 416-416 416zM702.752 390.688c7.808-7.808 7.808-20.512 0-28.32l-42.496-42.464c-7.808-7.808-20.512-7.808-28.32 0l-120.352 120.352-120.352-120.352c-7.808-7.808-20.512-7.808-28.32 0l-42.496 42.464c-7.808 7.808-7.808 20.512 0 28.32l120.384 120.384-120.384 120.32c-7.808 7.808-7.808 20.512 0 28.32l42.496 42.496c7.808 7.808 20.512 7.808 28.32 0l120.352-120.384 120.352 120.384c7.808 7.808 20.512 7.808 28.32 0l42.496-42.496c7.808-7.808 7.808-20.512 0-28.32l-120.384-120.32 120.384-120.384z" />
-            </g>
-          </svg>
-        </button>
+        <div
+          className={
+            canBeDismissed || (!isArtistPage && canBeDismissed)
+              ? `${style.close} active`
+              : style.close
+          }
+        >
+          <button onClick={closePlayer}>
+            <svg width="32" height="32" viewBox="0 0 32 32">
+              <g transform="scale(0.03125 0.03125)">
+                <path d="M512 928c-229.76 0-416-186.24-416-416s186.24-416 416-416 416 186.24 416 416-186.24 416-416 416zM702.752 390.688c7.808-7.808 7.808-20.512 0-28.32l-42.496-42.464c-7.808-7.808-20.512-7.808-28.32 0l-120.352 120.352-120.352-120.352c-7.808-7.808-20.512-7.808-28.32 0l-42.496 42.464c-7.808 7.808-7.808 20.512 0 28.32l120.384 120.384-120.384 120.32c-7.808 7.808-7.808 20.512 0 28.32l42.496 42.496c7.808 7.808 20.512 7.808 28.32 0l120.352-120.384 120.352 120.384c7.808 7.808 20.512 7.808 28.32 0l42.496-42.496c7.808-7.808 7.808-20.512 0-28.32l-120.384-120.32 120.384-120.384z" />
+              </g>
+            </svg>
+          </button>
+        </div>
       </div>
     </div>
   )
