@@ -75,6 +75,7 @@ $frontColor: #4f4f4f;
 
 .close {
   opacity: 0;
+  pointer-events: none;
   margin-left: 1rem;
   text-align: right;
   transition: opacity 0.15s ease-in-out;
@@ -89,15 +90,15 @@ $frontColor: #4f4f4f;
       height: 4rem;
 
       path {
-        transition: fill 0.15s ease-in-out;
+        transition: opacity 0.15s ease-in-out;
         fill: #d63b3b;
       }
     }
   }
 
-  &:hover {
-    path {
-      fill: #b73030;
+  :global(.active) {
+    &:hover {
+      opacity: 0.9;
     }
   }
 }
