@@ -3,18 +3,26 @@ import AudioPlayer from "react-h5-audio-player"
 import style from "./audio-player.module.scss"
 import "react-h5-audio-player/lib/styles.css"
 
-const Player = ({ data, canBeDismissed, isArtistPage }) => {
+const Player = ({ data, canBeDismissed, isArtistPage, artistName }) => {
   const [currentMusicIndex, setCurrentMusicIndex] = useState(0)
   const [isPlayerExpanded, setIsPlayerExpanded] = useState(true)
   const [musicSrc, setMusicSrc] = useState(data)
+  const [artistTitle, setArtistTitle] = useState("")
+
   var player = createRef()
+
+  const resetStorage = () => {
+    sessionStorage.removeItem("playlist")
+    sessionStorage.removeItem("artistName")
+  }
 
   useEffect(() => {
     setMusicSrc(data)
 
     // reset music when current playlist differs from current artist page
     if (JSON.stringify(data) !== sessionStorage.getItem("playlist")) {
-      sessionStorage.removeItem("playlist")
+      resetStorage()
+      setArtistTitle("")
       player.current.audio.current.pause()
     }
   }, [data, player])
@@ -33,12 +41,15 @@ const Player = ({ data, canBeDismissed, isArtistPage }) => {
 
   const onPlay = () => {
     setIsPlayerExpanded(true)
+    if (!canBeDismissed) sessionStorage.setItem("artistName", [artistName])
     sessionStorage.setItem("playlist", [JSON.stringify(musicSrc)])
+    setArtistTitle(`Vous écoutez ${sessionStorage.getItem("artistName")}`)
   }
 
   const closePlayer = () => {
     setIsPlayerExpanded(false)
-    sessionStorage.removeItem("playlist")
+    resetStorage()
+    setArtistTitle("")
     if (isPlayerExpanded) player.current.audio.current.pause()
   }
 
@@ -50,6 +61,7 @@ const Player = ({ data, canBeDismissed, isArtistPage }) => {
           : style.player
       }
     >
+      {artistTitle}
       <AudioPlayer
         ref={player}
         layout="horizontal-reverse"
