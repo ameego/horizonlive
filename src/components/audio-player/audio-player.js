@@ -10,29 +10,24 @@ const Player = ({ data, canBeDismissed, isArtistPage, artistName }) => {
   const [musicSrc, setMusicSrc] = useState(data)
   const [artistTitle, setArtistTitle] = useState(`Playlist de ${name}`)
 
-  let player = createRef()
-  let storedPlaylist = sessionStorage.getItem("playlist")
+  var player = createRef()
 
   const resetStorage = () => {
     sessionStorage.removeItem("playlist")
     sessionStorage.removeItem("artistName")
   }
 
-  const pausePlayer = () => {
-    player.current.audio.current.pause()
-  }
-
   useEffect(() => {
     setMusicSrc(data)
 
     // reset music when current playlist differs from current artist page
-    if (JSON.stringify(data) !== storedPlaylist) {
+    if (JSON.stringify(data) !== sessionStorage.getItem("playlist")) {
       resetStorage()
-      pausePlayer()
-      setIsPlayerExpanded(false)
+      player.current.audio.current.pause()
       setArtistTitle(`Playlist de ${artistName}`)
+      setIsPlayerExpanded(false)
     }
-  }, [data, player, artistName, storedPlaylist, pausePlayer])
+  }, [data, player, artistName])
 
   const handleClickPrevious = () => {
     setCurrentMusicIndex(
@@ -47,13 +42,14 @@ const Player = ({ data, canBeDismissed, isArtistPage, artistName }) => {
   }
 
   const onPlay = () => {
-    if (JSON.stringify(data) === storedPlaylist || !storedPlaylist) {
+    if (
+      JSON.stringify(data) === sessionStorage.getItem("playlist") ||
+      !sessionStorage.getItem("playlist")
+    ) {
       setIsPlayerExpanded(true)
       setArtistTitle(`Vous écoutez\n${sessionStorage.getItem("artistName")}`)
     }
-
     if (!canBeDismissed) sessionStorage.setItem("artistName", [artistName])
-
     sessionStorage.setItem("playlist", [JSON.stringify(musicSrc)])
   }
 
@@ -61,7 +57,7 @@ const Player = ({ data, canBeDismissed, isArtistPage, artistName }) => {
     setIsPlayerExpanded(false)
     resetStorage()
     setArtistTitle("")
-    if (isPlayerExpanded) pausePlayer()
+    if (isPlayerExpanded) player.current.audio.current.pause()
   }
 
   return (
