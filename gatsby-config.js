@@ -10,40 +10,49 @@ module.exports = {
       {
         name: "Home",
         link: "/",
+        data_testid: "nav-home",
       },
       {
         name: "Artists",
         link: "/artists",
+        data_testid: "nav-artist",
       },
       {
         name: "Vidéos",
         link: "/videos",
+        data_testid: "nav-video",
       },
       {
         name: "Focus",
         link: "/focus",
+        data_testid: "nav-focus",
         submenu: [
           {
             name: "Live",
             link: "/focus/live",
+            data_testid: "subnav-focus",
           },
           {
             name: "Label",
             link: "/focus/label",
+            data_testid: "subnav-label",
           },
           {
             name: "Publishing",
             link: "/focus/publishing",
+            data_testid: "subnav-publishing",
           },
           {
             name: "Management",
             link: "/focus/management",
+            data_testid: "subnav-management",
           },
         ],
       },
       {
         name: "Agenda",
         link: "/agenda",
+        data_testid: "nav-agenda",
       },
     ],
   },

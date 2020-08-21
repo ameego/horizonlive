@@ -3,7 +3,11 @@ import style from "./title.module.scss"
 
 const Title = ({ text, isSmaller }) => {
   let titleClass = isSmaller ? `${style.title} ${style.smaller}` : style.title
-  return <h2 className={titleClass}>{text}</h2>
+  return (
+    <h2 data-testid="main-title" className={titleClass}>
+      {text}
+    </h2>
+  )
 }
 
 export default Title

@@ -3,7 +3,11 @@ import { graphql, StaticQuery, Link } from "gatsby"
 import style from "./navigation.module.scss"
 
 const flatNavigation = (link, index) => (
-  <li key={link.name} className={style.navigation__item}>
+  <li
+    key={link.name}
+    className={style.navigation__item}
+    data-testid={link.data_testid}
+  >
     <Link
       className={style.navigation__item}
       to={link.link}
@@ -29,7 +33,7 @@ const nestedNavigation = (link, index) => (
       <div className={style.subnavigation}>
         {link.submenu.map((item, index) => {
           return (
-            <div key={index}>
+            <div key={index} data-testid={item.data_testid}>
               <Link
                 to={item.link}
                 partiallyActive={index !== 0 ? true : false}
@@ -54,9 +58,11 @@ const Navigation = () => (
             menuLinks {
               name
               link
+              data_testid
               submenu {
                 name
                 link
+                data_testid
               }
             }
           }

@@ -62,6 +62,7 @@ const Player = ({ data, canBeDismissed, isArtistPage, artistName }) => {
 
   return (
     <div
+      data-testid="audio-player"
       className={
         (isArtistPage && musicSrc && !canBeDismissed) ||
         (isPlayerExpanded && musicSrc)
@@ -69,7 +70,9 @@ const Player = ({ data, canBeDismissed, isArtistPage, artistName }) => {
           : style.player
       }
     >
-      <div className={style.information}>{artistTitle}</div>
+      <div data-testid="playlist-name" className={style.information}>
+        {artistTitle}
+      </div>
       <div className={style.playercontainer}>
         <AudioPlayer
           ref={player}
@@ -86,6 +89,7 @@ const Player = ({ data, canBeDismissed, isArtistPage, artistName }) => {
         />
 
         <div
+          data-testid="audio-player-close"
           className={
             canBeDismissed || (!isArtistPage && canBeDismissed)
               ? `${style.close} active`

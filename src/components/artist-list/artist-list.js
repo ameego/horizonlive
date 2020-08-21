@@ -22,7 +22,11 @@ const ArtistList = ({ data }) => (
     render={bannerSet => (
       <ul className={style.list}>
         {data.map((artist, index) => (
-          <li className={style.list__item} key={index}>
+          <li
+            className={style.list__item}
+            key={index}
+            data-testid="artist-link"
+          >
             <Link to={`../../artists/${artist.slug}`}>
               <FluidImg
                 durationFadeIn={500}
