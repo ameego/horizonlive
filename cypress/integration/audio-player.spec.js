@@ -19,7 +19,9 @@ context("Audio player", () => {
 
   it("should update player description", () => {
     cy.get(player).contains("Playlist de ")
+    cy.get("[aria-label=Play]")
     cy.get(".rhap_play-pause-button").click()
+    cy.get("[aria-label=Pause]")
     cy.get("[data-testid=main-title]").then(elem => {
       currentArtistName = elem[0].innerText
       cy.get(playlistName).contains("Vous écoutez " + elem[0].innerText, {
@@ -49,6 +51,7 @@ context("Audio player", () => {
     cy.get(".rhap_play-pause-button").click()
     cy.get("[data-testid=nav-artist] a").click()
     cy.get("[data-testid=artist-link]").eq(1).click()
+    cy.get("[aria-label=Play]")
     cy.get(playlistName).not("contains", currentArtistName)
     cy.get("[data-testid=main-title]").then(elem => {
       cy.get(playlistName).contains("Playlist de " + elem[0].innerText, {
