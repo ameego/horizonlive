@@ -23,3 +23,8 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
+
+Cypress.Commands.add("visitArtistByIndex", index => {
+  cy.get("[data-testid=nav-artist] a").click()
+  cy.get("[data-testid=artist-link]").eq(index).click()
+})
