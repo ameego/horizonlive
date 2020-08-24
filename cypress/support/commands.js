@@ -25,6 +25,7 @@
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
 
 Cypress.Commands.add("visitArtistByIndex", index => {
+  cy.wait(1000)
   cy.get("[data-testid=nav-artist] a").click()
-  cy.get("[data-testid=artist-link]").eq(index).click()
+  cy.get("[data-testid=artist-link] a").eq(index).click()
 })
