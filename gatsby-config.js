@@ -8,12 +8,12 @@ module.exports = {
     image: "",
     menuLinks: [
       {
-        name: "Home",
+        name: "Accueil",
         link: "/",
         data_testid: "nav-home",
       },
       {
-        name: "Artists",
+        name: "Artistes",
         link: "/artists",
         data_testid: "nav-artist",
       },
@@ -23,7 +23,7 @@ module.exports = {
         data_testid: "nav-video",
       },
       {
-        name: "Focus",
+        name: "Activités",
         link: "/focus",
         data_testid: "nav-focus",
         submenu: [
