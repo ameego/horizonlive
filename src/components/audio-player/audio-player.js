@@ -81,7 +81,7 @@ const Player = ({ data, canBeDismissed, isArtistPage, artistName }) => {
           autoPlay={false}
           showSkipControls={true}
           showJumpControls={false}
-          volume={0.75}
+          volume={0.65}
           src={musicSrc ? musicSrc[currentMusicIndex].publicURL : ""}
           onClickPrevious={handleClickPrevious}
           onClickNext={handleClickNext}
