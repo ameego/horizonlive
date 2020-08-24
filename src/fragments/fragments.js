@@ -28,10 +28,9 @@ export const query = graphql`
     eventdate(formatString: "Do/MMM/YYYY", locale: "fr")
   }
 
-  fragment HomeFragment on HomeJson {
+  fragment HomeFragment on HomePageJson {
     title
     subtitle
-    banner
     videos
   }
 

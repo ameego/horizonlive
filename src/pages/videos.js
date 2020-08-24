@@ -10,7 +10,7 @@ import VideoList from "../components/video-list/video-list"
 export const Videos = () => {
   const data = useStaticQuery(graphql`
     query VideosQuery {
-      allHomeJson {
+      allCommonJson {
         nodes {
           banner
         }

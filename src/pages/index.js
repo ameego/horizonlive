@@ -9,10 +9,10 @@ import ArtistList from "../components/artist-list/artist-list"
 import ImageBanner from "../components/image-banner/image-banner"
 import VideoList from "../components/video-list/video-list"
 
-function getHomeVideos(allVideosJson, allHomeJson) {
+function getHomeVideos(allVideosJson, allHomePageJson) {
   let filteredVideos = []
   allVideosJson.forEach(video => {
-    allHomeJson[0].videos.forEach(vid => {
+    allHomePageJson[0].videos.forEach(vid => {
       if (vid === video.title) filteredVideos.push(video)
     })
   })
@@ -28,7 +28,7 @@ export const Home = () => {
           ...ArtistsFragment
         }
       }
-      allHomeJson {
+      allHomePageJson {
         nodes {
           ...HomeFragment
         }
@@ -46,7 +46,7 @@ export const Home = () => {
     }
   `)
 
-  const { allVideosJson, allHomeJson, allArtistsJson } = data
+  const { allVideosJson, allHomePageJson, allArtistsJson } = data
 
   return (
     <>
@@ -54,8 +54,8 @@ export const Home = () => {
       <ImageBanner />
       <Layout>
         <PageIntro
-          title={allHomeJson.nodes[0].title}
-          subtitle={allHomeJson.nodes[0].subtitle}
+          title={allHomePageJson.nodes[0].title}
+          subtitle={allHomePageJson.nodes[0].subtitle}
         />
         <ArtistList data={allArtistsJson.nodes} />
         <Spreader>
@@ -66,7 +66,7 @@ export const Home = () => {
             lessBottomSpace={true}
           />
           <VideoList
-            data={getHomeVideos(allVideosJson.nodes, allHomeJson.nodes)}
+            data={getHomeVideos(allVideosJson.nodes, allHomePageJson.nodes)}
           />
         </Spreader>
         <Spreader>
