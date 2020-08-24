@@ -49,6 +49,7 @@ export const query = graphql`
   }
 
   fragment VideosFragment on VideosJson {
+    artist
     title
     url
   }

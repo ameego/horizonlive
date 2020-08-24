@@ -1,7 +1,12 @@
-.photogallery {
-  display: grid;
-  grid-gap: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  list-style-type: none;
-  margin: 0;
+// .photogallery {
+//   display: grid;
+//   grid-gap: 2rem;
+//   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+//   list-style-type: none;
+//   margin: 0;
+// }
+
+:global(.hOzwDT) {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
 }

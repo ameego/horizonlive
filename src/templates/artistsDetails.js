@@ -8,6 +8,7 @@ import PageIntro from "../components/page-intro/page-intro"
 import EventListing from "../components/event-listing/event-listing"
 import PhotoGallery from "../components/photo-gallery/photo-gallery"
 import ImageBanner from "../components/image-banner/image-banner"
+import VideoList from "../components/video-list/video-list"
 import marked from "marked"
 
 function rawMarkup(data) {
@@ -22,6 +23,7 @@ export default function Template({ data }) {
     bannerImage,
     galleryImages,
     quoteImage,
+    artistVideos,
   } = data
 
   return (
@@ -41,6 +43,9 @@ export default function Template({ data }) {
               dangerouslySetInnerHTML={rawMarkup(artistData.nodes[0].biography)}
             />
             <PhotoGallery data={galleryImages.nodes} />
+            <div>
+              <VideoList data={artistVideos.nodes} />
+            </div>
           </div>
           <div className="sidebar">
             <Quote
@@ -115,6 +120,11 @@ export const pageQuery = graphql`
     ) {
       nodes {
         publicURL
+      }
+    }
+    artistVideos: allVideosJson(filter: { artist: { eq: $artistName } }) {
+      nodes {
+        ...VideosFragment
       }
     }
   }
