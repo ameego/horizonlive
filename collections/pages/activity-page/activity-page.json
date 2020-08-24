@@ -1,0 +1,18 @@
+{
+  "live": {
+    "title": "Live",
+    "subtitle": "Sous-live"
+  },
+  "label": {
+    "title": "Label",
+    "subtitle": "Sous-label"
+  },
+  "management": {
+    "title": "Management",
+    "subtitle": "Sous-management"
+  },
+  "publishing": {
+    "title": "Publishing",
+    "subtitle": "Sous-publishing"
+  }
+}
