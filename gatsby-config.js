@@ -135,6 +135,12 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        path: `./collections/pages/activity-page/`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         path: `./collections/pages/agenda-page/`,
       },
     },

@@ -18,13 +18,6 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
           }
         }
       }
-      allAgendaJson {
-        edges {
-          node {
-            category
-          }
-        }
-      }
     }
   `)
 
@@ -50,6 +43,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       component: require.resolve(`./src/templates/focusDetails.js`),
       context: {
         slug: item.node.focus,
+        url: item.node.slug,
       },
     })
   })
