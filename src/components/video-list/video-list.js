@@ -21,7 +21,10 @@ const VideoList = ({ data }) => (
             title={video.title}
           ></iframe>
           <div className={style.videogallery__information}>
-            <Title3 isSmaller={true} text={video.title} />
+            <Title3
+              isSmaller={true}
+              text={`${video.artist} – ${video.title}`}
+            />
           </div>
         </li>
       )
