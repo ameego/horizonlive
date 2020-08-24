@@ -69,7 +69,7 @@ export const Home = () => {
             data={getHomeVideos(allVideosJson.nodes, allHomePageJson.nodes)}
           />
         </Spreader>
-        <Spreader>
+        {/* <Spreader>
           <PageIntro
             title="Actualités"
             subtitle="Vestibulum mollis nulla sed quam sagittis lobortis. Aliquam posuere consequat tortor, sed consectetur erat."
@@ -77,7 +77,7 @@ export const Home = () => {
             lessBottomSpace={true}
           />
           <NewsList data={data.allNewsJson.nodes} />
-        </Spreader>
+        </Spreader> */}
       </Layout>
     </>
   )
