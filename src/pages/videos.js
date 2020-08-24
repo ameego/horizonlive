@@ -15,6 +15,12 @@ export const Videos = () => {
           banner
         }
       }
+      allVideosPageJson {
+        nodes {
+          title
+          subtitle
+        }
+      }
       allVideosJson {
         nodes {
           title
@@ -31,8 +37,8 @@ export const Videos = () => {
       <Layout>
         <Spreader>
           <PageIntro
-            title="Horizon produit ses propres contenus vidéos"
-            subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce venenatis elit vel mi molestie, et vehicula ligula luctus. Vestibulum aliquam dui eget dui elementum."
+            title={data.allVideosPageJson.nodes[0].title}
+            subtitle={data.allVideosPageJson.nodes[0].subtitle}
           />
           <VideoList data={data.allVideosJson.nodes} />
         </Spreader>
