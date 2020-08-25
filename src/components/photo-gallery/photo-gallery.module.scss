@@ -7,6 +7,18 @@
 // }
 
 :global(.hOzwDT) {
+  display: grid !important;
+  grid-gap: 3rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   margin-left: 0 !important;
   margin-right: 0 !important;
+}
+
+:global(.djZQDx) {
+  cursor: pointer;
+}
+
+:global(.chABvK) {
+  width: auto !important;
+  max-width: none !important;
 }
