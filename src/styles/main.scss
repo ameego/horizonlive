@@ -1,7 +1,11 @@
 html {
-  font-size: 62.5%;
+  font-size: 55%;
   box-sizing: border-box;
   font-family: "Open Sans", sans-serif;
+
+  @media (min-width: 768px) {
+    font-size: 62.5%;
+  }
 }
 
 *,

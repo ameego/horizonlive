@@ -15,7 +15,7 @@ const PageIntro = ({
     : style.container
 
   return (
-    <div className={pageIntroClass} style={{ width: "60%" }}>
+    <div className={pageIntroClass}>
       <Title isSmaller={isSmaller} text={title} />
       {children}
       <Subtitle text={subtitle} />

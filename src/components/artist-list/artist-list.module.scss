@@ -1,9 +1,17 @@
 .list {
   display: grid;
-  grid-gap: 3rem;
+  grid-gap: 1.5rem;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   list-style-type: none;
-  margin: 0;
+  margin: 0 1.5rem;
+
+  @media (min-width: 500px) {
+    grid-gap: 3rem;
+  }
+
+  @media (min-width: 1210px) {
+    margin: 0;
+  }
 }
 
 .list__item {
@@ -29,4 +37,12 @@
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: -1px;
+}
+
+:global(.gatsby-image-wrapper) {
+  height: 25rem;
+
+  @media (min-width: 500px) {
+    height: auto;
+  }
 }

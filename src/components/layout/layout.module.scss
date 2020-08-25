@@ -1,6 +1,10 @@
 .layout {
-  margin: 10rem auto;
+  margin: 4rem auto;
   max-width: 1200px;
+
+  @media (min-width: 768px) {
+    margin-top: 10rem;
+  }
 
   > * + * {
     margin-top: 7.5rem;
