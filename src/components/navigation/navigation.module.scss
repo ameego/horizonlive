@@ -10,6 +10,14 @@
   cursor: pointer;
   position: relative;
 
+  & + & {
+    margin-left: 1rem;
+
+    a {
+      padding-left: 1rem;
+    }
+  }
+
   &:hover {
     > .subnavigation {
       display: block;
@@ -19,17 +27,13 @@
   a {
     display: inline-block;
     color: #fff;
-    padding: 1rem 0.5rem;
+    padding: 1rem 0;
     text-decoration: none;
     transition: color 0.125s ease-in-out;
 
     &:hover {
       color: #dd7c7c;
     }
-  }
-
-  > a {
-    margin: 0 0.5rem;
   }
 
   .active {
