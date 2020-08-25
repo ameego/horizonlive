@@ -4,6 +4,7 @@ import SEO from "../components/seo/seo"
 import Tags from "../components/tags/tags"
 import Quote from "../components/quote/quote"
 import Layout from "../components/layout/layout"
+import Title from "../components/titles/title-1/title-1"
 import PageIntro from "../components/page-intro/page-intro"
 import EventListing from "../components/event-listing/event-listing"
 import PhotoGallery from "../components/photo-gallery/photo-gallery"
@@ -42,8 +43,12 @@ export default function Template({ data }) {
             <div
               dangerouslySetInnerHTML={rawMarkup(artistData.nodes[0].biography)}
             />
-            <PhotoGallery data={galleryImages.nodes} />
             <div>
+              <Title text="Galerie photo" isSmaller />
+              <PhotoGallery data={galleryImages.nodes} />
+            </div>
+            <div>
+              <Title text="Videos" isSmaller />
               <VideoList data={artistVideos.nodes} />
             </div>
           </div>
