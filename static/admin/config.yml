@@ -112,8 +112,15 @@ collections:
     editor:
       preview: false
     fields:
-      - label: "Artist name"
+      - label: "Nom de l'artiste"
         name: artistName
+      - name: slug
+        label: "Slug"
+        pattern:
+          [
+            "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+            "A slug can have no spaces or special characters",
+          ]
       - label: Catégories
         name: category
         widget: relation
@@ -121,7 +128,11 @@ collections:
         multiple: true
         searchFields: ["focus"]
         valueField: "focus"
-      - label: "Biography"
+      - label: Bannière
+        name: banner
+        widget: image
+        media_folder: "/static/assets/banner/{{fields.slug}}"
+      - label: Biographie
         name: biography
         widget: "markdown"
       - label: "Introduction"
@@ -136,17 +147,6 @@ collections:
             name: quoteImage
             widget: image
             media_folder: "/static/assets/quote/{{fields.slug}}"
-      - label: Bannière
-        name: banner
-        widget: image
-        media_folder: "/static/assets/banner/{{fields.slug}}"
-      - name: slug
-        label: "Slug"
-        pattern:
-          [
-            "^[a-z0-9]+(?:-[a-z0-9]+)*$",
-            "A slug can have no spaces or special characters",
-          ]
       - label: "Photos"
         label_singular: "photo"
         name: "galleryImages"
@@ -160,7 +160,7 @@ collections:
             widget: image
           - label: "Text alternatif"
             name: altText
-      - label: Playlist
+      - label: Musiques
         name: playlist
         widget: "list"
         summary: "{{fields.musicname}}"
