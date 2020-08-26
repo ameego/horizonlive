@@ -213,6 +213,7 @@ collections:
         name: "eventdate"
         widget: "datetime"
         default: ""
+        format: "YYYY-MM-DD"
         dateFormat: "DD/MM/YY"
         timeFormat: false
         pickerUtc: false
