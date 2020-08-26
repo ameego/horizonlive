@@ -1,6 +1,6 @@
 import React from "react"
 import Gallery from "@browniebroke/gatsby-image-gallery"
-import "./photo-gallery.module.scss"
+import style from "./photo-gallery.module.scss"
 import "@browniebroke/gatsby-image-gallery/dist/style.css"
 
 const PhotoGallery = ({ data }) => {
@@ -11,7 +11,11 @@ const PhotoGallery = ({ data }) => {
     }
   })
 
-  return <Gallery images={formattedData} />
+  return (
+    <div className={style.photogallery}>
+      <Gallery images={formattedData} />
+    </div>
+  )
 }
 
 export default PhotoGallery
