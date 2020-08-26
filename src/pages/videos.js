@@ -25,6 +25,7 @@ export const Videos = () => {
         nodes {
           title
           url
+          artist
         }
       }
     }

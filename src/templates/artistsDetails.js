@@ -49,7 +49,7 @@ export default function Template({ data }) {
             </div>
             <div>
               <Title text="Videos" isSmaller />
-              <VideoList data={artistVideos.nodes} />
+              <VideoList data={artistVideos.nodes} isArtistNameHidden />
             </div>
           </div>
           <div className="sidebar">
