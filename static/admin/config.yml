@@ -101,7 +101,7 @@ collections:
               media_folder: "/static/assets/common/banner",
             }
 
-  - label: Artists
+  - label: Artistes
     name: artists
     summary: "{{artistName}}"
     description: "Les artistes d'Horizon sont listés dans cette collection"
