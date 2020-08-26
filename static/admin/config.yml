@@ -176,7 +176,7 @@ collections:
   - label: "Activités"
     name: focus
     description: "Les activités d'Horizon sont listées dans cette collection"
-    label_singular: focus
+    label_singular: activité
     folder: "collections/focus"
     create: true
     slug: "{{focus}}"
@@ -185,7 +185,7 @@ collections:
     editor:
       preview: false
     fields:
-      - label: "Focus"
+      - label: "Nom de l'activité"
         name: focus
       - label: "Slug"
         name: slug
@@ -216,9 +216,9 @@ collections:
         timeFormat: false
         pickerUtc: false
       - name: evenement
-        label: "Evenement"
+        label: "Évenement"
       - name: category
-        label: Artistes
+        label: Artiste
         widget: relation
         collection: "artists"
         searchFields: ["artistName"]
