@@ -2,7 +2,7 @@ backend:
   name: github
   repo: ameego/horizonlive
   branch: master
-  site_domain: cms.netlify.com
+  site_domain: practical-hypatia-35bd05.netlify.app
 media_folder: static/assets
 public_folder: /assets
 collections:
