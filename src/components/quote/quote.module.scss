@@ -1,5 +1,5 @@
 .quote {
-  margin-top: 2rem;
+  margin-top: 6rem;
   padding: 0 2rem 2rem 2rem;
   border-radius: 5px;
   background-color: rgba(255, 255, 255, 0.15);
@@ -15,6 +15,10 @@
     color: #fff;
     line-height: 1.5;
     font-style: italic;
+  }
+
+  @media (min-width: 1024px) {
+    margin-top: 2rem;
   }
 }
 

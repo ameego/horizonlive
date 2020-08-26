@@ -1,9 +1,13 @@
 .layout {
-  margin: 4rem auto;
+  margin: 4rem 2rem;
   max-width: 1200px;
 
   @media (min-width: 768px) {
     margin-top: 10rem;
+  }
+
+  @media (min-width: 1200px) {
+    margin: 4rem auto;
   }
 
   > * + * {
