@@ -23,9 +23,7 @@ export const Videos = () => {
       }
       allVideosJson {
         nodes {
-          title
-          url
-          artist
+          ...VideosFragment
         }
       }
     }
