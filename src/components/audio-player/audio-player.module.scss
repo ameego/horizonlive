@@ -83,6 +83,13 @@ $frontColor: #4f4f4f;
       fill: #d63b3b;
     }
   }
+
+  :global(.rhap_volume-controls) {
+    display: none;
+    @media (min-width: 650px) {
+      display: block;
+    }
+  }
 }
 
 .close {
@@ -116,12 +123,17 @@ $frontColor: #4f4f4f;
 }
 
 .information {
+  display: none;
   padding: 0.5rem 1.5rem;
   font-size: 1.4rem;
   font-weight: 600;
   text-align: left;
   line-height: 1.35;
   width: 20rem;
+
+  @media (min-width: 650px) {
+    display: block;
+  }
 }
 
 :global(.rhap_main-controls-button),
