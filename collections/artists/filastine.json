@@ -15,6 +15,7 @@
   ],
   "slug": "filastine",
   "banner": "/static/assets/banner/filastine/7090484017_8393bcf824_k.jpg",
+  "displayOrder": 200,
   "playlist": [
     {
       "musicname": "Test",
