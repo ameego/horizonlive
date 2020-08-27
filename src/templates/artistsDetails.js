@@ -60,7 +60,9 @@ export default function Template({ data }) {
               quote={artistData.nodes[0].citation.quote}
               src={quoteImage.nodes[0].childImageSharp.fluid}
             />
-            {agendaData ? <EventListing data={agendaData} /> : null}
+            {agendaData.nodes.length ? (
+              <EventListing data={agendaData} />
+            ) : null}
           </div>
         </div>
       </Layout>
