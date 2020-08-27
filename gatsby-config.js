@@ -4,7 +4,7 @@ module.exports = {
     titleTemplate: "%s · Produit des artistes libres",
     description:
       "Horizon produit des artistes libres et sans frontières. Horizon repère puis développe des artistes dès leurs tous premiers pas sur scène.",
-    url: "https://www.doe.com",
+    url: "https://www.horizon-musiques.fr",
     image: "",
     menuLinks: [
       {
