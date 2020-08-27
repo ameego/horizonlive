@@ -1,3 +1,32 @@
+const get = require(`lodash.get`)
+
+exports.createSchemaCustomization = ({ actions }) => {
+  const { createTypes, createFieldExtension } = actions
+
+  const isFuture = fieldName => source => {
+    const date = get(source, fieldName)
+    return new Date(date) > new Date()
+  }
+
+  createFieldExtension({
+    name: `isFuture`,
+    args: {
+      fieldName: "String!",
+    },
+    extend({ fieldName }) {
+      return {
+        resolve: isFuture(fieldName),
+      }
+    },
+  })
+
+  createTypes(`
+    type AgendaJson implements Node {
+      isFuture: Boolean! @isFuture(fieldName: "eventdate")
+    }
+  `)
+}
+
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions
   const result = await graphql(`
