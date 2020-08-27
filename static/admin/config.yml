@@ -136,7 +136,7 @@ collections:
         valueType: "int"
         min: 100
         step: 100
-        hint: "Utilisez le curseur à droite du champ texte pour changer la valeur. Plus le nombre est faible, plus l'artiste sera affiché en première position. 100 placera l'artiste en premier dans la liste, 200 en second, 300 en troisième, etc."
+        hint: "Contrôle l'ordre d'affichage des artistes. Utilisez le curseur à droite du champ texte pour changer la valeur. 100 place l'artiste en première position dans la liste, 200 en deuxième position, 300 en troisième position, etc."
         pattern:
           [
             '^(0|[1-9]\d?00)$',
