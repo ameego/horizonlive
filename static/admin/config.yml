@@ -133,6 +133,14 @@ collections:
         name: banner
         widget: image
         media_folder: "/static/assets/banner/{{fields.slug}}"
+      - label: Ordre d'affichage
+        name: displayOrder
+        widget: "number"
+        default: 100
+        valueType: "int"
+        min: 100
+        step: 100
+        hint: "Utilisez le curseur à droite du champ texte pour changer la valeur. Plus le nombre est faible, plus l'artiste sera affiché en première position."
       - label: Biographie
         name: biography
         widget: "markdown"
