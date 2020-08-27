@@ -3,7 +3,6 @@ import style from "./event-listing.module.scss"
 import Title from "../titles/title-1/title-1"
 
 function formatDay(day) {
-  console.log(day.length)
   return day.length > 1 ? day : `0${day}`
 }
 
