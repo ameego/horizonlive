@@ -9,7 +9,7 @@ import ArtistList from "../components/artist-list/artist-list"
 export const Home = () => {
   const data = useStaticQuery(graphql`
     query ArtistQuery {
-      artistData: allArtistsJson {
+      artistData: allArtistsJson(sort: { fields: displayOrder }) {
         nodes {
           ...ArtistsFragment
         }

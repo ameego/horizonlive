@@ -23,7 +23,7 @@ function getHomeVideos(allVideosJson, allHomePageJson) {
 export const Home = () => {
   const data = useStaticQuery(graphql`
     query HomeQuery {
-      allArtistsJson {
+      allArtistsJson(sort: { fields: displayOrder }) {
         nodes {
           ...ArtistsFragment
         }
