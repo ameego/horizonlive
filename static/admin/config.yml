@@ -129,10 +129,6 @@ collections:
         multiple: true
         searchFields: ["focus"]
         valueField: "focus"
-      - label: Bannière
-        name: banner
-        widget: image
-        media_folder: "/static/assets/banner/{{fields.slug}}"
       - label: Ordre d'affichage
         name: displayOrder
         widget: "number"
@@ -140,7 +136,16 @@ collections:
         valueType: "int"
         min: 100
         step: 100
-        hint: "Utilisez le curseur à droite du champ texte pour changer la valeur. Plus le nombre est faible, plus l'artiste sera affiché en première position."
+        hint: "Utilisez le curseur à droite du champ texte pour changer la valeur. Plus le nombre est faible, plus l'artiste sera affiché en première position. 100 placera l'artiste en premier dans la liste, 200 en second, 300 en troisième, etc."
+        pattern:
+          [
+            '^(0|[1-9]\d?00)$',
+            "Le nombre doit être incrémenté par 100 (100, 200, 300, 400, 500, etc.)",
+          ]
+      - label: Bannière
+        name: banner
+        widget: image
+        media_folder: "/static/assets/banner/{{fields.slug}}"
       - label: Biographie
         name: biography
         widget: "markdown"
@@ -201,7 +206,7 @@ collections:
         pattern:
           [
             "^[a-z0-9]+(?:-[a-z0-9]+)*$",
-            "A slug can have no spaces or special characters",
+            "Un slug ne peut pas avoir de caractère spéciaux, ni d'espaces",
           ]
 
   - label: Agenda
