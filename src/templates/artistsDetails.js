@@ -29,7 +29,10 @@ export default function Template({ data }) {
 
   return (
     <>
-      <SEO />
+      <SEO
+        title={artistData.nodes[0].artistName}
+        description={artistData.nodes[0].introduction}
+      />
       <ImageBanner
         src={bannerImage.nodes[0].childImageSharp.fluid}
         isAbsolute
