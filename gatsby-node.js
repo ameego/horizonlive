@@ -57,7 +57,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
   result.data.allArtistsJson.edges.forEach(item => {
     createPage({
-      path: `artists/${item.node.slug}`,
+      path: `artistes/${item.node.slug}`,
       component: require.resolve(`./src/templates/artistsDetails.js`),
       context: {
         slug: item.node.slug,

@@ -14,7 +14,7 @@ module.exports = {
       },
       {
         name: "Artistes",
-        link: "/artists",
+        link: "/artistes",
         data_testid: "nav-artist",
       },
       {
