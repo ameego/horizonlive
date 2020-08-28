@@ -37,11 +37,3 @@
   text-transform: uppercase;
   letter-spacing: -1px;
 }
-
-:global(.gatsby-image-wrapper) {
-  height: 25rem;
-
-  @media (min-width: 500px) {
-    height: auto;
-  }
-}

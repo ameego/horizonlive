@@ -43,6 +43,14 @@
       display: block;
     }
   }
+
+  :global(.gatsby-image-wrapper) {
+    height: 60vh;
+
+    @media (min-width: 768) {
+      height: auto;
+    }
+  }
 }
 
 .banner__img {
