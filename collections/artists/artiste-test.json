@@ -1,0 +1,44 @@
+{
+  "citation": {
+    "quote": "Phasellus maximus, lectus ut vulputate tristique, ligula nisi dignissim ante, vel vehicula mi sem ac lacus. Donec quis vulputate nunc. Mauris sed sapien a lacus vehicula mollis.",
+    "quoteImage": "/static/assets/quote/artiste-test/img007.jpg"
+  },
+  "galleryImages": [
+    {
+      "image": "/static/assets/gallery/artiste-test/img009.jpg",
+      "altText": "Alt1"
+    },
+    {
+      "image": "/static/assets/gallery/artiste-test/img010.jpg",
+      "altText": "Alt2"
+    },
+    {
+      "image": "/static/assets/gallery/artiste-test/img012.jpg",
+      "altText": "Alt4"
+    },
+    {
+      "image": "/static/assets/gallery/artiste-test/img027.jpg",
+      "altText": "Alt6"
+    },
+    {
+      "image": "/static/assets/gallery/artiste-test/img015.jpg",
+      "altText": "Alt7"
+    }
+  ],
+  "slug": "artiste-test",
+  "banner": "/static/assets/banner/artiste-test/img_3413.jpg",
+  "displayOrder": 400,
+  "playlist": [
+    {
+      "musicname": "Musique 1",
+      "music": "/static/music/artiste-test/ave-maria-hitman-blood-money-mp3.mp3"
+    }
+  ],
+  "artistName": "Artiste test",
+  "biography": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum efficitur quam, in auctor ligula porta sed. Nam tortor risus, pretium nec iaculis nec, lobortis vel est. Suspendisse tempus elementum metus. Integer a eros eget libero tincidunt condimentum. Ut tincidunt, magna at egestas volutpat, massa dui pharetra nibh, vitae pharetra quam ligula ut erat. Duis id urna ullamcorper ipsum pulvinar vehicula a eu tortor. In ut leo erat. Donec diam felis, posuere id finibus a, pellentesque vitae tellus. Nunc vel euismod lacus. Morbi viverra urna risus, in sodales mi rutrum non. In hac habitasse platea dictumst. Nullam magna lacus, blandit vel consectetur eu, viverra lobortis ligula.\n\nPhasellus maximus, lectus ut vulputate tristique, ligula nisi dignissim ante, vel vehicula mi sem ac lacus. Donec quis vulputate nunc. Mauris sed sapien a lacus vehicula mollis. Duis dignissim lacus sed semper dapibus. Donec imperdiet purus ac orci pellentesque, et aliquam urna vestibulum. Quisque nec augue nec eros sodales rutrum. Integer urna nisi, feugiat at iaculis eget, hendrerit eget tortor.\n\nProin diam augue, placerat ut nibh id, sodales condimentum mi. Sed viverra lorem quis molestie eleifend. Proin lobortis eros eget lectus scelerisque interdum. Nullam venenatis ipsum nec nisl aliquet tempus. Quisque blandit luctus pulvinar. Nam efficitur purus vitae mi varius, vel lobortis tortor cursus. Mauris sagittis quis nunc sed tristique.",
+  "introduction": "Quisque blandit luctus pulvinar. Nam efficitur purus vitae mi varius, vel lobortis tortor cursus. ",
+  "category": [
+    "Label",
+    "Publishing"
+  ]
+}
