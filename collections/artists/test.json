@@ -1,0 +1,27 @@
+{
+  "citation": {
+    "quote": "Selon le dictionnaire d’argot, traiter quelqu’un de barje c’est le considérer comme une personne farfelue, hors du commun",
+    "quoteImage": "/static/assets/quote/test/img007.jpg"
+  },
+  "galleryImages": [
+    {
+      "image": "/static/assets/gallery/test/img010.jpg",
+      "altText": "Selon le dictionnaire d’argot, traiter quelqu’un de barje c’est le considérer comme une personne farfelue, hors du commun"
+    }
+  ],
+  "slug": "test",
+  "banner": "/static/assets/banner/test/img007.jpg",
+  "displayOrder": 100,
+  "playlist": [
+    {
+      "musicname": "Selon le dictionnaire d’argot, traiter quelqu’un de barje c’est le considérer comme une personne farfelue, hors du commun",
+      "music": "/static/music/test/200112-102658.mp3"
+    }
+  ],
+  "artistName": "Test",
+  "biography": "Selon le dictionnaire d’argot, traiter quelqu’un de barje c’est le considérer comme une personne farfelue, hors du commun",
+  "introduction": "Selon le dictionnaire d’argot, traiter quelqu’un de barje c’est le considérer comme une personne farfelue, hors du commun",
+  "category": [
+    "Label"
+  ]
+}
