@@ -1,0 +1,26 @@
+{
+  "citation": {
+    "quote": "wefwef",
+    "quoteImage": "/static/assets/quote/67234102_10156420124736723_840629476122427392_o.jpg"
+  },
+  "galleryImages": [
+    {
+      "image": "/static/assets/gallery/yoyo/67704863_10156430387776723_1649174850759032832_o.jpg",
+      "altText": "rf"
+    }
+  ],
+  "slug": "yoyo",
+  "banner": "/static/assets/banner/67234102_10156420124736723_840629476122427392_o.jpg",
+  "playlist": [
+    {
+      "musicname": "eww",
+      "music": "/static/music/yoyo/200112-103256.mp3"
+    }
+  ],
+  "artistName": "yoyo",
+  "biography": "wefewf",
+  "introduction": "wefewf",
+  "category": [
+    "Management"
+  ]
+}
