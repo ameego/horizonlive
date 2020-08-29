@@ -1,19 +1,27 @@
 {
-  "displayOrder": 300,
-  "artistName": "Artistes",
-  "slug": "artistes",
-  "category": [
-    "Management"
-  ],
-  "biography": "wefwfwe",
-  "introduction": "wewef",
   "citation": {
-    "quote": "wefwef"
+    "quote": "wefwef",
+    "quoteImage": "/static/assets/quote/artistes/img027.jpg"
   },
+  "galleryImages": [
+    {
+      "image": "/static/assets/gallery/artistes/img012.jpg",
+      "altText": "wefwefwf"
+    }
+  ],
+  "slug": "artistes",
+  "banner": "/static/assets/banner/artistes/img009.jpg",
+  "displayOrder": 300,
   "playlist": [
     {
       "musicname": "wefwef",
       "music": "/static/music/artistes/200112-102658.mp3"
     }
+  ],
+  "artistName": "Artistes",
+  "biography": "wefwfwe",
+  "introduction": "wewef",
+  "category": [
+    "Management"
   ]
 }
