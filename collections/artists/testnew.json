@@ -1,0 +1,27 @@
+{
+  "citation": {
+    "quote": "wefewf",
+    "quoteImage": "/static/assets/quote/testnew/img012.jpg"
+  },
+  "galleryImages": [
+    {
+      "image": "/static/assets/gallery/testnew/img027.jpg",
+      "altText": "wefwfe"
+    }
+  ],
+  "slug": "testnew",
+  "banner": "/static/assets/banner/testnew/img009.jpg",
+  "displayOrder": 400,
+  "playlist": [
+    {
+      "musicname": "ewfwef",
+      "music": "/static/music/testnew/200112-103256.mp3"
+    }
+  ],
+  "artistName": "testnew",
+  "biography": "wefewfwef",
+  "introduction": "wefwef",
+  "category": [
+    "Publishing"
+  ]
+}
