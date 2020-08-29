@@ -19,7 +19,9 @@ export const wrapPageElement = ({ element, props }) => {
       {element}
       <Player
         artistName={
-          props.data && props.data.artistData && props.data.artistData.nodes
+          props.data &&
+          props.data.artistData &&
+          props.data.artistData.nodes.length > 0
             ? props.data.artistData.nodes[0].artistName
             : ""
         }
