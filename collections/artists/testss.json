@@ -1,0 +1,26 @@
+{
+  "citation": {
+    "quote": "testss",
+    "quoteImage": "/static/assets/quote/img009.jpg"
+  },
+  "galleryImages": [
+    {
+      "image": "/static/assets/gallery/testss/img027.jpg",
+      "altText": "wefwe"
+    }
+  ],
+  "slug": "testss",
+  "banner": "/static/assets/banner/img012.jpg",
+  "playlist": [
+    {
+      "musicname": "Musique",
+      "music": "/static/music/testss/200112-102658.mp3"
+    }
+  ],
+  "artistName": "testss",
+  "biography": "testss",
+  "introduction": "testss",
+  "category": [
+    "Live"
+  ]
+}
