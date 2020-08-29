@@ -1,0 +1,27 @@
+{
+  "citation": {
+    "quote": "wefwef",
+    "quoteImage": "/static/assets/quote/buridane/img009.jpg"
+  },
+  "galleryImages": [
+    {
+      "image": "/static/assets/gallery/buridane/img012.jpg",
+      "altText": "wefwef"
+    }
+  ],
+  "slug": "buridane",
+  "banner": "/static/assets/banner/buridane/img027.jpg",
+  "displayOrder": 100,
+  "playlist": [
+    {
+      "musicname": "wef",
+      "music": "/static/music/buridane/amb_bigfoot_backing_part_01_08.mp3"
+    }
+  ],
+  "artistName": "Buridane",
+  "biography": "wefwefwefwef",
+  "introduction": "wefwef",
+  "category": [
+    "Label"
+  ]
+}
