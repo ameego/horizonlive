@@ -1,0 +1,23 @@
+{
+  "displayOrder": 200,
+  "artistName": "Madina",
+  "slug": "madina",
+  "category": [
+    "Publishing"
+  ],
+  "biography": "Donec id sapien id ante placerat aliquet at quis sem. Duis molestie aliquet hendrerit. Ut bibendum turpis at viverra hendrerit. Duis mattis, dolor quis facilisis efficitur, mauris mauris egestas augue, vitae aliquet mauris tortor finibus dolor. Suspendisse id sem rutrum nisi congue facilisis sed ut purus. Phasellus pulvinar accumsan nunc imperdiet ultrices. Phasellus aliquam nisi ornare nisi egestas sollicitudin.\n\nDonec a augue sed lectus imperdiet consectetur. Phasellus dignissim auctor justo, sed tempor est faucibus ut. Cras vestibulum iaculis velit, eu ultrices metus eleifend id. Morbi dictum, massa vitae ultricies lobortis, mi libero porttitor purus, sed tincidunt tellus mauris sed magna. Donec non erat eget lacus ultrices rutrum. Donec sollicitudin bibendum leo at pellentesque. Mauris a pretium orci. In ut magna molestie, ultrices eros viverra, auctor lacus. Cras id libero tellus. Etiam vestibulum semper urna. Sed ex tellus, blandit sit amet tincidunt vitae, facilisis vitae leo. Cras a turpis pretium nibh pulvinar ullamcorper at vitae sapien. Morbi vitae dui ipsum. Phasellus vel sem accumsan nibh placerat rhoncus ac ut justo. Praesent pharetra neque id quam lobortis iaculis.\n\nEtiam vitae molestie velit. Cras bibendum convallis arcu, eu pharetra massa vehicula a. Quisque hendrerit, est sed vulputate cursus, libero mauris varius eros, quis ultricies leo ante sit amet enim. Aenean id metus sed augue sodales ullamcorper. Ut facilisis ullamcorper vehicula. Integer at dui sit amet elit pellentesque imperdiet. Sed quis magna quis sem accumsan tincidunt. Nullam est quam, feugiat sit amet metus et, maximus tempor risus. Duis at tortor eu libero volutpat interdum. Praesent vehicula tempor turpis, sit amet luctus diam egestas vitae. Etiam a neque venenatis, molestie mauris non, iaculis nisi. Nullam commodo porttitor sem, eu tempor nunc gravida ac. Morbi enim risus, interdum imperdiet rutrum pellentesque, iaculis at odio. Nunc varius sapien odio, id interdum justo fringilla vel.",
+  "introduction": "Etiam vitae molestie velit. Cras bibendum convallis arcu, eu pharetra massa vehicula a. Quisque hendrerit, est sed vulputate cursus.",
+  "citation": {
+    "quote": "Etiam vitae molestie velit. Cras bibendum convallis arcu, eu pharetra massa vehicula a. Quisque hendrerit, est sed vulputate cursus"
+  },
+  "playlist": [
+    {
+      "musicname": "Musique 1",
+      "music": "/static/music/madina/200112-102658.mp3"
+    },
+    {
+      "musicname": "Musique 2",
+      "music": "/static/music/madina/200112-103256.mp3"
+    }
+  ]
+}
