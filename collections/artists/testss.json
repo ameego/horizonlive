@@ -1,16 +1,17 @@
 {
   "citation": {
     "quote": "testss",
-    "quoteImage": "/static/assets/quote/img009.jpg"
+    "quoteImage": "/static/assets/quote/testss/73207302_1326782024168354_5383856836808956719_n.jpg"
   },
   "galleryImages": [
     {
-      "image": "/static/assets/gallery/testss/img027.jpg",
+      "image": "/static/assets/gallery/testss/67234102_10156420124736723_840629476122427392_o.jpg",
       "altText": "wefwe"
     }
   ],
   "slug": "testss",
-  "banner": "/static/assets/banner/img012.jpg",
+  "banner": "/static/assets/banner/testss/67704863_10156430387776723_1649174850759032832_o.jpg",
+  "displayOrder": 100,
   "playlist": [
     {
       "musicname": "Musique",
