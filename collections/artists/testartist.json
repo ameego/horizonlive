@@ -1,0 +1,19 @@
+{
+  "displayOrder": 300,
+  "artistName": "Testartist",
+  "slug": "testartist",
+  "category": [
+    "Publishing"
+  ],
+  "biography": "wewefpojwef pojwef",
+  "introduction": "wefwef",
+  "citation": {
+    "quote": "wefwef"
+  },
+  "playlist": [
+    {
+      "musicname": "wefwef",
+      "music": "/static/music/testartist/200112-102658.mp3"
+    }
+  ]
+}
