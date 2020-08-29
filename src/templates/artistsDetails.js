@@ -33,10 +33,12 @@ export default function Template({ data }) {
         title={artistData.nodes[0].artistName}
         description={artistData.nodes[0].introduction}
       />
-      <ImageBanner
-        src={bannerImage.nodes[0].childImageSharp.fluid}
-        isAbsolute
-      />
+      {bannerImage && bannerImage.nodes.length > 0 ? (
+        <ImageBanner
+          src={bannerImage.nodes[0].childImageSharp.fluid}
+          isAbsolute
+        />
+      ) : null}
       <Layout>
         <PageIntro
           title={artistData.nodes[0].artistName}
@@ -61,7 +63,11 @@ export default function Template({ data }) {
           <div className="sidebar">
             <Quote
               quote={artistData.nodes[0].citation.quote}
-              src={quoteImage.nodes[0].childImageSharp.fluid}
+              src={
+                quoteImage.nodes.length > 0
+                  ? quoteImage.nodes[0].childImageSharp.fluid
+                  : ""
+              }
             />
             {agendaData.nodes.length ? (
               <EventListing data={agendaData} />
