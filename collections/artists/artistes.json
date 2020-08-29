@@ -1,0 +1,19 @@
+{
+  "displayOrder": 300,
+  "artistName": "Artistes",
+  "slug": "artistes",
+  "category": [
+    "Management"
+  ],
+  "biography": "wefwfwe",
+  "introduction": "wewef",
+  "citation": {
+    "quote": "wefwef"
+  },
+  "playlist": [
+    {
+      "musicname": "wefwef",
+      "music": "/static/music/artistes/200112-102658.mp3"
+    }
+  ]
+}
