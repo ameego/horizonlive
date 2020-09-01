@@ -1,11 +1,20 @@
 {
   "citation": {
     "quote": "trouver citation",
-    "quoteImage": ""
+    "quoteImage": "/static/assets/quote/noga/noga_010_lollwillems.jpg"
   },
-  "galleryImages": [],
+  "galleryImages": [
+    {
+      "image": "/static/assets/gallery/noga/noga_20191207_344_web_©quentinbertoux.jpg",
+      "altText": "noga"
+    },
+    {
+      "image": "/static/assets/gallery/noga/noga_dsc_3024©yannzitouni.jpg",
+      "altText": "noga"
+    }
+  ],
   "slug": "noga",
-  "banner": "",
+  "banner": "/static/assets/banner/noga/etsi_2240x1140_bannierespot.png",
   "displayOrder": 700,
   "playlist": [],
   "artistName": "NOGA",
