@@ -1,35 +1,17 @@
 {
   "citation": {
-    "quote": "Etiam vitae molestie velit. Cras bibendum convallis arcu, eu pharetra massa vehicula a. Quisque hendrerit, est sed vulputate cursus",
-    "quoteImage": "/static/assets/quote/madina/img012.jpg"
+    "quote": "trouver citation",
+    "quoteImage": ""
   },
-  "galleryImages": [
-    {
-      "image": "/static/assets/gallery/madina/img027.jpg",
-      "altText": "Alt3"
-    },
-    {
-      "image": "/static/assets/gallery/madina/img007.jpg",
-      "altText": "Alt2"
-    }
-  ],
-  "slug": "madina",
-  "banner": "/static/assets/banner/madina/img009.jpg",
-  "displayOrder": 200,
-  "playlist": [
-    {
-      "musicname": "Musique 1",
-      "music": "/static/music/madina/200112-102658.mp3"
-    },
-    {
-      "musicname": "Musique 2",
-      "music": "/static/music/madina/200112-103256.mp3"
-    }
-  ],
-  "artistName": "Madina",
-  "biography": "Donec id sapien id ante placerat aliquet at quis sem. Duis molestie aliquet hendrerit. Ut bibendum turpis at viverra hendrerit. Duis mattis, dolor quis facilisis efficitur, mauris mauris egestas augue, vitae aliquet mauris tortor finibus dolor. Suspendisse id sem rutrum nisi congue facilisis sed ut purus. Phasellus pulvinar accumsan nunc imperdiet ultrices. Phasellus aliquam nisi ornare nisi egestas sollicitudin.\n\nDonec a augue sed lectus imperdiet consectetur. Phasellus dignissim auctor justo, sed tempor est faucibus ut. Cras vestibulum iaculis velit, eu ultrices metus eleifend id. Morbi dictum, massa vitae ultricies lobortis, mi libero porttitor purus, sed tincidunt tellus mauris sed magna. Donec non erat eget lacus ultrices rutrum. Donec sollicitudin bibendum leo at pellentesque. Mauris a pretium orci. In ut magna molestie, ultrices eros viverra, auctor lacus. Cras id libero tellus. Etiam vestibulum semper urna. Sed ex tellus, blandit sit amet tincidunt vitae, facilisis vitae leo. Cras a turpis pretium nibh pulvinar ullamcorper at vitae sapien. Morbi vitae dui ipsum. Phasellus vel sem accumsan nibh placerat rhoncus ac ut justo. Praesent pharetra neque id quam lobortis iaculis.\n\nEtiam vitae molestie velit. Cras bibendum convallis arcu, eu pharetra massa vehicula a. Quisque hendrerit, est sed vulputate cursus, libero mauris varius eros, quis ultricies leo ante sit amet enim. Aenean id metus sed augue sodales ullamcorper. Ut facilisis ullamcorper vehicula. Integer at dui sit amet elit pellentesque imperdiet. Sed quis magna quis sem accumsan tincidunt. Nullam est quam, feugiat sit amet metus et, maximus tempor risus. Duis at tortor eu libero volutpat interdum. Praesent vehicula tempor turpis, sit amet luctus diam egestas vitae. Etiam a neque venenatis, molestie mauris non, iaculis nisi. Nullam commodo porttitor sem, eu tempor nunc gravida ac. Morbi enim risus, interdum imperdiet rutrum pellentesque, iaculis at odio. Nunc varius sapien odio, id interdum justo fringilla vel.",
-  "introduction": "Etiam vitae molestie velit. Cras bibendum convallis arcu, eu pharetra massa vehicula a. Quisque hendrerit, est sed vulputate cursus.",
+  "galleryImages": [],
+  "slug": "noga",
+  "banner": "",
+  "displayOrder": 700,
+  "playlist": [],
+  "artistName": "NOGA",
+  "biography": "**ET SI…\\\n… ouvrir une page.**\n\nConscrire, au sens étymologique du terme, celles du passé pour mieux composer ensemble, en toute conscience, ce qu’il reste à écrire. Transcender l’expérience, et s’autoriser à accueillir, depuis nos racines, un nouveau possible.«Sweet release» susurrait *Calling you* à propos du changement sur la route de *Bagdad café*. *Léger la vie,* nous inspire Noga sur des rythmes percussifs dont le battement résonne comme un mantra. Si la Création a pris 7 jours, notre Libération pourrait bien, elle, se décliner en ces 7 chansons d’*Et si…*, enregistrées live auprès des indéfectibles complices Patrick Bebey et Olivier Koundouno. Puisées dans son répertoire tel qu’il s’offre en tournée, sa *Femme vivante*, «*si rebelle et aimante, qui dit non, non, l’air sévère et le cœur grand ouvert*», y côtoie la mise en musique des ancestraux Mi Ha’Ish du Roi David et Eli d’Hannah Szenes, tandis qu’autour d’elle(s) s’éploient l’importance de cultiver et transmettre les rayons de l’enfance (Innocents), ou combien nos projections savent, si l’on n’y prend garde, nous éloigner de l’essentiel (Sans écran). Les voilà réunies ici sous leurs couleurs les plus organiques, de la polyphonie du synthé Prophet au violoncelle et à la sanza, en passant par la ludique flûte pygmée, qui ose braver la mélancolie du joyau musical du film culte de Percy Adlon dans sa réorchestration jazz.\\\nAvec *Et si…,* Noga nous rappelle à l’épure et à sa beauté comme autant de forces à se réapproprier. Et nous insuffle cette énergie fédératrice et nourricière telle qu’elle nous l’adresse en concert.\\\nElle est si précieuse.",
+  "introduction": "trouver phrase d'accroche",
   "category": [
-    "Publishing"
+    "Live"
   ]
 }
