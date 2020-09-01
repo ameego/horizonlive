@@ -3,7 +3,16 @@
     "quote": "Un disque où l’on se réfugie comme dans une isba de bois sur les bords du lac Baïkal, propice à l’introspection et aux visions d’harmonie, de grâce et de générosité. </br> <b>Soul Kitchen </b>",
     "quoteImage": "/static/assets/quote/lesilenceetleau/jb-soulard.jpg"
   },
-  "galleryImages": [],
+  "galleryImages": [
+    {
+      "image": "/static/assets/gallery/lesilenceetleau/┬®-hugues-anhes-014.jpg",
+      "altText": "le silence et l'eau"
+    },
+    {
+      "image": "/static/assets/gallery/lesilenceetleau/┬®-hugues-anhes-058.jpg",
+      "altText": "le silence et l'eau"
+    }
+  ],
   "slug": "lesilenceetleau",
   "banner": "/static/assets/banner/lesilenceetleau/┬®-hugues-anhes-061.jpg",
   "displayOrder": 400,
