@@ -52,12 +52,15 @@ export default function Template({ data }) {
               dangerouslySetInnerHTML={rawMarkup(artistData.nodes[0].biography)}
             />
             <div>
-              <Title text="Galerie photo" isSmaller />
               <PhotoGallery data={galleryImages.nodes} />
             </div>
             <div>
-              <Title text="Videos" isSmaller />
-              <VideoList data={artistVideos.nodes} isArtistNameHidden />
+              {artistVideos.nodes.length > 0 ? (
+                <>
+                  <Title text="Videos" isSmaller />
+                  <VideoList data={artistVideos.nodes} isArtistNameHidden />
+                </>
+              ) : null}
             </div>
           </div>
           <div className="sidebar">
