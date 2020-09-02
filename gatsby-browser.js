@@ -10,7 +10,7 @@ export const wrapPageElement = ({ element, props }) => {
     props.data.artistPlaylist.nodes.length > 0
 
   var isArtistPage =
-    props.path.split("/")[1] === "artists" && props.path.split("/")[2] !== ""
+    props.path.split("/")[1] === "artistes" && props.path.split("/")[2] !== ""
 
   var playlistFromStorage = sessionStorage.getItem("playlist")
 
