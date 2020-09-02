@@ -47,7 +47,7 @@
   :global(.gatsby-image-wrapper) {
     height: 60vh;
 
-    @media (min-width: 768) {
+    @media (min-width: 768px) {
       height: auto;
     }
   }
