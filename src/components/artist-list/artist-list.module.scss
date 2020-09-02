@@ -3,10 +3,7 @@
   grid-gap: 1.5rem;
   grid-template-columns: 1fr;
   list-style-type: none;
-
-  @media (min-width: 500px) {
-    grid-gap: 3rem;
-  }
+  grid-gap: 2rem;
 
   @media (min-width: 650px) {
     grid-template-columns: 1fr 1fr;
