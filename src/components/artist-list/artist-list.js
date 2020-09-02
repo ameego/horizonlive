@@ -27,7 +27,7 @@ const ArtistList = ({ data }) => (
             key={index}
             data-testid="artist-link"
           >
-            <Link to={`../../artistes/${artist.slug}`}>
+            <Link to={`../../artistes/${artist.slug}/`}>
               {artist.banner ? (
                 <FluidImg
                   durationFadeIn={500}
