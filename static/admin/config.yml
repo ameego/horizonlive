@@ -271,8 +271,9 @@ collections:
     label_singular: vidéo
     folder: "collections/videos"
     create: true
-    slug: "{{title}}-{{artist}}"
-    summary: "{{title}} [{{artist}} · {{videocategory}}]"
+    slug: "{{title}}-{{artist}}-{{videocategory}}"
+    summary: "{{title}} · {{artist}} [{{videocategory}}]"
+    sortableFields: ["artist", "videocategory"]
     identifier_field: focus
     extension: json
     editor:
