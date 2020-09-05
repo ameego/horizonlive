@@ -210,7 +210,29 @@ collections:
         pattern:
           [
             "^[a-z0-9]+(?:-[a-z0-9]+)*$",
-            "Un slug ne peut pas avoir de caractère spéciaux, ni d'espaces",
+            "Un slug ne peut pas avoir de caractères spéciaux, ni d'espaces",
+          ]
+
+  - label: "Catégories vidéos"
+    name: videocat
+    description: "Les catégories de vidéos sont listées dans cette collection"
+    label_singular: catégorie
+    folder: "collections/videocategories"
+    create: true
+    slug: "{{slug}}"
+    identifier_field: categoryname
+    extension: json
+    editor:
+      preview: false
+    fields:
+      - label: "Nom de la catégorie"
+        name: categoryname
+      - label: "Slug"
+        name: slug
+        pattern:
+          [
+            "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+            "Un slug ne peut pas avoir de caractères spéciaux, ni d'espaces",
           ]
 
   - label: Agenda
@@ -250,7 +272,7 @@ collections:
     folder: "collections/videos"
     create: true
     slug: "{{title}}-{{artist}}"
-    summary: "{{title}} · {{artist}}"
+    summary: "{{title}} [{{artist}} · {{videocategory}}]"
     identifier_field: focus
     extension: json
     editor:
@@ -266,6 +288,12 @@ collections:
         collection: "artists"
         searchFields: ["artistName"]
         valueField: "artistName"
+      - name: videocategory
+        label: Catégorie
+        widget: relation
+        collection: videocat
+        searchFields: ["categoryname"]
+        valueField: categoryname
 
   - label: Actualités
     name: news
