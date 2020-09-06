@@ -6,7 +6,7 @@ function formatDay(day) {
   return day.length > 1 ? day : `0${day}`
 }
 
-const EventListing = ({ data, isArtistNameProminent }) => {
+const EventListing = ({ data, isArtistNameHidden }) => {
   return (
     <div>
       <Title text="Agenda" isSmaller />
@@ -23,7 +23,7 @@ const EventListing = ({ data, isArtistNameProminent }) => {
               </div>
             </div>
             <div className={style.eventlisting__information}>
-              {!isArtistNameProminent ? (
+              {isArtistNameHidden ? (
                 <p className={style.eventlisting__title}>{date.evenement}</p>
               ) : (
                 <>

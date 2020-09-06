@@ -35,7 +35,7 @@ export const Agenda = () => {
           title={data.allAgendaPageJson.nodes[0].title}
           subtitle={data.allAgendaPageJson.nodes[0].subtitle}
         />
-        <EventListing data={data.allAgendaJson} isArtistNameProminent />
+        <EventListing data={data.allAgendaJson} isArtistNameHidden />
       </Layout>
     </>
   )
