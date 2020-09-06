@@ -23,12 +23,16 @@ const EventListing = ({ data, isArtistNameProminent }) => {
               </div>
             </div>
             <div className={style.eventlisting__information}>
-              <p className={style.eventlisting__title}>
-                {isArtistNameProminent ? date.category : date.evenement}
-              </p>
-              <p className={style.eventlisting__subtitle}>
-                {isArtistNameProminent ? date.evenement : date.category}
-              </p>
+              {!isArtistNameProminent ? (
+                <p className={style.eventlisting__title}>{date.evenement}</p>
+              ) : (
+                <>
+                  <p className={style.eventlisting__title}>{date.category}</p>
+                  <p className={style.eventlisting__subtitle}>
+                    {date.evenement}
+                  </p>
+                </>
+              )}
             </div>
           </li>
         ))}
