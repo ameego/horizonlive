@@ -26,6 +26,8 @@
   border-radius: 5px;
   overflow: hidden;
   position: relative;
+  display: flex;
+  flex-direction: column;
 
   iframe {
     width: 100%;
@@ -34,6 +36,7 @@
 }
 
 .videogallery__information {
+  flex: 1;
   padding: 1.25rem 1rem 1.75rem;
   background: white;
 }
