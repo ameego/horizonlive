@@ -26,6 +26,12 @@ export const Videos = () => {
           ...VideosFragment
         }
       }
+      allVideocategoriesJson {
+        nodes {
+          categoryname
+          categorydescr
+        }
+      }
     }
   `)
 
@@ -34,13 +40,27 @@ export const Videos = () => {
       <SEO />
       <ImageBanner />
       <Layout>
-        <Spreader>
-          <PageIntro
-            title={data.allVideosPageJson.nodes[0].title}
-            subtitle={data.allVideosPageJson.nodes[0].subtitle}
-          />
-          <VideoList data={data.allVideosJson.nodes} />
-        </Spreader>
+        <PageIntro
+          title={data.allVideosPageJson.nodes[0].title}
+          subtitle={data.allVideosPageJson.nodes[0].subtitle}
+        />
+        {data.allVideocategoriesJson.nodes.map((cat, index) => (
+          <div>
+            <PageIntro
+              key={cat.categoryname}
+              title={cat.categoryname}
+              subtitle={cat.categorydescr}
+              isSmaller={true}
+              lessBottomSpace={true}
+            />
+            <VideoList
+              key={index}
+              data={data.allVideosJson.nodes.filter(
+                x => x.videocategory === cat.categoryname
+              )}
+            />
+          </div>
+        ))}
       </Layout>
     </>
   )

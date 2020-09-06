@@ -58,7 +58,11 @@ export default function Template({ data }) {
               {artistVideos.nodes.length > 0 ? (
                 <>
                   <Title text="Videos" isSmaller />
-                  <VideoList data={artistVideos.nodes} isArtistNameHidden />
+                  <VideoList
+                    data={artistVideos.nodes}
+                    isArtistNameHidden
+                    isNarrow
+                  />
                 </>
               ) : null}
             </div>

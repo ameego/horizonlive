@@ -227,6 +227,9 @@ collections:
     fields:
       - label: "Nom de la catégorie"
         name: categoryname
+      - label: "Description de la catégorie"
+        name: categorydescr
+        required: false
       - label: "Slug"
         name: slug
         pattern:

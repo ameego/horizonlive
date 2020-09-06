@@ -6,6 +6,12 @@
   grid-gap: 2rem;
 
   @media (min-width: 500px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.narrow {
+  @media (min-width: 500px) {
     grid-template-columns: 1fr 1fr;
   }
 }
