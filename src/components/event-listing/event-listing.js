@@ -23,7 +23,7 @@ const EventListing = ({ data, isArtistNameHidden }) => {
               </div>
             </div>
             <div className={style.eventlisting__information}>
-              {isArtistNameHidden ? (
+              {!isArtistNameHidden ? (
                 <p className={style.eventlisting__title}>{date.evenement}</p>
               ) : (
                 <>
