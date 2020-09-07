@@ -14,7 +14,7 @@
   ],
   "slug": "le-silence-et-l-eau",
   "banner": "/static/assets/banner/le-silence-et-l-eau/cover.jpg",
-  "displayOrder": 300,
+  "displayOrder": 200,
   "playlist": [
     {
       "music": "/static/music/le-silence-et-leau/grand_baikal.mp3",
