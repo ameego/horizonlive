@@ -18,8 +18,8 @@ const PageIntro = ({
 
   return (
     <div className={pageIntroClass}>
-      <Title isSmaller={isSmaller} text={title} />
       {children}
+      <Title isSmaller={isSmaller} text={title} />
       {subtitle ? <Subtitle isSmaller={isSmaller} text={subtitle} /> : null}
     </div>
   )
