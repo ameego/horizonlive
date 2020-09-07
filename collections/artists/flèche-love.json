@@ -2,16 +2,7 @@
   "citation": {
     "quote": "\"Flèche Love, intense liberté en mouvement \" France Info"
   },
-  "galleryImages": [
-    {
-      "image": "/static/assets/gallery/fleche-love/fleche_love_credit-roberto-greco_2.jpg",
-      "altText": "Crédit : Roberto Greco"
-    },
-    {
-      "image": "/static/assets/gallery/fleche-love/fleche-love-by-neil-mota.jpg",
-      "altText": "Crédit : Neil Motta"
-    }
-  ],
+  "galleryImages": [],
   "slug": "fleche-love",
   "banner": "/static/assets/banner/fleche-love/fleche-love-portrait-credit-roberto-greco.jpg",
   "displayOrder": 100,
