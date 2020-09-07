@@ -7,10 +7,10 @@
   > li {
     border-radius: 5px;
     font-size: 1.2rem;
-    padding: 0.5rem 0.75rem;
+    padding: 0.55rem 0.65rem 0.45rem;
     line-height: 1;
     color: #000;
-    border: 1px solid rgba(0, 0, 0, 0.125);
+    border: 1px solid rgba(0, 0, 0, 0.35);
 
     & + li {
       margin-left: 0.5rem;
@@ -18,6 +18,28 @@
   }
 }
 
+.plain {
+  > li {
+    background-color: white;
+  }
+}
+
 .centered {
   justify-content: center;
+}
+
+:global(.Live) {
+  background-color: rgba(#abd06b, 1);
+}
+
+:global(.Management) {
+  background-color: rgba(#f9f871, 1);
+}
+
+:global(.Publishing) {
+  background-color: rgba(#c1fcf6, 1);
+}
+
+:global(.Label) {
+  background-color: rgba(#e7bacf, 1);
 }

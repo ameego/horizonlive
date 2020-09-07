@@ -44,7 +44,7 @@ const VideoList = ({ data, isArtistNameHidden, isNarrow }) => {
                   isSmaller={true}
                   text={`${artistNameStr} ${video.title}`}
                 />
-                <Tags data={[video.videocategory]} />
+                <Tags isPlain data={[video.videocategory]} />
               </div>
             </li>
           )
