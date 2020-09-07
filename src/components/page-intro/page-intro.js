@@ -14,6 +14,8 @@ const PageIntro = ({
     ? `${style.container} ${style.less_spacing}`
     : style.container
 
+  pageIntroClass += isSmaller ? ` ${style.smaller}` : " "
+
   return (
     <div className={pageIntroClass}>
       <Title isSmaller={isSmaller} text={title} />
