@@ -1,6 +1,7 @@
 import React from "react"
 import style from "./video-list.module.scss"
 import Title3 from "../titles/title-3/title-3"
+import Tags from "../tags/tags"
 
 const VideoList = ({ data, isArtistNameHidden, isNarrow }) => {
   let titleClass = isNarrow
@@ -13,7 +14,7 @@ const VideoList = ({ data, isArtistNameHidden, isNarrow }) => {
         {data.map((video, index) => {
           var youtubeURL = `https://www.youtube.com/embed/${video.url}`
           var videoStr = `<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img{display: none;}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height: 100%; display: flex; justify-content: center; align-items: center; text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=${youtubeURL}?autoplay=1><img src=https://img.youtube.com/vi/${video.url}/hqdefault.jpg alt='${video.title}'><span>▶</span></a>`
-          var artistNameStr = isArtistNameHidden ? "" : `${video.artist} –`
+          var artistNameStr = isArtistNameHidden ? "" : `${video.artist} ·`
           return (
             <li key={index} className={style.videogallery__item}>
               <div
@@ -43,6 +44,7 @@ const VideoList = ({ data, isArtistNameHidden, isNarrow }) => {
                   isSmaller={true}
                   text={`${artistNameStr} ${video.title}`}
                 />
+                <Tags data={[video.videocategory]} />
               </div>
             </li>
           )
