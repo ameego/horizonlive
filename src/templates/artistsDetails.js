@@ -57,7 +57,11 @@ export default function Template({ data }) {
             <div>
               {artistVideos.nodes.length > 0 ? (
                 <>
-                  <Title text="Videos" isSmaller />
+                  <PageIntro
+                    title="Videos"
+                    isSmaller={true}
+                    lessBottomSpace={true}
+                  />
                   <VideoList
                     data={artistVideos.nodes}
                     isArtistNameHidden

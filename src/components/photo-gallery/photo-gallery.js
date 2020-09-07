@@ -2,7 +2,7 @@ import React from "react"
 import Gallery from "@browniebroke/gatsby-image-gallery"
 import style from "./photo-gallery.module.scss"
 import "@browniebroke/gatsby-image-gallery/dist/style.css"
-import Title from "../titles/title-1/title-1"
+import PageIntro from "../page-intro/page-intro"
 
 const PhotoGallery = ({ data }) => {
   var formattedData = data.map(item => {
@@ -16,7 +16,11 @@ const PhotoGallery = ({ data }) => {
     <>
       {data.length > 0 ? (
         <>
-          <Title text="Galerie photo" isSmaller />
+          <PageIntro
+            title="Galerie photo"
+            isSmaller={true}
+            lessBottomSpace={true}
+          />
           <div className={style.photogallery}>
             <Gallery images={formattedData} />
           </div>
