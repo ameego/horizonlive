@@ -16,7 +16,6 @@ const Header = ({ siteTitle }) => {
           <Navigation />
         </div>
       </header>
-      <div id="nav-container-top"></div>
     </>
   )
 }

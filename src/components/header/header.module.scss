@@ -26,11 +26,6 @@
   }
 }
 
-:global(#nav-container-top) {
-  height: 1px;
-  background-color: transparent;
-}
-
 :global(#nav-container) {
   transition: background-color 0.15s ease-in-out;
 }
