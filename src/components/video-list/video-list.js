@@ -3,7 +3,7 @@ import style from "./video-list.module.scss"
 import Title3 from "../titles/title-3/title-3"
 import Tags from "../tags/tags"
 
-const VideoList = ({ data, isArtistNameHidden, isNarrow }) => {
+const VideoList = ({ data, isArtistNameHidden, isNarrow, hideCategory }) => {
   let titleClass = isNarrow
     ? `${style.videogallery} ${style.narrow}`
     : style.videogallery
@@ -40,11 +40,13 @@ const VideoList = ({ data, isArtistNameHidden, isNarrow }) => {
                 ></iframe>
               </div>
               <div className={style.videogallery__information}>
+                {!hideCategory ? (
+                  <Tags isPlain data={[video.videocategory]} />
+                ) : null}
                 <Title3
                   isSmaller={true}
                   text={`${artistNameStr} ${video.title}`}
                 />
-                <Tags isPlain data={[video.videocategory]} />
               </div>
             </li>
           )

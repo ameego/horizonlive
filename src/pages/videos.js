@@ -57,6 +57,7 @@ export const Videos = () => {
               data={data.allVideosJson.nodes.filter(
                 x => x.videocategory === cat.categoryname
               )}
+              hideCategory
             />
           </div>
         ))}
