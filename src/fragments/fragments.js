@@ -52,6 +52,7 @@ export const query = graphql`
     videocategory
     title
     url
+    displayOrder
   }
 
   fragment ArtistBannerImage on ImageSharp {

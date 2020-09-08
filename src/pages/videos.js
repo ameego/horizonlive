@@ -20,7 +20,7 @@ export const Videos = () => {
           subtitle
         }
       }
-      allVideosJson {
+      allVideosJson(sort: { fields: displayOrder, order: ASC }) {
         nodes {
           ...VideosFragment
         }

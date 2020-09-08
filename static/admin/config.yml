@@ -275,8 +275,8 @@ collections:
     folder: "collections/videos"
     create: true
     slug: "{{title}}-{{artist}}-{{videocategory}}"
-    summary: "{{title}} · {{artist}} [{{videocategory}}]"
-    sortableFields: ["artist", "videocategory"]
+    summary: "{{title}} · {{artist}} [{{videocategory}} · position: {{displayOrder}}]"
+    sortableFields: ["artist", "videocategory", "displayOrder"]
     identifier_field: focus
     extension: json
     editor:
@@ -298,6 +298,19 @@ collections:
         collection: videocat
         searchFields: ["categoryname"]
         valueField: categoryname
+      - label: Ordre d'affichage
+        name: displayOrder
+        widget: "number"
+        default: 10
+        valueType: "int"
+        min: 10
+        step: 10
+        hint: "Contrôle l'ordre d'affichage des vidéos. Utilisez le curseur à droite du champ texte pour changer la valeur. 100 place la vidéo en première position dans la liste, 200 en deuxième position, 300 en troisième position, etc."
+        pattern:
+          [
+            '^(0|[1-9]\d?0)$',
+            "Le nombre doit être incrémenté par 10 (10, 20, 30, 40, 50, etc.)",
+          ]
 
   - label: Actualités
     name: news

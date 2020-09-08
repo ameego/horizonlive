@@ -152,7 +152,10 @@ export const pageQuery = graphql`
         publicURL
       }
     }
-    artistVideos: allVideosJson(filter: { artist: { eq: $artistName } }) {
+    artistVideos: allVideosJson(
+      filter: { artist: { eq: $artistName } }
+      sort: { fields: displayOrder, order: ASC }
+    ) {
       nodes {
         ...VideosFragment
       }

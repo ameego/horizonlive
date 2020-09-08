@@ -33,7 +33,7 @@ export const Home = () => {
           ...HomeFragment
         }
       }
-      allVideosJson {
+      allVideosJson(sort: { fields: displayOrder, order: ASC }) {
         nodes {
           ...VideosFragment
         }
