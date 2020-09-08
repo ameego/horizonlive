@@ -301,11 +301,11 @@ collections:
       - label: Ordre d'affichage
         name: displayOrder
         widget: "number"
-        default: 10
+        default: 1
         valueType: "int"
-        min: 10
-        step: 10
-        hint: "Contrôle l'ordre d'affichage des vidéos. Utilisez le curseur à droite du champ texte pour changer la valeur. 100 place la vidéo en première position dans la liste, 200 en deuxième position, 300 en troisième position, etc."
+        min: 1
+        step: 1
+        hint: "Contrôle l'ordre d'affichage des vidéos. Le plus petit chiffre/nombre la vidéo en première position dans la liste."
         pattern:
           [
             '^(0|[1-9]\d?0)$',
