@@ -34,10 +34,7 @@ export default function Template({ data }) {
         description={artistData.nodes[0].introduction}
       />
       {bannerImage && bannerImage.nodes.length > 0 ? (
-        <ImageBanner
-          src={bannerImage.nodes[0].childImageSharp.fluid}
-          isAbsolute
-        />
+        <ImageBanner src={bannerImage.nodes[0].childImageSharp.fluid} />
       ) : null}
       <Layout>
         <PageIntro
