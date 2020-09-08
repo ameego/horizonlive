@@ -43,24 +43,27 @@ export const Videos = () => {
           title={data.allVideosPageJson.nodes[0].title}
           subtitle={data.allVideosPageJson.nodes[0].subtitle}
         />
-        {data.allVideocategoriesJson.nodes.map((cat, index) => (
-          <div>
-            <PageIntro
-              key={cat.categoryname}
-              title={cat.categoryname}
-              subtitle={cat.categorydescr}
-              isSmaller={true}
-              lessBottomSpace={true}
-            />
-            <VideoList
-              key={index}
-              data={data.allVideosJson.nodes.filter(
-                x => x.videocategory === cat.categoryname
-              )}
-              hideCategory
-            />
-          </div>
-        ))}
+        {data.allVideocategoriesJson.nodes.map((cat, index) => {
+          var videoData = data.allVideosJson.nodes.filter(
+            x => x.videocategory === cat.categoryname
+          )
+          return (
+            <>
+              {videoData.length ? (
+                <div>
+                  <PageIntro
+                    key={cat.categoryname}
+                    title={cat.categoryname}
+                    subtitle={cat.categorydescr}
+                    isSmaller={true}
+                    lessBottomSpace={true}
+                  />
+                  <VideoList key={index} data={videoData} hideCategory />
+                </div>
+              ) : null}
+            </>
+          )
+        })}
       </Layout>
     </>
   )
