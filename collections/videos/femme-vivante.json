@@ -4,5 +4,5 @@
   "artist": "Noga",
   "videocategory": "Clip",
   "displayOrder": 90,
-  "isLimitedToArtistPage": false
+  "isLimitedToArtistPage": true
 }
