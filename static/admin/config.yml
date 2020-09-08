@@ -343,6 +343,10 @@ collections:
         collection: videocat
         searchFields: ["categoryname"]
         valueField: categoryname
+      - label: "Limiter la visibilité à la page artiste"
+        name: isLimitedToArtistPage
+        widget: "boolean"
+        default: false
       - label: Ordre d'affichage
         name: displayOrder
         widget: "number"

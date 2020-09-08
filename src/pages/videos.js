@@ -20,7 +20,10 @@ export const Videos = () => {
           subtitle
         }
       }
-      allVideosJson(sort: { fields: displayOrder, order: ASC }) {
+      allVideosJson(
+        sort: { fields: displayOrder, order: ASC }
+        filter: { isLimitedToArtistPage: { ne: true } }
+      ) {
         nodes {
           ...VideosFragment
         }
