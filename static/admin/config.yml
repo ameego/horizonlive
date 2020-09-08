@@ -18,7 +18,12 @@ collections:
         name: home
         fields:
           - { label: "Titre", name: title, widget: text }
-          - { label: "Sous-titre", name: subtitle, widget: text }
+          - {
+              label: "Sous-titre",
+              name: subtitle,
+              widget: text,
+              required: false,
+            }
           - {
               label: "Vitrine de vidéos",
               name: videos,
@@ -34,28 +39,48 @@ collections:
         name: artistpage
         fields:
           - { label: "Titre", name: title, widget: text }
-          - { label: "Sous-titre", name: subtitle, widget: text }
+          - {
+              label: "Sous-titre",
+              name: subtitle,
+              widget: text,
+              required: false,
+            }
 
       - file: "collections/pages/videos-page/videos-page.json"
         label: Vidéos
         name: videos
         fields:
           - { label: "Titre", name: title, widget: text }
-          - { label: "Sous-titre", name: subtitle, widget: text }
+          - {
+              label: "Sous-titre",
+              name: subtitle,
+              widget: text,
+              required: false,
+            }
 
       - file: "collections/pages/agenda-page/agenda-page.json"
         label: Agenda
         name: agenda
         fields:
           - { label: "Titre", name: title, widget: text }
-          - { label: "Sous-titre", name: subtitle, widget: text }
+          - {
+              label: "Sous-titre",
+              name: subtitle,
+              widget: text,
+              required: false,
+            }
 
       - file: "collections/pages/contact-page/contact-page.json"
         label: Contacts
         name: contacts
         fields:
           - { label: "Titre", name: title, widget: text }
-          - { label: "Sous-titre", name: subtitle, widget: text }
+          - {
+              label: "Sous-titre",
+              name: subtitle,
+              widget: text,
+              required: false,
+            }
 
       - file: "collections/pages/activity-page/activity-page.json"
         label: Activités
@@ -67,28 +92,48 @@ collections:
             collapsed: true
             fields:
               - { label: "Titre", name: title, widget: text }
-              - { label: "Sous-titre", name: subtitle, widget: text }
+              - {
+                  label: "Sous-titre",
+                  name: subtitle,
+                  widget: text,
+                  required: false,
+                }
           - label: "Label"
             name: "label"
             widget: "object"
             collapsed: true
             fields:
               - { label: "Titre", name: title, widget: text }
-              - { label: "Sous-titre", name: subtitle, widget: text }
+              - {
+                  label: "Sous-titre",
+                  name: subtitle,
+                  widget: text,
+                  required: false,
+                }
           - label: "Management"
             name: "management"
             widget: "object"
             collapsed: true
             fields:
               - { label: "Titre", name: title, widget: text }
-              - { label: "Sous-titre", name: subtitle, widget: text }
+              - {
+                  label: "Sous-titre",
+                  name: subtitle,
+                  widget: text,
+                  required: false,
+                }
           - label: "Publishing"
             name: "publishing"
             widget: "object"
             collapsed: true
             fields:
               - { label: "Titre", name: title, widget: text }
-              - { label: "Sous-titre", name: subtitle, widget: text }
+              - {
+                  label: "Sous-titre",
+                  name: subtitle,
+                  widget: text,
+                  required: false,
+                }
 
       - file: "collections/common/common.json"
         label: Informations communes
