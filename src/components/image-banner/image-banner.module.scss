@@ -1,5 +1,5 @@
 .banner {
-  position: fixed;
+  position: absolute;
   top: 0;
   width: 100%;
   z-index: -1;
@@ -62,13 +62,13 @@
     width: 100%;
     height: 100%;
     background-image: linear-gradient(
-      rgba(0, 0, 0, 0.15),
-      rgba(0, 0, 0, 0.15),
-      #1a2423
+      rgba(0, 0, 0, 0.1),
+      rgba(0, 0, 0, 0.1),
+      #000
     );
 
     @media (min-width: 768px) {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.15), #1a2423);
+      background-image: linear-gradient(rgba(0, 0, 0, 0.15), #000);
     }
   }
 }
