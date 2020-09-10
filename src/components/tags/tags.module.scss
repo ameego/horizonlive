@@ -10,6 +10,8 @@
     padding: 0.55rem 0.65rem 0.45rem;
     line-height: 1;
     color: #000;
+    border: 1px solid;
+    background-color: white;
 
     & + li {
       margin-left: 0.5rem;
@@ -26,20 +28,4 @@
 
 .centered {
   justify-content: center;
-}
-
-:global(.Live) {
-  background-color: rgba(#abd06b, 1);
-}
-
-:global(.Management) {
-  background-color: rgba(#f9f871, 1);
-}
-
-:global(.Publishing) {
-  background-color: rgba(#c1fcf6, 1);
-}
-
-:global(.Label) {
-  background-color: rgba(#e7bacf, 1);
 }
