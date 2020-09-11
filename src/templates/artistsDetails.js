@@ -72,7 +72,8 @@ export default function Template({ data }) {
             <Quote
               quote={artistData.nodes[0].citation.quote}
               src={
-                artistData.nodes[0].citation.quoteImage
+                artistData.nodes[0].citation.quoteImage &&
+                quoteImage.nodes.length > 0
                   ? quoteImage.nodes[0].childImageSharp.fluid
                   : ""
               }
