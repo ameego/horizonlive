@@ -40,13 +40,13 @@ const VideoList = ({ data, isArtistNameHidden, isNarrow, hideCategory }) => {
                 ></iframe>
               </div>
               <div className={style.videogallery__information}>
-                {!hideCategory ? (
-                  <Tags isPlain data={[video.videocategory]} />
-                ) : null}
                 <Title3
                   isSmaller={true}
                   text={`${artistNameStr} ${video.title}`}
                 />
+                {!hideCategory ? (
+                  <Tags isPlain data={[video.videocategory]} />
+                ) : null}
               </div>
             </li>
           )

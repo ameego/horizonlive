@@ -38,8 +38,8 @@ const ArtistList = ({ data }) => (
                 />
               ) : null}
               <div className={style.list__information}>
-                <Tags data={artist.category} />
                 <Title3 text={artist.artistName} />
+                <Tags data={artist.category} />
               </div>
             </Link>
           </li>
