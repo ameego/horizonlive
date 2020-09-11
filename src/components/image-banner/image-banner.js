@@ -2,6 +2,7 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import FluidImg from "../fluid-img/fluid-img"
 import style from "./image-banner.module.scss"
+import Utils from "../../utils/utils"
 
 const ImageBanner = ({ src }) => {
   const data = useStaticQuery(graphql`
@@ -15,10 +16,18 @@ const ImageBanner = ({ src }) => {
           }
         }
       }
+      common: allCommonJson {
+        nodes {
+          banner
+        }
+      }
     }
   `)
 
-  src = !src ? data.homeBanner.nodes[0].childImageSharp.fluid : src
+
+  src = !src
+    ? Utils.getCurrentImage(data.homeBanner.nodes, data.common.nodes[0].banner)
+    : src
 
   return (
     <div className={style.banner}>

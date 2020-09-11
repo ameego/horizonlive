@@ -36,6 +36,7 @@ export const query = graphql`
 
   fragment CommonFragment on ImageSharp {
     fluid(maxWidth: 1280, maxHeight: 700, quality: 60) {
+      originalName
       ...GatsbyImageSharpFluid_withWebp
     }
   }
