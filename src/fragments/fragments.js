@@ -74,7 +74,7 @@ export const query = graphql`
     full: fluid(maxWidth: 1280, quality: 60) {
       ...GatsbyImageSharpFluid_withWebp
     }
-    thumb: fluid(maxWidth: 250, maxHeight: 150, quality: 40) {
+    thumb: fluid(maxWidth: 500, maxHeight: 300, quality: 45) {
       ...GatsbyImageSharpFluid_withWebp
     }
   }
