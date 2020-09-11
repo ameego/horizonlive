@@ -29,13 +29,15 @@ const ArtistList = ({ data }) => (
           >
             <Link to={`../../artistes/${artist.slug}/`}>
               {artist.banner ? (
-                <FluidImg
-                  durationFadeIn={500}
-                  src={Utils.getCurrentImage(
-                    bannerSet.allFile.nodes,
-                    artist.banner
-                  )}
-                />
+                <div className={style.artistinformation}>
+                  <FluidImg
+                    durationFadeIn={500}
+                    src={Utils.getCurrentImage(
+                      bannerSet.allFile.nodes,
+                      artist.banner
+                    )}
+                  />
+                </div>
               ) : null}
               <div className={style.list__information}>
                 <Title3 text={artist.artistName} />
