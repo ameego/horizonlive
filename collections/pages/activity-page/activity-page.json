@@ -5,14 +5,14 @@
   },
   "label": {
     "title": "Label",
-    "subtitle": "Sous-label"
+    "subtitle": "Artistes dont les albums sont produits par Horizon"
   },
   "management": {
     "title": "Management",
-    "subtitle": "Sous-management"
+    "subtitle": "Artistes managés par Horizon"
   },
   "publishing": {
-    "title": "Publishing",
-    "subtitle": "Sous-publishing"
+    "title": "Editions",
+    "subtitle": "Les artistes du catalogue éditorial d'Horizon"
   }
 }
