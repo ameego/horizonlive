@@ -32,6 +32,8 @@ export const query = graphql`
     title
     subtitle
     videos
+    vidtitle
+    vidsubtitle
   }
 
   fragment CommonFragment on ImageSharp {
