@@ -27,35 +27,35 @@
     }
   }
 
+  > a {
+    :global(.headroom--scrolled) & {
+      color: #000;
+    }
+  }
+
   a {
     display: inline-block;
     color: #fff;
-    padding: 1rem 0;
+    padding: 1rem 0 0.5rem;
     text-decoration: none;
     transition: color 0.125s ease-in-out;
 
     &:hover {
       color: #dd7c7c;
+
+      :global(.headroom--scrolled) & {
+        color: #dd7c7c;
+      }
     }
   }
 
   .active {
     color: #dd7c7c;
     border-bottom: 1px solid;
-  }
-}
 
-:global(.nav-container-sticky) {
-  .navigation__item > a {
-    color: #000;
-
-    &:hover {
+    :global(.headroom--scrolled) & {
       color: #dd7c7c;
     }
-  }
-
-  .navigation__item > .active {
-    color: #dd7c7c;
   }
 }
 

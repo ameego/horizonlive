@@ -1,8 +1,6 @@
 .header {
-  // position: sticky;
-  // top: 0;
   z-index: 10;
-  padding: 2rem 1rem 1rem;
+  padding: 2rem 1rem 2rem;
 
   > div {
     max-width: 1200px;
@@ -22,6 +20,10 @@
       text-decoration: none;
       font-weight: bold;
       transition: color 0.15s ease-in-out;
+
+      :global(.headroom--scrolled) & {
+        color: #000;
+      }
     }
   }
 }

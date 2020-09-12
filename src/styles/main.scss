@@ -201,3 +201,29 @@ body {
     margin-top: 2rem;
   }
 }
+
+.headroom {
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  z-index: 1000;
+  transition: background-color 0.15s ease-in-out;
+}
+.headroom--unfixed {
+  position: relative;
+  transform: translateY(0);
+}
+.headroom--scrolled {
+  transition: transform 0.25s ease-in-out;
+}
+.headroom--unpinned {
+  position: fixed;
+  transform: translateY(-100%);
+  background-color: white;
+}
+.headroom--pinned {
+  position: fixed;
+  transform: translateY(0%);
+  background-color: white;
+}
