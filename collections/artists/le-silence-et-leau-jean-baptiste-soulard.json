@@ -1,6 +1,7 @@
 {
   "citation": {
-    "quote": "\"Un disque où l’on se réfugie comme dans une isba de bois sur les bords du lac Baïkal, propice à l’introspection et aux visions d’harmonie, de grâce et de générosité.\" Soul Kitchen"
+    "quote": "\"Un disque où l’on se réfugie comme dans une isba de bois sur les bords du lac Baïkal, propice à l’introspection et aux visions d’harmonie, de grâce et de générosité.\" Soul Kitchen",
+    "quoteImage": "/static/assets/quote/le-silence-et-l-eau/cover.jpg"
   },
   "galleryImages": [
     {
@@ -14,7 +15,7 @@
   ],
   "slug": "le-silence-et-l-eau",
   "banner": "/static/assets/banner/le-silence-et-l-eau/jb-soul_photo-┬®-hugues-anhes_mg_2622.jpg",
-  "displayOrder": 200,
+  "displayOrder": 300,
   "playlist": [
     {
       "music": "/static/music/le-silence-et-leau/grand_baikal.mp3",
