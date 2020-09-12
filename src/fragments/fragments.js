@@ -66,7 +66,7 @@ export const query = graphql`
   }
 
   fragment ArtistQuoteImage on ImageSharp {
-    fluid(maxWidth: 500, maxHeight: 300, quality: 40) {
+    fluid(maxWidth: 500, quality: 40) {
       originalName
       ...GatsbyImageSharpFluid_withWebp
     }
