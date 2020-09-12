@@ -28,11 +28,12 @@
   &::after {
     content: "\201C";
     position: absolute;
-    bottom: 0.5rem;
+    bottom: -1rem;
     width: 100%;
     text-align: center;
     color: #fff;
     font-size: 13rem;
     line-height: 0;
+    font-family: "ABeeZee", sans-serif;
   }
 }

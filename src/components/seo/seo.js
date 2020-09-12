@@ -31,6 +31,10 @@ const SEO = ({ title, description, image }) => {
         href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&amp;display=swap"
         rel="stylesheet"
       />
+      <link
+        href="https://fonts.googleapis.com/css2?family=ABeeZee&amp;display=swap"
+        rel="stylesheet"
+      ></link>
 
       {seo.url && <meta property="og:url" content={seo.url} />}
 
