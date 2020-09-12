@@ -10,5 +10,15 @@
   "citation": {
     "quote": "\"Des mélodies enivrantes et habitées.\" (Les Inrockuptibles)",
     "quoteImage": "/static/assets/quote/norma/norma.jpg"
-  }
+  },
+  "galleryImages": [
+    {
+      "image": "/static/assets/gallery/norma/norma-2.jpg",
+      "altText": "Norma"
+    },
+    {
+      "image": "/static/assets/gallery/norma/norma.jpg",
+      "altText": "Norma"
+    }
+  ]
 }
