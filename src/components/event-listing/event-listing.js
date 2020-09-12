@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, useStaticQuery } from "gatsby"
+import { Link, useStaticQuery, graphql } from "gatsby"
 import style from "./event-listing.module.scss"
 import Title from "../titles/title-1/title-1"
 
