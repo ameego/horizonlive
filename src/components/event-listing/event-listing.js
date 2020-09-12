@@ -1,4 +1,5 @@
 import React from "react"
+import { Link, useStaticQuery } from "gatsby"
 import style from "./event-listing.module.scss"
 import Title from "../titles/title-1/title-1"
 
@@ -7,6 +8,25 @@ function formatDay(day) {
 }
 
 const EventListing = ({ data, isArtistNameHidden }) => {
+  const artistData = useStaticQuery(graphql`
+    query EventListingQuery {
+      allArtistsJson: allArtistsJson {
+        edges {
+          node {
+            slug
+            artistName
+          }
+        }
+      }
+    }
+  `)
+
+  const getArtistSlug = artistName => {
+    return artistData.allArtistsJson.edges.find(
+      x => artistName === x.node.artistName
+    ).node.slug
+  }
+
   return (
     <div>
       <Title text="Agenda" isSmaller />
@@ -27,7 +47,11 @@ const EventListing = ({ data, isArtistNameHidden }) => {
                 <p className={style.eventlisting__title}>{date.evenement}</p>
               ) : (
                 <>
-                  <p className={style.eventlisting__title}>{date.category}</p>
+                  <p className={style.eventlisting__title}>
+                    <Link to={`/artistes/${getArtistSlug(date.category)}`}>
+                      {date.category}
+                    </Link>
+                  </p>
                   <p className={style.eventlisting__subtitle}>
                     {date.evenement}
                   </p>
