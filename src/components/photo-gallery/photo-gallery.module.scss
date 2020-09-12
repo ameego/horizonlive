@@ -22,4 +22,35 @@
       }
     }
   }
+
+  > div > div {
+    position: relative;
+    overflow: hidden;
+    transition: background-size 0.15s ease-in-out;
+
+    &::before {
+      content: "";
+      border-radius: 5px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 10;
+      height: 100%;
+      width: 100%;
+      border: 0 solid rgba(255, 255, 255, 1);
+      transition: border-width 0.15s ease-in-out;
+    }
+  }
+
+  > div {
+    > div:hover {
+      &::before {
+        border-width: 4px;
+      }
+
+      :global(.gatsby-image-wrapper) {
+        transform: scale(1.035);
+      }
+    }
+  }
 }
