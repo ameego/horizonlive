@@ -6,6 +6,21 @@
     margin-top: 0.5rem;
   }
 
+  a {
+    h2 {
+      display: inline-block;
+      padding-bottom: 0.5rem;
+      transition: border-color 0.15s ease-in-out;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    }
+
+    &:hover {
+      h2 {
+        border-color: white;
+      }
+    }
+  }
+
   @media (min-width: 768px) {
     width: 80%;
     margin-bottom: 7.5rem;
