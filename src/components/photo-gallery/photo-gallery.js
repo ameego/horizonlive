@@ -14,8 +14,8 @@ const PhotoGallery = ({ data, artistData }) => {
     })
 
     return {
-      title: caption.altText,
-      alt: caption.altText,
+      title: caption ? caption.altText : "",
+      alt: caption ? caption.altText : "",
       full: item.childImageSharp.full,
       thumb: item.childImageSharp.thumb,
     }
