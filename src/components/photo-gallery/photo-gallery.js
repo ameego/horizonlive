@@ -4,9 +4,18 @@ import style from "./photo-gallery.module.scss"
 import "@browniebroke/gatsby-image-gallery/dist/style.css"
 import PageIntro from "../page-intro/page-intro"
 
-const PhotoGallery = ({ data }) => {
+const PhotoGallery = ({ data, artistData }) => {
   var formattedData = data.map(item => {
+    var caption = artistData.nodes[0].galleryImages.find(x => {
+      var srcPath = x.image.split("/")
+      var src = srcPath[srcPath.length - 1]
+
+      return src === item.childImageSharp.full.originalName
+    })
+
     return {
+      title: caption.altText,
+      alt: caption.altText,
       full: item.childImageSharp.full,
       thumb: item.childImageSharp.thumb,
     }

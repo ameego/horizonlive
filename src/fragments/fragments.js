@@ -74,9 +74,11 @@ export const query = graphql`
 
   fragment ArtistGalleryFluid on ImageSharp {
     full: fluid(maxWidth: 1280, quality: 60) {
+      originalName
       ...GatsbyImageSharpFluid_withWebp
     }
     thumb: fluid(maxWidth: 500, maxHeight: 300, quality: 45) {
+      originalName
       ...GatsbyImageSharpFluid_withWebp
     }
   }
