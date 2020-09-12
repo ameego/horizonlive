@@ -4,7 +4,6 @@ import SEO from "../components/seo/seo"
 import Layout from "../components/layout/layout"
 import Spreader from "../components/spreader/spreader"
 import PageIntro from "../components/page-intro/page-intro"
-import NewsList from "../components/news-list/news-list"
 import ArtistList from "../components/artist-list/artist-list"
 import ImageBanner from "../components/image-banner/image-banner"
 import VideoList from "../components/video-list/video-list"
@@ -60,10 +59,11 @@ export const Home = () => {
         <ArtistList data={allArtistsJson.nodes} />
         <Spreader>
           <PageIntro
-            title="Vidéothèque"
-            subtitle="Vestibulum mollis nulla sed quam sagittis lobortis. Aliquam posuere consequat tortor, sed consectetur erat."
+            title={allHomePageJson.nodes[0].vidtitle}
+            subtitle={allHomePageJson.nodes[0].vidsubtitle}
             isSmaller={true}
             lessBottomSpace={true}
+            link={"/videos"}
           />
           <VideoList
             data={getHomeVideos(allVideosJson.nodes, allHomePageJson.nodes)}

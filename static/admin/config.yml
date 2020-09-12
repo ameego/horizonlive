@@ -17,10 +17,17 @@ collections:
         label: Accueil
         name: home
         fields:
-          - { label: "Titre", name: title, widget: text }
+          - { label: "Titre de page", name: title }
           - {
-              label: "Sous-titre",
+              label: "Sous-titre de page",
               name: subtitle,
+              widget: text,
+              required: false,
+            }
+          - { label: "Titre de la section vidéo", name: vidtitle }
+          - {
+              label: "Sous-titre de la section vidéo",
+              name: vidsubtitle,
               widget: text,
               required: false,
             }
