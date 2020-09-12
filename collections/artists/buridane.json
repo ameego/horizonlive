@@ -3,7 +3,12 @@
     "quote": "\"Une voix qui murmure avec la puissance d'un hurlement\" (Les Inrockuptibles)",
     "quoteImage": "/static/assets/quote/buridane/buridane-barje-endurance_covervierge.jpg"
   },
-  "galleryImages": [],
+  "galleryImages": [
+    {
+      "image": "/static/assets/gallery/buridane/buridane-taureau-clip.jpg",
+      "altText": "Crédit : Loll Willems"
+    }
+  ],
   "slug": "buridane",
   "banner": "/static/assets/banner/buridane/buridane.jpg",
   "displayOrder": 400,
