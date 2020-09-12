@@ -1,15 +1,25 @@
 {
-  "displayOrder": 800,
-  "artistName": "Thomas Hellman",
-  "slug": "thomas-hellman",
-  "category": [
-    "Management"
-  ],
-  "biography": "Thomas Hellman est un auteur- compositeur-interprète, écrivain et chroniqueur radio québécois, né d'un père américain et d'une mère française. Ce sont ses chroniques diffusées sur Radio-Canada portant sur l’histoire de la musique américaine pendant la crise des années 1930 qui l’ont inspiré pour son spectacle  Rêves américains.\n\nDe la conquête de l'Ouest à la crise des années 30, Thomas Hellman raconte l'histoire américaine, à travers des chansons tirées du répertoire blues, folk, et gospel de l’époque, dont il fait des adaptations bilingues\n\nThomas Hellman propose  un chemin en dehors des sentiers battus, à travers des vieilles chansons de l’époque dont il fait des adaptations bilingues, des extraits d’œuvres littéraires mis en musique (Steinbeck, Thoreau, Frank H Mayer, Leon Ray Livingstone) et ses propres textes et chansons. Il récite, joue, chante, incarne sur scène divers personnages et raconte des anecdotes. Rêves américains est une réflexion sur notre époque. Ce projet audacieux ne cherche pas tant à raconter l'histoire américaine qu'à faire ressortir sa dimension mythologique, universelle. Il raconte l'expérience de toute une société qui pourrait aussi être celle de n'importe lequel d'entre nous : une plongée dans la noirceur qui émerge dans la lumière.",
-  "introduction": "L'histoire des Etats-Unis, version folk",
   "citation": {
     "quote": "\"Sa voix profonde nous embarque aux racines du folk nord-américain, tout en résonnant de façon saisissante avec l'actualité. Vivifiant.\" (Télérama)",
     "quoteImage": "/static/assets/quote/thomas-hellman/2018-th-crmathieurivard_003_ld.jpg"
   },
-  "banner": "/static/assets/banner/thomas-hellman/thomas-hellman-banniere.png"
+  "galleryImages": [
+    {
+      "image": "/static/assets/gallery/thomas-hellman/2018-th-crsophiedallairebouchard_001.jpg",
+      "altText": "Crédit : Sophie Dallaire Bouchard"
+    },
+    {
+      "image": "/static/assets/gallery/thomas-hellman/2018-th-crsergerobert_002.jpg",
+      "altText": "crédit : Serge Robert"
+    }
+  ],
+  "slug": "thomas-hellman",
+  "banner": "/static/assets/banner/thomas-hellman/thomas-hellman-banniere.png",
+  "displayOrder": 800,
+  "artistName": "Thomas Hellman",
+  "biography": "Thomas Hellman est un auteur- compositeur-interprète, écrivain et chroniqueur radio québécois, né d'un père américain et d'une mère française. Ce sont ses chroniques diffusées sur Radio-Canada portant sur l’histoire de la musique américaine pendant la crise des années 1930 qui l’ont inspiré pour son spectacle  Rêves américains.\n\nDe la conquête de l'Ouest à la crise des années 30, Thomas Hellman raconte l'histoire américaine, à travers des chansons tirées du répertoire blues, folk, et gospel de l’époque, dont il fait des adaptations bilingues\n\nThomas Hellman propose  un chemin en dehors des sentiers battus, à travers des vieilles chansons de l’époque dont il fait des adaptations bilingues, des extraits d’œuvres littéraires mis en musique (Steinbeck, Thoreau, Frank H Mayer, Leon Ray Livingstone) et ses propres textes et chansons. Il récite, joue, chante, incarne sur scène divers personnages et raconte des anecdotes. Rêves américains est une réflexion sur notre époque. Ce projet audacieux ne cherche pas tant à raconter l'histoire américaine qu'à faire ressortir sa dimension mythologique, universelle. Il raconte l'expérience de toute une société qui pourrait aussi être celle de n'importe lequel d'entre nous : une plongée dans la noirceur qui émerge dans la lumière.",
+  "introduction": "L'histoire des Etats-Unis, version folk",
+  "category": [
+    "Management"
+  ]
 }
