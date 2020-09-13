@@ -289,6 +289,19 @@ collections:
             "^[a-z0-9]+(?:-[a-z0-9]+)*$",
             "Un slug ne peut pas avoir de caractères spéciaux, ni d'espaces",
           ]
+      - label: Ordre d'affichage
+        name: displayOrder
+        widget: "number"
+        default: 1
+        valueType: "int"
+        min: 1
+        step: 1
+        hint: "Contrôle l'ordre d'affichage de la catégorie dans la page vidéo. Le plus petit chiffre/nombre la vidéo en première position dans la liste."
+        pattern:
+          [
+            '^(0|[1-9]\d?)$',
+            "Le nombre doit être incrémenté par 1 (1, 2, 3, 4, 5, etc.)",
+          ]
 
   - label: Agenda
     name: agenda
@@ -362,11 +375,6 @@ collections:
         min: 1
         step: 1
         hint: "Contrôle l'ordre d'affichage des vidéos. Le plus petit chiffre/nombre la vidéo en première position dans la liste."
-        pattern:
-          [
-            '^(0|[1-9]\d?0)$',
-            "Le nombre doit être incrémenté par 10 (10, 20, 30, 40, 50, etc.)",
-          ]
 
   - label: Actualités
     name: news

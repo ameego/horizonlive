@@ -28,7 +28,7 @@ export const Videos = () => {
           ...VideosFragment
         }
       }
-      allVideocategoriesJson {
+      allVideocategoriesJson(sort: { fields: displayOrder }) {
         nodes {
           categoryname
           categorydescr
