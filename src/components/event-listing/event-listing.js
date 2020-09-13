@@ -7,7 +7,7 @@ function formatDay(day) {
   return day.length > 1 ? day : `0${day}`
 }
 
-const EventListing = ({ data, isArtistNameHidden }) => {
+const EventListing = ({ data, isArtistNameHidden, isScrollable }) => {
   const artistData = useStaticQuery(graphql`
     query EventListingQuery {
       allArtistsJson: allArtistsJson {
@@ -27,10 +27,12 @@ const EventListing = ({ data, isArtistNameHidden }) => {
     ).node.slug
   }
 
+  var eventClassName = isScrollable ? style.scrollingbox : ""
+
   return (
     <div>
       <PageIntro title="Agenda" isSmaller={true} lessBottomSpace={true} />
-      <div className={style.scrollingbox}>
+      <div className={eventClassName}>
         <ul className={style.eventlisting}>
           {data.nodes.map((date, index) => (
             <li key={index} className={style.eventlisting__container}>

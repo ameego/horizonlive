@@ -2,6 +2,7 @@
   padding: 0;
   border-radius: 5px;
   overflow: hidden;
+  background-color: #fff;
 
   a {
     display: inline-block;
@@ -107,5 +108,9 @@
     background-color: white;
     background-size: 100% 40px, 100% 40px, 100% 10px, 100% 10px;
     background-attachment: local, local, scroll, scroll;
+  }
+
+  .eventlisting {
+    background-color: transparent;
   }
 }
