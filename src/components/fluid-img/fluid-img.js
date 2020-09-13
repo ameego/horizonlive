@@ -5,7 +5,7 @@ const FluidImg = ({ src, loading, durationFadeIn }) => (
   <>
     {src ? (
       <Img
-        durationFadeIn={durationFadeIn ? durationFadeIn : 1500}
+        durationFadeIn={durationFadeIn ? durationFadeIn : 500}
         loading={loading ? loading : "lazy"}
         fluid={src}
       />
