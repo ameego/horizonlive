@@ -30,37 +30,39 @@ const EventListing = ({ data, isArtistNameHidden }) => {
   return (
     <div>
       <Title text="Agenda" isSmaller />
-      <ul className={style.eventlisting}>
-        {data.nodes.map((date, index) => (
-          <li key={index} className={style.eventlisting__container}>
-            <div className={style.eventlisting__date}>
-              <div className={style.eventlisting__date1}>
-                {formatDay(date.eventdate.split("/")[0])}
+      <div className={style.scrollingbox}>
+        <ul className={style.eventlisting}>
+          {data.nodes.map((date, index) => (
+            <li key={index} className={style.eventlisting__container}>
+              <div className={style.eventlisting__date}>
+                <div className={style.eventlisting__date1}>
+                  {formatDay(date.eventdate.split("/")[0])}
+                </div>
+                <div className={style.eventlisting__date2}>
+                  <span>{date.eventdate.split("/")[1]}</span>
+                  <span>{date.eventdate.split("/")[2]}</span>
+                </div>
               </div>
-              <div className={style.eventlisting__date2}>
-                <span>{date.eventdate.split("/")[1]}</span>
-                <span>{date.eventdate.split("/")[2]}</span>
+              <div className={style.eventlisting__information}>
+                {!isArtistNameHidden ? (
+                  <p className={style.eventlisting__title}>{date.evenement}</p>
+                ) : (
+                  <>
+                    <p className={style.eventlisting__title}>
+                      <Link to={`/artistes/${getArtistSlug(date.category)}`}>
+                        {date.category}
+                      </Link>
+                    </p>
+                    <p className={style.eventlisting__subtitle}>
+                      {date.evenement}
+                    </p>
+                  </>
+                )}
               </div>
-            </div>
-            <div className={style.eventlisting__information}>
-              {!isArtistNameHidden ? (
-                <p className={style.eventlisting__title}>{date.evenement}</p>
-              ) : (
-                <>
-                  <p className={style.eventlisting__title}>
-                    <Link to={`/artistes/${getArtistSlug(date.category)}`}>
-                      {date.category}
-                    </Link>
-                  </p>
-                  <p className={style.eventlisting__subtitle}>
-                    {date.evenement}
-                  </p>
-                </>
-              )}
-            </div>
-          </li>
-        ))}
-      </ul>
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   )
 }
