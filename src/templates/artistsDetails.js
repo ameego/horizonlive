@@ -81,7 +81,7 @@ export default function Template({ data }) {
               }
             />
             {agendaData.nodes.length ? (
-              <EventListing data={agendaData} isScrollable />
+              <EventListing data={agendaData} />
             ) : null}
           </div>
         </div>
