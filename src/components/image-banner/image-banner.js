@@ -24,7 +24,6 @@ const ImageBanner = ({ src }) => {
     }
   `)
 
-
   src = !src
     ? Utils.getCurrentImage(data.homeBanner.nodes, data.common.nodes[0].banner)
     : src
@@ -32,7 +31,7 @@ const ImageBanner = ({ src }) => {
   return (
     <div className={style.banner}>
       <div className={style.banner__img}>
-        <FluidImg durationFadeIn={1000} src={src} />
+        <FluidImg src={src} />
       </div>
     </div>
   )
