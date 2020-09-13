@@ -1,5 +1,6 @@
 {
   "categoryname": "Live",
   "slug": "live",
-  "categorydescr": ""
+  "categorydescr": "",
+  "displayOrder": 1
 }
