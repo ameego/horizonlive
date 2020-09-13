@@ -1,7 +1,7 @@
 import React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
 import style from "./event-listing.module.scss"
-import Title from "../titles/title-1/title-1"
+import PageIntro from "../page-intro/page-intro"
 
 function formatDay(day) {
   return day.length > 1 ? day : `0${day}`
@@ -29,7 +29,7 @@ const EventListing = ({ data, isArtistNameHidden }) => {
 
   return (
     <div>
-      <Title text="Agenda" isSmaller />
+      <PageIntro title="Agenda" isSmaller={true} lessBottomSpace={true} />
       <div className={style.scrollingbox}>
         <ul className={style.eventlisting}>
           {data.nodes.map((date, index) => (
