@@ -18,8 +18,12 @@
   "displayOrder": 500,
   "playlist": [
     {
-      "music": "/static/music/le-silence-et-leau/grand_baikal.mp3",
-      "musicname": "Grand Baikal"
+      "musicname": "Grand Baikal (en duo avec Bessa)",
+      "music": "/static/music/le-silence-et-l-eau/02-grand_baikal.mp3"
+    },
+    {
+      "musicname": "Isba (en duo avec Blick Bassy)",
+      "music": "/static/music/le-silence-et-l-eau/03-isbamp3.mp3"
     },
     {
       "music": "/static/music/le-silence-et-l-eau/01-sois_le_dernier.mp3",
