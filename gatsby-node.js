@@ -5,7 +5,9 @@ exports.createSchemaCustomization = ({ actions }) => {
 
   const isFuture = fieldName => source => {
     const date = get(source, fieldName)
-    return new Date(date) > new Date()
+    let numberOfDays = 2 * 24 * 60 * 60 * 1000
+
+    return new Date(date) > new Date(new Date().getTime() - numberOfDays)
   }
 
   createFieldExtension({
