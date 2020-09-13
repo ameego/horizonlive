@@ -20,6 +20,10 @@
     {
       "music": "/static/music/le-silence-et-leau/grand_baikal.mp3",
       "musicname": "Grand Baikal"
+    },
+    {
+      "music": "/static/music/le-silence-et-l-eau/01-sois_le_dernier.mp3",
+      "musicname": "Sois le dernier (en duo avec Bessa)"
     }
   ],
   "artistName": "Le Silence et l'eau",
