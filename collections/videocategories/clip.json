@@ -1,5 +1,6 @@
 {
   "categoryname": "Clip",
   "slug": "clip",
-  "categorydescr": ""
+  "categorydescr": "",
+  "displayOrder": 3
 }
