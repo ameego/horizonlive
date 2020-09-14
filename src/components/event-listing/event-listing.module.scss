@@ -20,6 +20,10 @@
 
 .eventlisting li {
   list-style-type: none;
+
+  &:nth-child(even) {
+    background-color: rgba(#dd7c7c, 0.05);
+  }
 }
 
 .eventlisting__container {
@@ -48,8 +52,9 @@
   font-size: 1.4rem;
 
   span {
-    text-transform: uppercase;
     display: block;
+    font-weight: 600;
+    text-transform: uppercase;
 
     & + span {
       margin-top: 0.15rem;
@@ -64,7 +69,7 @@
   align-content: center;
   color: #000;
   flex: 1;
-  padding: 1rem;
+  padding: 0.65rem;
   border-left: 1px solid #000;
   border-bottom: 1px solid #000;
 
@@ -74,8 +79,8 @@
 }
 
 .eventlisting__title {
-  font-size: 1.6rem;
-  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 1.35;
 }
 
 .eventlisting__subtitle {
