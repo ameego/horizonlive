@@ -81,7 +81,7 @@ export default function Template({ data }) {
               }
             />
             {agendaData.nodes.length ? (
-              <EventListing data={agendaData} />
+              <EventListing data={agendaData} title="Agenda" />
             ) : null}
           </div>
         </div>

@@ -43,11 +43,18 @@ export const Agenda = () => {
           title={data.allAgendaPageJson.nodes[0].title}
           subtitle={data.allAgendaPageJson.nodes[0].subtitle}
         />
-        <EventListing data={data.futureDates} isArtistNameHidden />
+        <EventListing
+          data={data.futureDates}
+          isArtistNameHidden
+          title="Agenda"
+        />
         {data.passedDates.nodes.length > 0 ? (
           <>
-            <PageIntro title="Dates passées" />
-            <EventListing data={data.passedDates} isArtistNameHidden />
+            <EventListing
+              data={data.passedDates}
+              isArtistNameHidden
+              title="Dates passées"
+            />
           </>
         ) : null}
       </Layout>
