@@ -42,7 +42,7 @@ collections:
             }
 
       - file: "collections/pages/artists-page/artist-page.json"
-        label: Artists
+        label: Artistes
         name: artistpage
         fields:
           - { label: "Titre", name: title, widget: text }
@@ -88,6 +88,9 @@ collections:
               widget: text,
               required: false,
             }
+          - label: Texte
+            name: text
+            widget: "markdown"
 
       - file: "collections/pages/activity-page/activity-page.json"
         label: Activités

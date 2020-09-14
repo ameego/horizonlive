@@ -54,6 +54,11 @@ module.exports = {
         link: "/agenda",
         data_testid: "nav-agenda",
       },
+      {
+        name: "Contacts",
+        link: "/contact",
+        data_testid: "nav-contact",
+      },
     ],
   },
   plugins: [
