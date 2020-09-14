@@ -52,7 +52,7 @@ body {
     display: none;
   }
 
-  p + p {
+  * + * {
     margin-top: 0.75em;
   }
 
@@ -60,8 +60,15 @@ body {
     margin-top: 1rem;
   }
 
-  p a {
-    font-weight: bold;
+  a {
+    color: #fff;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  * + h3 {
+    margin-top: 3rem;
   }
 
   h1 + ul {
