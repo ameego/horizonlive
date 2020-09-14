@@ -33,7 +33,7 @@ export const Contacts = () => {
           title={data.allContactPageJson.nodes[0].title}
           subtitle={data.allContactPageJson.nodes[0].subtitle}
         />
-        <div className="formatted-content">
+        <div className="formatted-content formatted-content-2">
           <div
             dangerouslySetInnerHTML={rawMarkup(
               data.allContactPageJson.nodes[0].text
