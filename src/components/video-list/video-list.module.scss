@@ -5,7 +5,11 @@
   list-style-type: none;
   grid-gap: 2rem;
 
-  @media (min-width: 500px) {
+  @media (min-width: 550px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: 1024px) {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
