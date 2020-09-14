@@ -9,9 +9,17 @@ import EventListing from "../components/event-listing/event-listing"
 export const Agenda = () => {
   const data = useStaticQuery(graphql`
     query Agenda {
-      allAgendaJson(
+      futureDates: allAgendaJson(
         sort: { fields: eventdate }
         filter: { isFuture: { eq: true } }
+      ) {
+        nodes {
+          ...AgendaFragment
+        }
+      }
+      passedDates: allAgendaJson(
+        sort: { fields: eventdate }
+        filter: { isFuture: { eq: false } }
       ) {
         nodes {
           ...AgendaFragment
@@ -35,7 +43,13 @@ export const Agenda = () => {
           title={data.allAgendaPageJson.nodes[0].title}
           subtitle={data.allAgendaPageJson.nodes[0].subtitle}
         />
-        <EventListing data={data.allAgendaJson} isArtistNameHidden />
+        <EventListing data={data.futureDates} isArtistNameHidden />
+        {data.passedDates.nodes.length > 0 ? (
+          <>
+            <PageIntro title="Dates passées" />
+            <EventListing data={data.passedDates} isArtistNameHidden />
+          </>
+        ) : null}
       </Layout>
     </>
   )
