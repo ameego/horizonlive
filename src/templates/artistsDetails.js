@@ -97,8 +97,8 @@ export const pageQuery = graphql`
       }
     }
     agendaData: allAgendaJson(
-      filter: { category: { eq: $artistName }, isFuture: { eq: true } }
-      sort: { fields: eventdate, order: ASC }
+      sort: { fields: eventdate }
+      filter: { isFuture: { eq: true }, category: { eq: $artistName } }
     ) {
       nodes {
         ...AgendaFragment
