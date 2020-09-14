@@ -37,7 +37,7 @@ export const Agenda = () => {
   return (
     <>
       <SEO />
-      <ImageBanner />
+      <ImageBanner isFixed />
       <Layout>
         <PageIntro
           title={data.allAgendaPageJson.nodes[0].title}

@@ -53,6 +53,11 @@
   }
 }
 
+.isFixed {
+  position: fixed;
+  filter: blur(0);
+}
+
 .banner__img {
   &::after {
     content: "";

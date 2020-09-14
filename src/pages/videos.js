@@ -40,7 +40,7 @@ export const Videos = () => {
   return (
     <>
       <SEO />
-      <ImageBanner />
+      <ImageBanner isFixed />
       <Layout>
         <PageIntro
           title={data.allVideosPageJson.nodes[0].title}

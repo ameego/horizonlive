@@ -25,7 +25,7 @@ export const Home = () => {
   return (
     <>
       <SEO />
-      <ImageBanner />
+      <ImageBanner isFixed />
       <Layout>
         <PageIntro
           title={data.allArtistsPageJson.nodes[0].title}

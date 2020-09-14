@@ -50,7 +50,7 @@ export const Home = () => {
   return (
     <>
       <SEO />
-      <ImageBanner />
+      <ImageBanner isFixed />
       <Layout>
         <PageIntro
           title={allHomePageJson.nodes[0].title}
