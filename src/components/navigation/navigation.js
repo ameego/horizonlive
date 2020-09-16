@@ -49,40 +49,40 @@ const nestedNavigation = (link, index) => (
   </li>
 )
 
-const Navigation = () => (
-  <StaticQuery
-    query={graphql`
-      query SiteTitleQuery {
-        site {
-          siteMetadata {
-            menuLinks {
-              name
-              link
-              data_testid
-              submenu {
+export default function Navigation() {
+  return (
+    <StaticQuery
+      query={graphql`
+        query SiteTitleQuery {
+          site {
+            siteMetadata {
+              menuLinks {
                 name
                 link
                 data_testid
+                submenu {
+                  name
+                  link
+                  data_testid
+                }
               }
             }
           }
         }
-      }
-    `}
-    render={data => (
-      <nav>
-        <ul style={{ display: "flex", flex: 1 }}>
-          {data.site.siteMetadata.menuLinks.map((link, index) => {
-            const containsSubMenu = !!link.submenu
+      `}
+      render={data => (
+        <nav className={style.nav}>
+          <ul className={style.ul}>
+            {data.site.siteMetadata.menuLinks.map((link, index) => {
+              const containsSubMenu = !!link.submenu
 
-            return !containsSubMenu
-              ? flatNavigation(link, index)
-              : nestedNavigation(link, index)
-          })}
-        </ul>
-      </nav>
-    )}
-  />
-)
-
-export default Navigation
+              return !containsSubMenu
+                ? flatNavigation(link, index)
+                : nestedNavigation(link, index)
+            })}
+          </ul>
+        </nav>
+      )}
+    />
+  )
+}

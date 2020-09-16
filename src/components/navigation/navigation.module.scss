@@ -1,3 +1,20 @@
+.nav {
+  @media (min-width: 768px) {
+    button {
+      display: none;
+    }
+  }
+}
+
+.ul {
+  display: none;
+
+  @media (min-width: 768px) {
+    display: flex !important;
+    flex: 1;
+  }
+}
+
 .navigation__item {
   display: block;
   color: #fff;
@@ -6,17 +23,25 @@
   background-color: transparent;
   margin: 0;
   font-family: inherit;
-  font-size: 16px;
+  font-size: 1.6rem;
   cursor: pointer;
   position: relative;
 
   & + & {
     margin-left: 1rem;
 
+    @media (max-width: 768px) {
+      margin-top: 1rem;
+    }
+
     a {
       padding-left: 0.5rem;
       padding-right: 0.5rem;
     }
+  }
+
+  @media (max-width: 768px) {
+    font-size: 2.6rem;
   }
 
   &:hover {
@@ -29,7 +54,9 @@
 
   > a {
     :global(.headroom--scrolled) & {
-      color: #000;
+      @media (min-width: 768px) {
+        color: #000;
+      }
     }
   }
 
@@ -63,21 +90,29 @@
   &:active {
     pointer-events: none;
   }
+  @media (max-width: 768px) {
+    display: none !important;
+  }
 }
 
 .subnavigation {
-  overflow: hidden;
-  border-radius: 5px;
-  opacity: 0;
-  pointer-events: none;
-  position: absolute;
-  z-index: 2;
-  padding: 2rem;
-  background: black;
-  transform: translateY(-1rem);
-  transition: opacity 0.15s ease-in-out, transform 0.1s ease-in-out;
-
   > * + * {
     margin-top: 1rem;
+  }
+  @media (min-width: 768px) {
+    overflow: hidden;
+    border-radius: 5px;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    z-index: 2;
+    padding: 2rem;
+    background: black;
+    transform: translateY(-1rem);
+    transition: opacity 0.15s ease-in-out, transform 0.1s ease-in-out;
+
+    > * + * {
+      margin-top: 1rem;
+    }
   }
 }

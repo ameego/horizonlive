@@ -1,8 +1,15 @@
 .header {
   z-index: 10;
-  padding: 2rem 1rem 2rem;
+  padding: 1rem 1rem 1rem;
+
+  @media (min-width: 768px) {
+    padding: 2rem 1rem 2rem;
+  }
 
   > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     max-width: 1200px;
     margin: 0 auto 0;
 
@@ -10,6 +17,12 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+    }
+  }
+
+  svg {
+    :global(.headroom--scrolled) & {
+      fill: #000;
     }
   }
 
@@ -22,12 +35,89 @@
       transition: color 0.15s ease-in-out;
 
       :global(.headroom--scrolled) & {
+        // @media (min-width: 768px) {
         color: #000;
+        // }
       }
+    }
+  }
+
+  @media (min-width: 768px) {
+    button {
+      display: none;
     }
   }
 }
 
 :global(.headroom--scrolled) {
   box-shadow: 0 4px 3px -3px rgba(0, 0, 0, 0.25);
+}
+
+:global(.openMenu) {
+  svg {
+    fill: white !important;
+  }
+
+  h1 a {
+    color: white !important;
+  }
+
+  ul {
+    display: flex;
+    flex: 1;
+
+    @media (max-width: 768px) {
+      text-align: right;
+      flex-direction: column;
+    }
+  }
+
+  nav {
+    position: absolute;
+    top: 7rem;
+    right: 1rem;
+  }
+
+  @media (max-width: 768px) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 100%;
+    background: black;
+  }
+
+  .closeMenuIcon {
+    display: block;
+  }
+
+  .openMenuIcon {
+    display: none;
+  }
+}
+
+:global(.closeMenu) {
+  .closeMenuIcon {
+    display: none;
+  }
+
+  .openMenuIcon {
+    display: block;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+
+  button {
+    height: 4.7rem;
+    align-self: flex-end;
+    background: transparent;
+    border: none;
+
+    svg {
+      fill: white;
+    }
+  }
 }
