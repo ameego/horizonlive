@@ -11,7 +11,7 @@ export default function Template({ data, pageContext }) {
   return (
     <>
       <SEO />
-      <ImageBanner />
+      <ImageBanner isFixed />
       <Layout>
         <PageIntro title={currentData.title} subtitle={currentData.subtitle} />
         <ArtistList data={data.artistData.nodes} />
