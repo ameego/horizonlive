@@ -18,7 +18,7 @@ export const Agenda = () => {
         }
       }
       passedDates: allAgendaJson(
-        sort: { fields: eventdate }
+        sort: { fields: eventdate, order: DESC }
         filter: { isFuture: { eq: false } }
       ) {
         nodes {
