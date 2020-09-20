@@ -12,7 +12,12 @@
   "slug": "l",
   "banner": "/static/assets/banner/l/l.png",
   "displayOrder": 200,
-  "playlist": [],
+  "playlist": [
+    {
+      "musicname": "Femmes Vie Libérté !",
+      "music": "/static/music/l/2.femme-vie-liberté.master.mp3"
+    }
+  ],
   "artistName": "L",
   "biography": "\"Paysages\" renoue avec l’esprit et la lettre qui abondaient dans « *Initiale* » son premier opus.\n\nLe souffle de L, si particulier, sa voix si sûre et si fragile à la fois, nous y envoûtent tout du long.\n\nSes « *Paysages* » dessinent et peignent des horizons dans lesquels nous nous glissons, enveloppés dans une écriture ciselée à la douceur incomparable et la profondeur intense.\n\nLes échappées belles, voyages au long cours et points de vue se succèdent au gré de la plénitude des cordes (deux violoncelles, une guitare), d’une batterie recomposée avec élégance, et de quelques synthés.\n\nLa mélancolie du temps qui file, les orages anciens, tout n’est pas est oublié, mais tout est apaisé, tout passe, la vie de L en titres langoureux efface les rancunes et même les douleurs.\n\n*Paysages* est un disque où l’espoir est solidement ancré.\n\nLe soleil se lève dans tout l’album, modelé dans l’argile et la pierre d’une grande Chanson. Il est écrit en filigrane dans les luttes, l’honneur et l’espérance.\n\nAvec ce quatrième album, en prise avec le monde, L creuse son sillon d’artiste ancrée et ouverte.\n\nElle sera également aux côtés de Jeanne Added, Camélia Jordana et Sandra Nkaké, pour faire résonner « *Protest Songs »* et chanter les combats collectifs.\n\nL poursuit son chemin d’artiste associée aux Scènes du Golfe, les Théâtres de Vannes et Arradon proches de sa maison bretonne et océane.\n\n*Ghislaine Gouby*\n\n*\\----*\n\n*Production de tournées et spectacles : LA FAMILIA*",
   "introduction": "Le nouvel album de L est un disque solaire et ardent.",
