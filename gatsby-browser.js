@@ -14,13 +14,6 @@ export const wrapPageElement = ({ element, props }) => {
 
   var playlistFromStorage = sessionStorage.getItem("playlist")
 
-  console.log(
-    props.data,
-    props.data.artistPlaylist,
-    isArtistPage,
-    playlistFromStorage
-  )
-
   return (
     <>
       {element}
