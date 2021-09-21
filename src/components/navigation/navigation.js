@@ -80,6 +80,9 @@ export default function Navigation() {
                 ? flatNavigation(link, index)
                 : nestedNavigation(link, index)
             })}
+            <li className={style.navigation__item}>
+              <a className={style.navigation__item} href="https://horizonmusiques.bigcartel.com/" target="_blank">Shop</a>
+            </li>
           </ul>
         </nav>
       )}
