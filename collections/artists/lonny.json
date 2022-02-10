@@ -1,15 +1,19 @@
 {
   "citation": {
-    "quote": "\"Ses chansons sont un petit miracle » Soul Kitchen",
-    "quoteImage": "/static/assets/quote/lonny/louise-167-copy.jpg"
+    "quote": "\"Les textes sont superbes. L'album se situe dans les pas d'une autre grande figure de la folk, Leonard Cohen.\"  France Inter",
+    "quoteImage": "/static/assets/quote/lonny/cover_lonny-bd.jpg"
   },
   "galleryImages": [
     {
-      "image": "/static/assets/gallery/lonny/louise-184.jpg",
-      "altText": "Crédit : Frédérique Bérubé"
+      "image": "/static/assets/gallery/lonny/lonny-crédit-manon-ricupero-2.jpg",
+      "altText": "Crédit : Manon Ricupero"
     },
     {
-      "image": "/static/assets/gallery/lonny/dsc06897.jpg",
+      "image": "/static/assets/gallery/lonny/lonny-crédit-manon-ricupero-7.jpg",
+      "altText": "Crédit : Manon Ricupero"
+    },
+    {
+      "image": "/static/assets/gallery/lonny/louise-184.jpg",
       "altText": "Crédit : Frédérique Bérubé"
     }
   ],
