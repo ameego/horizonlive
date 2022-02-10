@@ -15,6 +15,10 @@
     {
       "image": "/static/assets/gallery/lonny/louise-184.jpg",
       "altText": "Crédit : Frédérique Bérubé"
+    },
+    {
+      "image": "/static/assets/gallery/lonny/lonny-crédit-manon-ricupero-6.jpg",
+      "altText": "Crédit : Manon Ricupero"
     }
   ],
   "slug": "lonny",
