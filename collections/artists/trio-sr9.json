@@ -1,14 +1,25 @@
 {
+  "citation": {
+    "quote": "“L'exigence, la folie du trio et les voix des chanteurs transforment la gageure en pépites d'audace.” MAGIC",
+    "quoteImage": "/static/assets/quote/trio-sr9/credit_julien-mignot-2.jpg"
+  },
+  "galleryImages": [
+    {
+      "image": "/static/assets/gallery/trio-sr9/credit_julien-mignot-3.jpg",
+      "altText": "Crédit : Julien Mignot"
+    },
+    {
+      "altText": "Crédit : Julien Mignot",
+      "image": "/static/assets/gallery/trio-sr9/credit_julien-mignot-4.jpg"
+    }
+  ],
+  "slug": "trio-sr9",
+  "banner": "/static/assets/banner/trio-sr9/credit_julien-mignot.jpg",
   "displayOrder": 600,
   "artistName": "Trio SR9",
-  "slug": "trio-sr9",
-  "category": [
-    "Live"
-  ],
   "biography": "Après avoir adapté Bach, Satie ou Ravel, **Le Trio SR9** se lance avec \"Déjà Vu\" dans une entreprise encore plus décoiffante : la relecture de tubes récents de la pop music, de Rihanna à Pharrell Williams, de Billie Eilish à Ariana Grande, de Lana Del Rey à Franck Ocean. Pour ce faire, il s’est adjoint les services de voix aussi singulières que ce projet ludique et poétique : **Camille, Camélia Jordana, BLICK BASSY, Sandra Nkaké, Malik Djoudi et La Chica** sont de la partie, prêts à jouer les funambules sur des arrangements de **Clément Ducol**.",
   "introduction": "\"Déjà Vu\" | Feat. Camille, Blick Bassy, Malik Djoudi, Camélia Jordana, Sandra Nkaké et La Chica",
-  "citation": {
-    "quote": "“L'exigence, la folie du trio et les voix des chanteurs transforment la gageure en pépites d'audace.” MAGIC"
-  },
-  "banner": "/static/assets/banner/trio-sr9/credit_julien-mignot.jpg"
+  "category": [
+    "Live"
+  ]
 }
