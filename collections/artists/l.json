@@ -1,16 +1,28 @@
 {
   "citation": {
     "quote": "\"Ses chansons touchent à l'essentiel\" (Télérama)",
-    "quoteImage": "/static/assets/quote/l/phot-l-.jpg"
+    "quoteImage": "/static/assets/quote/lraphaelelannadere/l-square.png"
   },
   "galleryImages": [
     {
-      "image": "/static/assets/gallery/l/phot-l-.jpg",
-      "altText": "Crédit : Gregory Dargent"
+      "image": "/static/assets/gallery/lraphaelelannadere/©2022-11_léa-boeglinxraphaele-lannadere_web-13.jpg",
+      "altText": "Raphaële Lannadère"
+    },
+    {
+      "image": "/static/assets/gallery/lraphaelelannadere/©2022-11_léa-boeglinxraphaele-lannadere_web-17.jpg",
+      "altText": "Raphaële Lannadère"
+    },
+    {
+      "image": "/static/assets/gallery/lraphaelelannadere/©2022-11_léa-boeglinxraphaele-lannadere_web-28-v2.jpg",
+      "altText": "Raphaële Lannadère"
+    },
+    {
+      "image": "/static/assets/gallery/lraphaelelannadere/©2022-11_léa-boeglinxraphaele-lannadere_web-27.jpg",
+      "altText": "Raphaële Lannadère"
     }
   ],
-  "slug": "l",
-  "banner": "/static/assets/banner/l/l.png",
+  "slug": "lraphaelelannadere",
+  "banner": "/static/assets/banner/lraphaelelannadere/l-square.png",
   "displayOrder": 200,
   "playlist": [
     {
@@ -18,8 +30,12 @@
       "music": "/static/music/l/2.femme-vie-liberté.master.mp3"
     }
   ],
-  "artistName": "L",
-  "biography": "\"Paysages\" renoue avec l’esprit et la lettre qui abondaient dans « *Initiale* » son premier opus.\n\nLe souffle de L, si particulier, sa voix si sûre et si fragile à la fois, nous y envoûtent tout du long.\n\nSes « *Paysages* » dessinent et peignent des horizons dans lesquels nous nous glissons, enveloppés dans une écriture ciselée à la douceur incomparable et la profondeur intense.\n\nLes échappées belles, voyages au long cours et points de vue se succèdent au gré de la plénitude des cordes (deux violoncelles, une guitare), d’une batterie recomposée avec élégance, et de quelques synthés.\n\nLa mélancolie du temps qui file, les orages anciens, tout n’est pas est oublié, mais tout est apaisé, tout passe, la vie de L en titres langoureux efface les rancunes et même les douleurs.\n\n*Paysages* est un disque où l’espoir est solidement ancré.\n\nLe soleil se lève dans tout l’album, modelé dans l’argile et la pierre d’une grande Chanson. Il est écrit en filigrane dans les luttes, l’honneur et l’espérance.\n\nAvec ce quatrième album, en prise avec le monde, L creuse son sillon d’artiste ancrée et ouverte.\n\nElle sera également aux côtés de Jeanne Added, Camélia Jordana et Sandra Nkaké, pour faire résonner « *Protest Songs »* et chanter les combats collectifs.\n\nL poursuit son chemin d’artiste associée aux Scènes du Golfe, les Théâtres de Vannes et Arradon proches de sa maison bretonne et océane.\n\n*Ghislaine Gouby*\n\n*\\----*\n\n*Production de tournées et spectacles : LA FAMILIA*",
-  "introduction": "Le nouvel album de L est un disque solaire et ardent.",
-  "category": ["Label", "Publishing", "Management"]
+  "artistName": "L - Raphaële Lannadère",
+  "biography": "Raphaële Lannadère, dite « L » est auteure-compositrice-interprète. Son premier album, Initiale, sorti en avril 2011 chez Tôt ou Tard, a connu un véritable succès (Disque d'Or, Prix Barbara...). En 2015, elle publie un 2ème album radicalement différent, puis elle revient à ses premiers amours, avec Chansons, son 3ème album, paru en février 2018, toujours chez Tôt ou Tard. La jeune femme s’émancipe alors de l’industrie musicale et se dote, en 2018, de sa propre structure « L est au Bois ». La même année, elle crée aux Scènes du Golfe (dont elle devient artiste associée), Un jardin de silence, spectacle hommage à Barbara, mis en scène par Thomas Jolly. Elle crée aussi Protest Songs, un répertoire de chansons contestataires qu’elle chante avec Camélia Jordana, Sandra Nkaké et Jeanne Added. Son 4ème album, Paysages, (\"Bijou de l'année chanson\", Sylvain Siclier,Sélection 2021-Le Monde) sort en janvier 2021. \n\nConsidérant son métier comme celui d’une artisane, elle s'entoure du même groupe de musiciens, qu'elle qualifie de véritables compagnons. C’est avec eux une fois encore, - Juan de Guillebon, Frédéric Jean, Julien Lefèvre, Antoine Montgaudon\u0002qu'elle fait le choix d’enregistrer « Cheminement », son 5eme album studio. Le travail plateau est mené aux côtés d'AnneSophie Bérard pour un spectacle conjuguant arts vidéo, installation et musique.",
+  "introduction": "Cheminement : nouveau spectacle et nouvel album en 2023",
+  "category": [
+    "Label",
+    "Publishing",
+    "Management"
+  ]
 }
