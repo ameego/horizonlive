@@ -1,24 +1,28 @@
 {
   "citation": {
     "quote": "\"Une voix qui murmure avec la puissance d'un hurlement\" (Les Inrockuptibles)",
-    "quoteImage": "/static/assets/quote/buridane/buridane-barje-endurance_covervierge.jpg"
+    "quoteImage": "/static/assets/quote/buridane/bubu-square.png"
   },
   "galleryImages": [
     {
-      "image": "/static/assets/gallery/buridane/buridane-taureau-clip.jpg",
-      "altText": "Crédit : Loll Willems"
+      "image": "/static/assets/gallery/buridane/presse-6.png",
+      "altText": "Buridane"
     },
     {
-      "image": "/static/assets/gallery/buridane/buridane-portrait-.jpg",
-      "altText": "Crédit : Emilie Mori"
+      "image": "/static/assets/gallery/buridane/buridane-total-fiasco_©salomé-bellin.png",
+      "altText": "Buridane"
+    },
+    {
+      "image": "/static/assets/gallery/buridane/presse-1.png",
+      "altText": "Buridane"
     }
   ],
   "slug": "buridane",
-  "banner": "/static/assets/banner/buridane/buridane.jpg",
+  "banner": "/static/assets/banner/buridane/buridane-crédit-fabienne-chemin-min.jpg",
   "displayOrder": 900,
   "artistName": "Buridane",
-  "biography": "**Barje, barjot, barré.** Selon le dictionnaire d’argot, traiter quelqu’un de barje c’est le considérer comme une personne farfelue, hors du commun, et qui n’hésite pas à prendre des risques. Voilà une définition qui sied si bien à Buridane qu’elle l’a prise au mot dans le titre de son nouvel album : Barje Endurance, ou l’originalité dans la continuité.\n\nUn temps écartelée entre son amour de la danse et sa passion pour l’écriture, à l’inverse du célèbre et tragiquement indécis équidé du philosophe dont elle a emprunté et féminisé le patronyme, Buridane a finalement choisi : elle allait chanter et faire danser les mots. Des débuts prometteurs couronnés de chroniques élogieuses et de prix divers, de concerts et de tournées, et puis le silence et la solitude de l’entre-deux. Un espace de transition qu’elle a mis à profit pour préparer la suite, s’isoler pour mieux ciseler.",
-  "introduction": "Barje Endurance",
+  "biography": "Petite sœur de la génération Nouvelle Scène Française, Buridane est une auteure-compositrice au parcours émérite (Chantier des Francos, Prix Adami, lauréate du FAIR, coup de cœur de l’académie Charles Cros, un passage remarqué au festival d’Avignon). Mais attention, si elle écrit pour les rescapés de la vie, les âmes gothiques et les Virgin Suicides, ne croyez pas pour autant que c’est de la musique pour se pendre. C’est tout le contraire. C’est plutôt comme une danse tribale faite pour chasser les mauvais esprits et faire venir la pluie. Des chansons vaudous, des chansons qui lavent. Des chansons faites pour se dire que ça vaut le coup de se laisser faire, défaire et refaire par la vie. Faites pour laisser passer la lumière, faite pour les fous fêlés et les optimistes qui s’ignorent.\n\n Après \"Pas Fragile\" et \"Barje Endurance\", elle revient avec un **nouvel album \"Colette Fantôme\"**. Sorte de poupée russe avec un mort, ce disque est un dialogue avec un fantôme, un rêve d’émancipation, une mythologie à écrire.",
+  "introduction": "Colette Fantôme - Nouvel album en 2023",
   "category": [
     "Live"
   ]
