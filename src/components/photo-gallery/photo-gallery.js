@@ -13,13 +13,24 @@ const PhotoGallery = ({ data, artistData }) => {
       return src === item.childImageSharp.full.originalName
     })
 
-    return {
-      title: caption ? caption.altText : "",
-      alt: caption ? caption.altText : "",
-      full: item.childImageSharp.full,
-      thumb: item.childImageSharp.thumb,
+    if(caption) {
+      const img = caption.image.split("/");
+      const currentImg = img[img.length - 1];
+
+      if(currentImg === item.childImageSharp.full.originalName) {
+        return {
+          title: caption ? caption.altText : "",
+          alt: caption ? caption.altText : "",
+          full: item.childImageSharp.full,
+          thumb: item.childImageSharp.thumb,
+        }
+      }
     }
   })
+
+  var filtered = formattedData.filter(function(x) {
+    return x !== undefined;
+  });
 
   return (
     <>
@@ -31,7 +42,7 @@ const PhotoGallery = ({ data, artistData }) => {
             lessBottomSpace={true}
           />
           <div className={style.photogallery}>
-            <Gallery images={formattedData} />
+            <Gallery images={filtered} />
           </div>
         </>
       ) : null}
