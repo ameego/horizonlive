@@ -37,7 +37,7 @@ const VideoList = ({ data, isArtistNameHidden, isNarrow, hideCategory }) => {
                   allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
                   title={video.title}
-                ></iframe>
+                />
               </div>
               <div className={style.videogallery__information}>
                 <Title3
