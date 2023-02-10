@@ -47,12 +47,12 @@ export default function Template({ data }) {
             <div
               dangerouslySetInnerHTML={rawMarkup(artistData.nodes[0].biography)}
             />
-            <div>
+            {galleryImages.nodes ? <div>
               <PhotoGallery
                 data={galleryImages.nodes}
                 artistData={artistData}
               />
-            </div>
+            </div> : null}
             <div>
               {artistVideos.nodes.length > 0 ? (
                 <>
