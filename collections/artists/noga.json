@@ -1,28 +1,26 @@
 {
   "citation": {
-    "quote": "\"Caresse de l’âme, douceur céleste.\" (Longueurs d'Ondes)",
-    "quoteImage": "/static/assets/quote/noga/noga-citation.png"
+    "quote": "\"Comme une brise de douceur apaisante\" jazzradio.fr",
+    "quoteImage": "/static/assets/quote/noga/©johannsauty-9919-web-10x15-300-brt.jpg"
   },
   "galleryImages": [
     {
-      "image": "/static/assets/gallery/noga/noga_dsc_3024©yannzitouni.jpg",
-      "altText": "Noga dans la foule"
-    },
-    {
-      "image": "/static/assets/gallery/noga/noga_20191207_344_web_©quentinbertoux.jpg",
-      "altText": "Noga et ses membres"
-    },
-    {
-      "image": "/static/assets/gallery/noga/femmevivante_1144x1080x144.jpg",
-      "altText": "Noga "
+      "image": "/static/assets/gallery/noga/©johannsauty-8321_web.jpeg",
+      "altText": "Noga"
     }
   ],
   "slug": "noga",
-  "banner": "/static/assets/banner/noga/femmevivante_1144x1080x144.jpg",
+  "banner": "/static/assets/banner/noga/©johannsauty-8474-web_nb.jpg",
   "displayOrder": 600,
+  "playlist": [
+    {
+      "music": "/static/music/noga/chant-de-paix-precise-master-44khz-16bit-wav.wav",
+      "musicname": "Chant de Paix"
+    }
+  ],
   "artistName": "Noga",
-  "biography": "Nourrie de sa proximité avec les traditions orales et de son parcours au théâtre et au cabaret, Noga, conteuse-griotte, aime raconter ses histoires sur les rythmes métissés des musiques ancrées à la terre et aux éléments.\\\nChanger les souvenirs en lumières pour s’ouvrir au monde, plutôt que d’accentuer ce qui va mal en cédant à la nostalgie ou au désarroi. Cultiver, toujours, le goût du jour suivant : «S’il y a plus d’espoir, il y a plus d’humanité». Puisque «tout ce sur quoi l’on porte son attention va grandir», Noga a choisi de le faire sur ce qui nous relie... elle déroule ses chansons comme l’on craquerait l’une après l’autre un bouquet d’allumettes. Et parvient, en résonance avec les fragments de vie de chacun, à apaiser les doutes et les peines, à mesure que s’y fortifie le muscle de la joie...\\\nAvec Et si…, son nouvel EP qui reprend certains titres puisés dans son répertoire tel qu'elle l'offre en tournée, Noga nous rappelle à l’épure et à sa beauté comme autant de forces à se réapproprier. Et nous insuffle cette énergie fédératrice et nourricière telle qu’elle nous l’adresse en concert.\\\nElle est si précieuse.",
-  "introduction": "Changer les souvenirs en lumières pour s’ouvrir au monde",
+  "biography": "Genevoise d’origine israélo-berlinoise, chanteuse, musicienne, improvisatrice, Noga développe depuis une vingtaine d’années une carrière qui emprunte des chemins de traverse, en toute liberté. Après une dizaine d’albums dont l’un chez Sony, LEV (sortie le 17 avril 23 chez EVIDENCE MUSIQUE)  est son second album en hébreu. Elle y explore un choix de psaumes, taillant dedans, coupant, mixant, combinant les sons dans une volonté d’élever la fréquence vibratoire et la connexion entre les êtres, le tout sur une musique très actuelle. \nOnze chansons comme un voyage à travers le large spectre musical de l'artiste jazz world fusion. Le radio edit Eli Ata, sorti en février 2023, se classe dès la première semaine #7 sur la playlist Deezer \"Jazz Now\" (21K fans).\nSur scène, Noga s'entoure, en formule trio, de Patrick Bebey et Arnaud Laprêt. Et en full band, ils sont rejoints par Asher Varadi, Olivier Koundouno et Daniel de Morais.\n\nUn concert en hébreu, qui navigue d'îlot en îlot dans une mémoire revisitée. La voix de Noga agit comme un baume, vivante et habitée, soutenue par ses âmes sœurs, musiciens complices. Pourrait-elle nous réunir en apaisant nos peurs ?\n\nCrédits photos : Johann Sauty",
+  "introduction": "Entre passé et avenir, des vibrations lumineuses pour apaiser nos peurs",
   "category": [
     "Live"
   ]
