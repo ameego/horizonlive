@@ -4,12 +4,12 @@
   },
   "galleryImages": [
     {
-      "image": "/static/assets/gallery/alphonse-bisaillon/alphonse-bisaillon_photo-3_cr-rosalie-roberge.jpg",
-      "altText": "Alphonse Bisaillon - Cr Rosalie Roberge"
+      "image": "/static/assets/gallery/alphonse-bisaillon/alphonse-bisaillon_photo-2_cr-rosalie-roberge.jpg",
+      "altText": "Alphonse Bisaillon - 1"
     },
     {
-      "image": "/static/assets/gallery/alphonse-bisaillon/alphonse-bisaillon_photo-2_cr-rosalie-roberge.jpg",
-      "altText": "Alphonse Bisaillon - Cr Rosalie Roberge"
+      "image": "/static/assets/gallery/alphonse-bisaillon/alphonse-bisaillon_photo-3_cr-rosalie-roberge.jpg",
+      "altText": "Alphonse Bisaillon - 2"
     }
   ],
   "slug": "alphonse-bisaillon",
