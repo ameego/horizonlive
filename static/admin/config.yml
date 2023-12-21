@@ -2,7 +2,7 @@ backend:
   name: github
   repo: ameego/horizonlive
   branch: master
-  site_domain: horizon-musiques.fr
+  site_domain: horizonmusiques.netlify.app
 locale: fr
 media_folder: static/assets
 public_folder: /assets
