@@ -1,0 +1,14 @@
+{
+  "displayOrder": 100,
+  "artistName": "Hello",
+  "slug": "hello",
+  "category": [
+    "Live"
+  ],
+  "biography": "Hello",
+  "introduction": "Yoyo",
+  "citation": {
+    "quote": "Yoyoyoy"
+  },
+  "banner": "/static/assets/banner/hello/akira.jpg"
+}
