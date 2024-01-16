@@ -1,15 +1,21 @@
 {
-  "displayOrder": 400,
-  "artistName": "Thx4Crying",
-  "slug": "thx4crying",
-  "category": [
-    "Live"
-  ],
-  "biography": "Un nom aux allures de Skyblog, iel a sorti il y a quelques mois son premier EP \"montagne d’émeraudes\".\rDe ses drames versés sur l'écran, Thx4Crying en fait des chansons ténébreuses et lumineuses, où les larmes ne tardent jamais à s’évaporer pour se transformer en feu de joie immortel.",
-  "introduction": "Thx4crying",
   "citation": {
     "quote": " \"Chansons lumineuses et sombres\" France Culture ",
-    "quoteImage": "/static/assets/quote/thx4crying/thx4crying.jpg"
+    "quoteImage": "/static/assets/quote/thx4crying/thx4crying_me_presse_09_rvb-©-florian-salabert.png"
   },
-  "banner": "/static/assets/banner/thx4crying/thx4crying-2.jpg"
+  "galleryImages": [
+    {
+      "image": "/static/assets/gallery/thx4crying/photo-promo-thx4crying-mars-23-©-florian-salabert.png",
+      "altText": "Crédit photo : Thx4Crying"
+    }
+  ],
+  "slug": "thx4crying",
+  "banner": "/static/assets/banner/thx4crying/thx4crying-2.jpg",
+  "displayOrder": 400,
+  "artistName": "Thx4Crying",
+  "biography": "Un nom aux allures de Skyblog, iel a sorti il y a quelques mois son premier EP \"montagne d’émeraudes\".\rDe ses drames versés sur l'écran, Thx4Crying en fait des chansons ténébreuses et lumineuses, où les larmes ne tardent jamais à s’évaporer pour se transformer en feu de joie immortel.",
+  "introduction": "Thx4crying",
+  "category": [
+    "Live"
+  ]
 }
