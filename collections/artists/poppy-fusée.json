@@ -1,9 +1,22 @@
 {
   "citation": {
-    "quoteImage": "",
+    "quoteImage": "/static/assets/quote/poppyfusee/poppy-banner.jpg",
     "quote": "\"Ce que je propose, c’est de vous emmener faire un petit tour de fusée dans mon univers. Je vous promets que si vous me faites confiance, si vous fermez les yeux, vous réussirez à faire un voyage depuis votre canapé, votre lit, votre bus.\""
   },
-  "galleryImages": [],
+  "galleryImages": [
+    {
+      "image": "/static/assets/gallery/poppyfusee/square-poppy.jpg",
+      "altText": "POPPY FUSEE 1"
+    },
+    {
+      "image": "/static/assets/gallery/poppyfusee/square-poppy-2.jpg",
+      "altText": "POPPY FUSEE 2"
+    },
+    {
+      "image": "/static/assets/gallery/poppyfusee/square-poppy-3.jpg",
+      "altText": "POPPY FUSEE 1"
+    }
+  ],
   "slug": "poppyfusee",
   "banner": "/static/assets/banner/poppyfusee/poppy-banner.jpg",
   "displayOrder": 200,
