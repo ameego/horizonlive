@@ -5,11 +5,11 @@
   },
   "galleryImages": [
     {
-      "image": "/static/assets/gallery/no-money-kids/no-money-kids-photo-promo-2.jpg",
-      "altText": "No Money Kids"
+      "image": "/static/assets/gallery/no-money-kids/no-money-kids-banner-2.jpg",
+      "altText": "No Money Kids 1"
     },
     {
-      "image": "/static/assets/gallery/no-money-kids/no-money-kids-photo-promo-3.jpg",
+      "image": "/static/assets/gallery/no-money-kids/no-money-kids-banner-3.jpg",
       "altText": "No Money Kids 2"
     }
   ],
