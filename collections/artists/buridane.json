@@ -5,16 +5,16 @@
   },
   "galleryImages": [
     {
-      "image": "/static/assets/gallery/buridane/presse-1.png",
-      "altText": "Buridane"
+      "image": "/static/assets/gallery/buridane/buridane-square-1.jpg",
+      "altText": "BURIDANE - 1"
     },
     {
-      "image": "/static/assets/gallery/buridane/buridane2023-17bis-crédit-frank-loriou.jpg",
-      "altText": "Crédit : Frank Loriou"
+      "image": "/static/assets/gallery/buridane/buridane-square-2.jpg",
+      "altText": "BURIDANE - 2"
     },
     {
-      "image": "/static/assets/gallery/buridane/buridane2023-249bis-crédit-frank-loriou.jpg",
-      "altText": "Crédit : Frank Loriou"
+      "image": "/static/assets/gallery/buridane/buridane-square-3.jpg",
+      "altText": "BURIDANE - 3"
     }
   ],
   "slug": "buridane",
