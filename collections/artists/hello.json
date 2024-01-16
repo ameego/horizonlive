@@ -1,14 +1,14 @@
 {
-  "displayOrder": 100,
-  "artistName": "Hello",
+  "displayOrder": 400,
+  "artistName": "Thx4Crying",
   "slug": "hello",
   "category": [
     "Live"
   ],
-  "biography": "Hello",
-  "introduction": "Yoyo",
+  "biography": "Un nom aux allures de Skyblog, iel a sorti il y a quelques mois son premier EP \"montagne d’émeraudes\".\rDe ses drames versés sur l'écran, Thx4Crying en fait des chansons ténébreuses et lumineuses, où les larmes ne tardent jamais à s’évaporer pour se transformer en feu de joie immortel.",
+  "introduction": "Thx4crying",
   "citation": {
-    "quote": "Yoyoyoy"
+    "quote": " \"Chansons lumineuses et sombres\" France Culture "
   },
-  "banner": "/static/assets/banner/hello/akira.jpg"
+  "banner": "/static/assets/banner/hello/thx4crying.jpg"
 }
