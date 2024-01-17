@@ -3,7 +3,16 @@
     "quote": "\"Baloney 5uicide renoue avec l’excentricité tout en ayant quelque chose de profondément émouvant. (...) C’est très réussi.\" Le Journal de Montréal",
     "quoteImage": "/static/assets/quote/violett-pi/violett-square-1.jpg"
   },
-  "galleryImages": [],
+  "galleryImages": [
+    {
+      "image": "/static/assets/gallery/violett-pi/square-2.jpg",
+      "altText": "VIOLETT PI 1"
+    },
+    {
+      "image": "/static/assets/gallery/violett-pi/violett-square-1.jpg",
+      "altText": "VIOLETT PI 2"
+    }
+  ],
   "slug": "violett-pi",
   "banner": "/static/assets/banner/violett-pi/violett-banner-1.jpg",
   "displayOrder": 1200,
