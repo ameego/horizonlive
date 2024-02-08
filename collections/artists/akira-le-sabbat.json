@@ -3,17 +3,12 @@
     "quote": "\"C’est vraiment une expérience, un vrai sabbat. Akira & le Sabbat ne parle d’ailleurs pas de « concerts » mais de « rendez-vous » avec le public, un de ces rencards où tout explose, la colère, la joie, l’envie de jouer fort, de partager, de fédérer, d’échanger les instruments, de danser au milieu du public et avec lui.\" Marion Guilbaud, Côté Club - France Inter",
     "quoteImage": "/static/assets/quote/akira-et-le-sabbat/square.png"
   },
-  "galleryImages": [
-    {
-      "image": "/static/assets/gallery/akira-et-le-sabbat/akira-le-sabbat-crédit-coline-haslé.jpg",
-      "altText": "Crédit photo : Coline Haslé"
-    }
-  ],
+  "galleryImages": [],
   "slug": "akira-et-le-sabbat",
-  "banner": "",
+  "banner": "/static/assets/banner/akira-et-le-sabbat/akira-le-sabbat-2-cr.-noémie-lacote-min-1-.jpg",
   "displayOrder": 100,
   "artistName": "Akira et le Sabbat",
-  "biography": "Akira & le Sabbat échappe à toute définition de genres. Un **tourbillon queer** mêlant rap, **rock, techno, electro**... Les six membres de ce collectif hors norme abordent leur vingtaine les poings serrés, et transforment leur rage en un **besoin frénétique de danse**, de transe, et de mots qui claquent comme des pavés. D’ailleurs, iels ne parlent pas de concerts, mais de **rendez-vous.** Répondrez-vous présent∙es ?\n\n**B﻿ooking : Adeline Cler - adeline.cler@horizon-musiques.fr**\n\nPhotos : Coline Haslé",
+  "biography": "Akira & le Sabbat échappe à toute définition de genres. Un **tourbillon queer** mêlant rap, **rock, techno, electro**... Les six membres de ce collectif hors norme abordent leur vingtaine les poings serrés, et transforment leur rage en un **besoin frénétique de danse**, de transe, et de mots qui claquent comme des pavés. D’ailleurs, iels ne parlent pas de concerts, mais de **rendez-vous.** Répondrez-vous présent∙es ?\n\n**B﻿ooking : Adeline Cler - adeline.cler@horizon-musiques.fr**\n\nPhotos : Noémie Lacote",
   "introduction": "Notre musique est notre manifeste.",
   "category": [
     "Label",
