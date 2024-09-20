@@ -11,6 +11,10 @@
     {
       "image": "/static/assets/gallery/la-reine-garcon/lrg_manon-ricupero_1-min.jpg",
       "altText": "Photo : Manon Ricupero"
+    },
+    {
+      "image": "/static/assets/gallery/la-reine-garcon/lrg_manon-ricupero_10-min.png",
+      "altText": "Photo : Manon Ricupero"
     }
   ],
   "slug": "la-reine-garcon",
