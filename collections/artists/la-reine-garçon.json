@@ -7,6 +7,10 @@
     {
       "image": "/static/assets/gallery/la-reine-garcon/lrg_guendalina-flamini_a-20-carré-min.jpg",
       "altText": "Photo : Guendalina Flamini"
+    },
+    {
+      "image": "/static/assets/gallery/la-reine-garcon/lrg_manon-ricupero_1-min.jpg",
+      "altText": "Photo : Manon Ricupero"
     }
   ],
   "slug": "la-reine-garcon",
