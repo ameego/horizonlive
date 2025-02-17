@@ -15,11 +15,7 @@ export const query = graphql`
     galleryImages {
       image
       altText
-    }
-    playlist {
-      musicname
-      music
-    }
+    }    
   }
 
   fragment AgendaFragment on AgendaJson {

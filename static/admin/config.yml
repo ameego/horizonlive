@@ -232,19 +232,6 @@ collections:
             widget: image
           - label: "Text alternatif"
             name: altText
-      - label: Musiques
-        name: playlist
-        widget: "list"
-        required: false
-        summary: "{{fields.musicname}}"
-        minimize_collapsed: true
-        fields:
-          - label: "Nom de la Musique"
-            name: musicname
-          - label: Musique
-            name: music
-            widget: file
-            media_folder: "/static/music/{{fields.slug}}"
 
   - label: "Activités"
     name: focus

@@ -141,17 +141,7 @@ export const pageQuery = graphql`
           ...ArtistGalleryFluid
         }
       }
-    }
-    artistPlaylist: allFile(
-      filter: {
-        sourceInstanceName: { eq: "artistMusic" }
-        relativeDirectory: { eq: $slug }
-      }
-    ) {
-      nodes {
-        publicURL
-      }
-    }
+    }    
     artistVideos: allVideosJson(
       filter: { artist: { eq: $artistName } }
       sort: { fields: displayOrder, order: ASC }
