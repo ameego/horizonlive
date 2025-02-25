@@ -3,7 +3,12 @@
     "quote": " \"Chansons lumineuses et sombres\" France Culture ",
     "quoteImage": "/static/assets/quote/thx4crying/thx4crying-2-min.jpg"
   },
-  "galleryImages": [],
+  "galleryImages": [
+    {
+      "image": "/static/assets/gallery/thx4crying/thx4crying-2-min-1-.jpg",
+      "altText": "Thx4Crying - Crédit Florian Salabert "
+    }
+  ],
   "slug": "thx4crying",
   "banner": "/static/assets/banner/thx4crying/thx4crying-photo-2025-1-©-florian-salabert-1280-par-800.jpg",
   "displayOrder": 200,
