@@ -3,20 +3,7 @@
     "quote": "\"Alphonse est un ovni absolu, un artiste avec un très très grand A\" - Diane Tell, au micro d'ICI Première, Radio-Canada",
     "quoteImage": "/static/assets/quote/alphonse-bisaillon/alphonse-2.jpg"
   },
-  "galleryImages": [
-    {
-      "image": "/static/assets/gallery/alphonse-bisaillon/alphonse-banner-1.jpg",
-      "altText": "ALPHONSE BISAILLON 1"
-    },
-    {
-      "image": "/static/assets/gallery/alphonse-bisaillon/alphonse-square-2.jpg",
-      "altText": "ALPHONSE BISAILLON 2"
-    },
-    {
-      "image": "/static/assets/gallery/alphonse-bisaillon/alphonse-banner-2.jpg",
-      "altText": "ALPHONSE BISAILLON 3"
-    }
-  ],
+  "galleryImages": [],
   "slug": "alphonse-bisaillon",
   "banner": "/static/assets/banner/alphonse-bisaillon/alphonse-3.jpg",
   "displayOrder": 900,
