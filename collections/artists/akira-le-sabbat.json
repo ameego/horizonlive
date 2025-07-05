@@ -3,24 +3,7 @@
     "quote": "\"C’est vraiment une expérience, un vrai sabbat. Akira & le Sabbat ne parle d’ailleurs pas de « concerts » mais de « rendez-vous » avec le public, un de ces rencards où tout explose, la colère, la joie, l’envie de jouer fort, de partager, de fédérer, d’échanger les instruments, de danser au milieu du public et avec lui.\" Marion Guilbaud, Côté Club - France Inter",
     "quoteImage": ""
   },
-  "galleryImages": [
-    {
-      "image": "/static/assets/gallery/akira-et-le-sabbat/akira-le-sabbat-2-cr.-noémie-lacote-min-1-.jpg",
-      "altText": "Akira & le Sabbat 1"
-    },
-    {
-      "image": "/static/assets/gallery/akira-et-le-sabbat/akira-le-sabbat-1-cr.-noémie-lacote-min.jpg",
-      "altText": "Akira & le Sabbat 2"
-    },
-    {
-      "image": "/static/assets/gallery/akira-et-le-sabbat/akira-resize-2.jpg",
-      "altText": "Akira & le Sabbat 3"
-    },
-    {
-      "image": "/static/assets/gallery/akira-et-le-sabbat/akira_2_4x5_2-2-min.jpg",
-      "altText": "Akira & le Sabbat 4"
-    }
-  ],
+  "galleryImages": [],
   "slug": "akira-et-le-sabbat",
   "banner": "",
   "displayOrder": 2000,
