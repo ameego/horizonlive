@@ -1,14 +1,21 @@
 {
+  "citation": {
+    "quote": "Texte coupant, scène en feu. À vif, à fond, à part.",
+    "quoteImage": "/static/assets/quote/ooralise/ooralise-site-hrz-galerie-grâce-kalonji.jpeg"
+  },
+  "galleryImages": [
+    {
+      "image": "/static/assets/gallery/ooralise/ooralise-banniere-hrz-grâce-kalonji.jpeg",
+      "altText": "Crédit photo :  Grâce Kalonji"
+    }
+  ],
+  "slug": "ooralise",
+  "banner": "/static/assets/banner/ooralise/ooralise-banniere-hrz-grâce-kalonji.jpeg",
   "displayOrder": 200,
   "artistName": "Ooralise",
-  "slug": "ooralise",
-  "category": [
-    "Live"
-  ],
   "biography": "Découpeuse acharnée, OORALISE est une rappeuse franco-malgache basée entre Genève et Lyon. Empreinte d’une assurance éclatante elle transmet son énergie, brille, et oralise ses messages avec des flows percutants et techniques.\n\nAvec ses textes autant dénonciateurs qu’introspectifs, elle incarne le pont parfait entre le boombap et le rap new wave pouvant nous rappeler Little Simz, Doechii & Mairo. \n\nAttention, phénomène en approche.",
   "introduction": "Attention : tempête rap imminente !",
-  "citation": {
-    "quote": "Texte coupant, scène en feu. À vif, à fond, à part."
-  },
-  "banner": "/static/assets/banner/ooralise/ooralise-banniere-hrz-grâce-kalonji.jpeg"
+  "category": [
+    "Live"
+  ]
 }
