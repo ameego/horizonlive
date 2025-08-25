@@ -3,7 +3,12 @@
     "quote": "\"Alphonse est un ovni absolu, un artiste avec un très très grand A\" - Diane Tell, au micro d'ICI Première, Radio-Canada",
     "quoteImage": "/static/assets/quote/alphonse-bisaillon/alphonse-2.jpg"
   },
-  "galleryImages": [],
+  "galleryImages": [
+    {
+      "image": "/static/assets/gallery/alphonse-bisaillon/credit-charline-clavier-min-1-.jpg",
+      "altText": "Crédit : Charline Clavier"
+    }
+  ],
   "slug": "alphonse-bisaillon",
   "banner": "/static/assets/banner/alphonse-bisaillon/alphonse-3.jpg",
   "displayOrder": 900,
