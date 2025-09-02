@@ -1,15 +1,21 @@
 {
-  "displayOrder": 100,
-  "artistName": "Pi Ja Ma",
-  "slug": "pi-ja-ma",
-  "category": [
-    "Live"
-  ],
-  "biography": "**Pi Ja Ma**, alias **Pauline de Tarragon**, est en train de devenir l’une des artistes les plus captivantes de la nouvelle scène **pop française**.\n\n\nAutrice, chanteuse, illustratrice et même céramiste, elle crée un univers où s’entrelacent **chansons lumineuses, impertinence douce, images poétiques**, et a**mour inconditionnel pour la liberté**.\n\n\nSon nouveau single *Carnet secret* marque le début d’un retour très attendu : porté par **son charisme naturel** et **son talent singulier**, il confirme l’ampleur d’un engouement déjà visible sur les réseaux et plateformes.\n\n\n**Sensible, inventive**, Pi Ja Ma incarne une manière rare d’habiter la pop. Immédiatement reconnaissable, de plus en plus incontournable.\n\n**B﻿ooking :** [yohann@bluebird-booking.eu](mailto:yohann@bluebird-booking.eu)\n\n**C﻿hef de projet** : **Lucas Bernier** - [lucas.bernier@horizon-musiques.fr](mailto:lucas.bernier@horizon-musiques.fr)\n\n**P﻿hotos** : Hugo Pillard",
   "citation": {
     "quote": "\"Solitaire dans l’intimité de sa chambre ou indépendante dans l’immensité du monde, les images fusent et brossent un portrait développé et abouti de la musicienne\" - France Inter",
     "quoteImage": "/static/assets/quote/pi-ja-ma/vignette-web-pi-ja-ma.jpg"
   },
+  "galleryImages": [
+    {
+      "image": "/static/assets/gallery/pi-ja-ma/photos-web-pi-ja-ma.jpg",
+      "altText": "Pi Ja Ma"
+    }
+  ],
+  "slug": "pi-ja-ma",
+  "banner": "/static/assets/banner/pi-ja-ma/pi-ja-ma-bannière-web-def.jpg",
+  "displayOrder": 100,
+  "artistName": "Pi Ja Ma",
+  "biography": "**Pi Ja Ma**, alias **Pauline de Tarragon**, est en train de devenir l’une des artistes les plus captivantes de la nouvelle scène **pop française**.\n\n\nAutrice, chanteuse, illustratrice et même céramiste, elle crée un univers où s’entrelacent **chansons lumineuses, impertinence douce, images poétiques**, et a**mour inconditionnel pour la liberté**.\n\n\nSon nouveau single *Carnet secret* marque le début d’un retour très attendu : porté par **son charisme naturel** et **son talent singulier**, il confirme l’ampleur d’un engouement déjà visible sur les réseaux et plateformes.\n\n\n**Sensible, inventive**, Pi Ja Ma incarne une manière rare d’habiter la pop. Immédiatement reconnaissable, de plus en plus incontournable.\n\n**B﻿ooking :** [yohann@bluebird-booking.eu](mailto:yohann@bluebird-booking.eu)\n\n**C﻿hef de projet** : **Lucas Bernier** - [lucas.bernier@horizon-musiques.fr](mailto:lucas.bernier@horizon-musiques.fr)\n\n**P﻿hotos** : Hugo Pillard",
   "introduction": "Nouveau titre \"18h37\" - disponible",
-  "banner": "/static/assets/banner/pi-ja-ma/pi-ja-ma-bannière-web-def.jpg"
+  "category": [
+    "Live"
+  ]
 }
