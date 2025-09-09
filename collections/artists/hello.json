@@ -7,6 +7,10 @@
     {
       "image": "/static/assets/gallery/thx4crying/photo-thx.jpg",
       "altText": "Thx4Crying"
+    },
+    {
+      "image": "/static/assets/gallery/thx4crying/photo-thx2.jpg",
+      "altText": "Thx4Crying"
     }
   ],
   "slug": "thx4crying",
