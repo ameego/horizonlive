@@ -11,6 +11,10 @@
     {
       "image": "/static/assets/gallery/la-parade/photo.jpg",
       "altText": "La Parade"
+    },
+    {
+      "image": "/static/assets/gallery/la-parade/photo3.jpg",
+      "altText": "La Parade"
     }
   ],
   "slug": "la-parade",
