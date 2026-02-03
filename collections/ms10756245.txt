@@ -1,0 +1,5 @@
+﻿{
+  "Description": "Fichier de vérification de la propriété du domaine pour Microsoft 365 : placer dans la racine du site web",
+  "Domain": "horizon-musiques.fr",
+  "Id": "e263bedf-be24-4ad9-ade2-9ab033495ab5"
+}
