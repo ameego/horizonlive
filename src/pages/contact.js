@@ -7,6 +7,7 @@ import ImageBanner from "../components/image-banner/image-banner"
 import marked from "marked"
 
 function rawMarkup(data) {
+  if (!data) return { __html: "" }
   let rawMarkup = marked(data)
   return { __html: rawMarkup }
 }
@@ -30,13 +31,13 @@ export const Contacts = () => {
       <ImageBanner isFixed />
       <Layout>
         <PageIntro
-          title={data.allContactPageJson.nodes[0].title}
-          subtitle={data.allContactPageJson.nodes[0].subtitle}
+          title={(data.allContactPageJson.nodes[0] || {}).title}
+          subtitle={(data.allContactPageJson.nodes[0] || {}).subtitle}
         />
         <div className="formatted-content formatted-content-2">
           <div
             dangerouslySetInnerHTML={rawMarkup(
-              data.allContactPageJson.nodes[0].text
+              (data.allContactPageJson.nodes[0] || {}).text
             )}
           />
         </div>

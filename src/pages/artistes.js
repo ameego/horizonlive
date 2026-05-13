@@ -28,8 +28,8 @@ export const Home = () => {
       <ImageBanner isFixed />
       <Layout>
         <PageIntro
-          title={data.allArtistsPageJson.nodes[0].title}
-          subtitle={data.allArtistsPageJson.nodes[0].subtitle}
+          title={(data.allArtistsPageJson.nodes[0] || {}).title}
+          subtitle={(data.allArtistsPageJson.nodes[0] || {}).subtitle}
         />
         <ArtistList data={data.artistData.nodes} />
       </Layout>

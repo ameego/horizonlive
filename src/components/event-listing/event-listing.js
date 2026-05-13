@@ -22,9 +22,10 @@ const EventListing = ({ data, isArtistNameHidden, isScrollable, title }) => {
   `)
 
   const getArtistSlug = artistName => {
-    return artistData.allArtistsJson.edges.find(
+    var match = artistData.allArtistsJson.edges.find(
       x => artistName === x.node.artistName
-    ).node.slug
+    )
+    return match ? match.node.slug : null
   }
 
   var eventClassName = isScrollable ? style.scrollingbox : ""
@@ -34,15 +35,18 @@ const EventListing = ({ data, isArtistNameHidden, isScrollable, title }) => {
       <PageIntro title={title} isSmaller={true} lessBottomSpace={true} />
       <div className={eventClassName}>
         <ul className={style.eventlisting}>
-          {data.nodes.map((date, index) => (
+          {data.nodes.map((date, index) => {
+            var dateParts = date.eventdate ? date.eventdate.split("/") : []
+            var slug = date.category ? getArtistSlug(date.category) : null
+            return (
             <li key={index} className={style.eventlisting__container}>
               <div className={style.eventlisting__date}>
                 <div className={style.eventlisting__date1}>
-                  {formatDay(date.eventdate.split("/")[0])}
+                  {dateParts[0] ? formatDay(dateParts[0]) : null}
                 </div>
                 <div className={style.eventlisting__date2}>
-                  <span>{date.eventdate.split("/")[1]}</span>
-                  <span>{date.eventdate.split("/")[2]}</span>
+                  <span>{dateParts[1]}</span>
+                  <span>{dateParts[2]}</span>
                 </div>
               </div>
               <div className={style.eventlisting__information}>
@@ -51,9 +55,11 @@ const EventListing = ({ data, isArtistNameHidden, isScrollable, title }) => {
                 ) : (
                   <>
                     <p className={style.eventlisting__title}>
-                      <Link to={`/artistes/${getArtistSlug(date.category)}`}>
-                        {date.category}
-                      </Link>
+                      {slug ? (
+                        <Link to={`/artistes/${slug}`}>
+                          {date.category}
+                        </Link>
+                      ) : date.category}
                     </p>
                     <p className={style.eventlisting__subtitle}>
                       {date.evenement}
@@ -62,7 +68,8 @@ const EventListing = ({ data, isArtistNameHidden, isScrollable, title }) => {
                 )}
               </div>
             </li>
-          ))}
+            )
+          })}
         </ul>
       </div>
     </div>

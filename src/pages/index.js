@@ -10,8 +10,10 @@ import VideoList from "../components/video-list/video-list"
 
 function getHomeVideos(allVideosJson, allHomePageJson) {
   let filteredVideos = []
+  var pageNode = allHomePageJson[0]
+  if (!pageNode || !pageNode.videos) return filteredVideos
   allVideosJson.forEach(video => {
-    allHomePageJson[0].videos.forEach(vid => {
+    pageNode.videos.forEach(vid => {
       if (vid === video.title) filteredVideos.push(video)
     })
   })
@@ -53,14 +55,14 @@ export const Home = () => {
       <ImageBanner isFixed />
       <Layout>
         <PageIntro
-          title={allHomePageJson.nodes[0].title}
-          subtitle={allHomePageJson.nodes[0].subtitle}
+          title={(allHomePageJson.nodes[0] || {}).title}
+          subtitle={(allHomePageJson.nodes[0] || {}).subtitle}
         />
         <ArtistList data={allArtistsJson.nodes} />
         <Spreader>
           <PageIntro
-            title={allHomePageJson.nodes[0].vidtitle}
-            subtitle={allHomePageJson.nodes[0].vidsubtitle}
+            title={(allHomePageJson.nodes[0] || {}).vidtitle}
+            subtitle={(allHomePageJson.nodes[0] || {}).vidsubtitle}
             isSmaller={true}
             lessBottomSpace={true}
             link={"/videos"}

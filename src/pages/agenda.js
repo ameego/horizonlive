@@ -40,8 +40,8 @@ export const Agenda = () => {
       <ImageBanner isFixed />
       <Layout>
         <PageIntro
-          title={data.allAgendaPageJson.nodes[0].title}
-          subtitle={data.allAgendaPageJson.nodes[0].subtitle}
+          title={(data.allAgendaPageJson.nodes[0] || {}).title}
+          subtitle={(data.allAgendaPageJson.nodes[0] || {}).subtitle}
         />
         <EventListing
           data={data.futureDates}

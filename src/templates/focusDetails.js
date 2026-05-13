@@ -7,13 +7,17 @@ import ImageBanner from "../components/image-banner/image-banner"
 import ArtistList from "../components/artist-list/artist-list"
 
 export default function Template({ data, pageContext }) {
-  const currentData = data.allActivityPageJson.nodes[0][pageContext.url]
+  var activityNode = data.allActivityPageJson.nodes[0]
+  var currentData = activityNode && pageContext.url ? activityNode[pageContext.url] : null
   return (
     <>
       <SEO />
       <ImageBanner isFixed />
       <Layout>
-        <PageIntro title={currentData.title} subtitle={currentData.subtitle} />
+        <PageIntro
+          title={currentData ? currentData.title : null}
+          subtitle={currentData ? currentData.subtitle : null}
+        />
         <ArtistList data={data.artistData.nodes} />
       </Layout>
     </>

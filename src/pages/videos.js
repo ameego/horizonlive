@@ -43,8 +43,8 @@ export const Videos = () => {
       <ImageBanner isFixed />
       <Layout>
         <PageIntro
-          title={data.allVideosPageJson.nodes[0].title}
-          subtitle={data.allVideosPageJson.nodes[0].subtitle}
+          title={(data.allVideosPageJson.nodes[0] || {}).title}
+          subtitle={(data.allVideosPageJson.nodes[0] || {}).subtitle}
         />
         {data.allVideocategoriesJson.nodes.map((cat, index) => {
           var videoData = data.allVideosJson.nodes.filter(

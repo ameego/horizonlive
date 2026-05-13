@@ -12,6 +12,7 @@ import VideoList from "../components/video-list/video-list"
 import marked from "marked"
 
 function rawMarkup(data) {
+  if (!data) return { __html: "" }
   let rawMarkup = marked(data)
   return { __html: rawMarkup }
 }
@@ -71,15 +72,17 @@ export default function Template({ data }) {
             </div>
           </div>
           <div className="sidebar">
-            <Quote
-              quote={artistData.nodes[0].citation.quote}
-              src={
-                artistData.nodes[0].citation.quoteImage &&
-                quoteImage.nodes.length > 0
-                  ? quoteImage.nodes[0].childImageSharp.fluid
-                  : ""
-              }
-            />
+            {artistData.nodes[0].citation && (
+              <Quote
+                quote={artistData.nodes[0].citation.quote}
+                src={
+                  artistData.nodes[0].citation.quoteImage &&
+                  quoteImage.nodes.length > 0
+                    ? quoteImage.nodes[0].childImageSharp.fluid
+                    : ""
+                }
+              />
+            )}
             {agendaData.nodes.length ? (
               <EventListing data={agendaData} title="Agenda" />
             ) : null}

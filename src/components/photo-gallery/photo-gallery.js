@@ -5,8 +5,10 @@ import "@browniebroke/gatsby-image-gallery/dist/style.css"
 import PageIntro from "../page-intro/page-intro"
 
 const PhotoGallery = ({ data, artistData }) => {
+  var galleryImages = artistData.nodes[0] && artistData.nodes[0].galleryImages ? artistData.nodes[0].galleryImages : []
   var formattedData = data.map(item => {
-    var caption = artistData.nodes[0].galleryImages.find(x => {
+    var caption = galleryImages.find(x => {
+      if (!x.image) return false
       var srcPath = x.image.split("/")
       var src = srcPath[srcPath.length - 1]
 

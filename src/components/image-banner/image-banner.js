@@ -26,8 +26,9 @@ const ImageBanner = ({ src, isFixed }) => {
 
   var className = isFixed ? `${style.banner} ${style.isFixed}` : style.banner
 
-  src = !src
-    ? Utils.getCurrentImage(data.homeBanner.nodes, data.common.nodes[0].banner)
+  var commonNode = data.common.nodes.length > 0 ? data.common.nodes[0] : null
+  src = !src && commonNode
+    ? Utils.getCurrentImage(data.homeBanner.nodes, commonNode.banner)
     : src
 
   return (
