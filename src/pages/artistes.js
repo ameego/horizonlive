@@ -6,10 +6,12 @@ import PageIntro from "../components/page-intro/page-intro"
 import ImageBanner from "../components/image-banner/image-banner"
 import ArtistList from "../components/artist-list/artist-list"
 
+export const Head = ({ location }) => <SEO pathname={location.pathname} />
+
 export const Home = () => {
   const data = useStaticQuery(graphql`
     query ArtistQuery {
-      artistData: allArtistsJson(sort: { fields: displayOrder }) {
+      artistData: allArtistsJson(sort: { displayOrder: ASC }) {
         nodes {
           ...ArtistsFragment
         }
@@ -24,7 +26,6 @@ export const Home = () => {
   `)
   return (
     <>
-      <SEO />
       <ImageBanner isFixed />
       <Layout>
         <PageIntro

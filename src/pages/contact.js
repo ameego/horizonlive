@@ -4,11 +4,13 @@ import SEO from "../components/seo/seo"
 import Layout from "../components/layout/layout"
 import PageIntro from "../components/page-intro/page-intro"
 import ImageBanner from "../components/image-banner/image-banner"
-import marked from "marked"
+import { marked } from "marked"
+
+export const Head = ({ location }) => <SEO pathname={location.pathname} />
 
 function rawMarkup(data) {
   if (!data) return { __html: "" }
-  let rawMarkup = marked(data)
+  let rawMarkup = marked.parse(data)
   return { __html: rawMarkup }
 }
 
@@ -27,7 +29,6 @@ export const Contacts = () => {
 
   return (
     <>
-      <SEO />
       <ImageBanner isFixed />
       <Layout>
         <PageIntro

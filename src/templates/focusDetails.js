@@ -6,12 +6,13 @@ import PageIntro from "../components/page-intro/page-intro"
 import ImageBanner from "../components/image-banner/image-banner"
 import ArtistList from "../components/artist-list/artist-list"
 
+export const Head = ({ location }) => <SEO pathname={location.pathname} />
+
 export default function Template({ data, pageContext }) {
   var activityNode = data.allActivityPageJson.nodes[0]
   var currentData = activityNode && pageContext.url ? activityNode[pageContext.url] : null
   return (
     <>
-      <SEO />
       <ImageBanner isFixed />
       <Layout>
         <PageIntro

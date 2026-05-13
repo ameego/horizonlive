@@ -62,8 +62,20 @@ module.exports = {
     ],
   },
   plugins: [
-    `gatsby-plugin-sass`,
-    `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        cssLoaderOptions: {
+          esModule: false,
+          modules: {
+            namedExport: false,
+          },
+        },
+        sassOptions: {
+          silenceDeprecations: ["legacy-js-api"],
+        },
+      },
+    },
     `gatsby-plugin-netlify-cms`,
     `gatsby-transformer-json`,
     {

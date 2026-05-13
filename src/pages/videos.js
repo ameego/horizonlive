@@ -6,6 +6,8 @@ import PageIntro from "../components/page-intro/page-intro"
 import ImageBanner from "../components/image-banner/image-banner"
 import VideoList from "../components/video-list/video-list"
 
+export const Head = ({ location }) => <SEO pathname={location.pathname} />
+
 export const Videos = () => {
   const data = useStaticQuery(graphql`
     query VideosQuery {
@@ -21,14 +23,14 @@ export const Videos = () => {
         }
       }
       allVideosJson(
-        sort: { fields: displayOrder, order: ASC }
+        sort: { displayOrder: ASC }
         filter: { isLimitedToArtistPage: { ne: true } }
       ) {
         nodes {
           ...VideosFragment
         }
       }
-      allVideocategoriesJson(sort: { fields: displayOrder }) {
+      allVideocategoriesJson(sort: { displayOrder: ASC }) {
         nodes {
           categoryname
           categorydescr
@@ -39,7 +41,6 @@ export const Videos = () => {
 
   return (
     <>
-      <SEO />
       <ImageBanner isFixed />
       <Layout>
         <PageIntro

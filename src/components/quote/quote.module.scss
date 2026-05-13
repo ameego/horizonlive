@@ -3,8 +3,11 @@
   padding: 0 2rem 2rem 2rem;
   border-radius: 5px;
   background-color: rgba(255, 255, 255, 0.15);
+  // overflow: hidden;
 
   :global(.gatsby-image-wrapper) {
+    display: block;
+    width: 100%;
     position: relative;
     top: -3rem;
     border-radius: 5px;
@@ -28,6 +31,7 @@
   &::after {
     content: "\201C";
     position: absolute;
+    right: 0;
     bottom: -1rem;
     width: 100%;
     text-align: center;

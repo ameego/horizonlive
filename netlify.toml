@@ -1,5 +1,8 @@
 [build]
   publish = "public/"
 
+[build.environment]
+  NODE_VERSION = "20"
+
 [[plugins]]
   package = "netlify-plugin-gatsby-cache"

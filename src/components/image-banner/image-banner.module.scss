@@ -4,8 +4,6 @@
   width: 100%;
   z-index: -1;
   opacity: 0.5;
-  margin-left: 50%;
-  transform: translateX(-50%);
   filter: blur(7px);
 
   &::after,
@@ -45,6 +43,8 @@
   }
 
   :global(.gatsby-image-wrapper) {
+    display: block !important;
+    width: 100% !important;
     height: 70vh;
 
     @media (min-width: 1024px) {

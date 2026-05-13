@@ -6,11 +6,13 @@ import PageIntro from "../components/page-intro/page-intro"
 import ImageBanner from "../components/image-banner/image-banner"
 import EventListing from "../components/event-listing/event-listing"
 
+export const Head = ({ location }) => <SEO pathname={location.pathname} />
+
 export const Agenda = () => {
   const data = useStaticQuery(graphql`
     query Agenda {
       futureDates: allAgendaJson(
-        sort: { fields: eventdate }
+        sort: { eventdate: ASC }
         filter: { isFuture: { eq: true } }
       ) {
         nodes {
@@ -18,7 +20,7 @@ export const Agenda = () => {
         }
       }
       passedDates: allAgendaJson(
-        sort: { fields: eventdate, order: DESC }
+        sort: { eventdate: DESC }
         filter: { isFuture: { eq: false } }
       ) {
         nodes {
@@ -36,7 +38,6 @@ export const Agenda = () => {
 
   return (
     <>
-      <SEO />
       <ImageBanner isFixed />
       <Layout>
         <PageIntro

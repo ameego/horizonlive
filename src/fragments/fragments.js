@@ -15,7 +15,7 @@ export const query = graphql`
     galleryImages {
       image
       altText
-    }    
+    }
   }
 
   fragment AgendaFragment on AgendaJson {
@@ -33,10 +33,7 @@ export const query = graphql`
   }
 
   fragment CommonFragment on ImageSharp {
-    fluid(maxWidth: 1280, maxHeight: 700, quality: 60) {
-      originalName
-      ...GatsbyImageSharpFluid_withWebp
-    }
+    gatsbyImageData(width: 1280, height: 700, quality: 60)
   }
 
   fragment NewsFragment on NewsJson {
@@ -55,27 +52,15 @@ export const query = graphql`
   }
 
   fragment ArtistBannerImage on ImageSharp {
-    fluid(maxWidth: 500, maxHeight: 300, quality: 40) {
-      originalName
-      ...GatsbyImageSharpFluid_withWebp
-    }
+    gatsbyImageData(width: 500, height: 300, quality: 40)
   }
 
   fragment ArtistQuoteImage on ImageSharp {
-    fluid(maxWidth: 500, quality: 40) {
-      originalName
-      ...GatsbyImageSharpFluid_withWebp
-    }
+    gatsbyImageData(width: 500, quality: 40)
   }
 
   fragment ArtistGalleryFluid on ImageSharp {
-    full: fluid(maxWidth: 1280, quality: 60) {
-      originalName
-      ...GatsbyImageSharpFluid_withWebp
-    }
-    thumb: fluid(maxWidth: 500, maxHeight: 300, quality: 45) {
-      originalName
-      ...GatsbyImageSharpFluid_withWebp
-    }
+    full: gatsbyImageData(width: 1280, quality: 60)
+    thumb: gatsbyImageData(width: 500, height: 300, quality: 45)
   }
 `

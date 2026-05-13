@@ -11,6 +11,7 @@ const ImageBanner = ({ src, isFixed }) => {
         filter: { sourceInstanceName: { eq: "commonBanner" } }
       ) {
         nodes {
+          base
           childImageSharp {
             ...CommonFragment
           }

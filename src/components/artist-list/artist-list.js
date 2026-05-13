@@ -12,6 +12,7 @@ const ArtistList = ({ data }) => (
       query ArtistBanner {
         allFile(filter: { sourceInstanceName: { eq: "artistsBanner" } }) {
           nodes {
+            base
             childImageSharp {
               ...ArtistBannerImage
             }

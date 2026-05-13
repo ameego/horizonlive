@@ -8,6 +8,8 @@ import ArtistList from "../components/artist-list/artist-list"
 import ImageBanner from "../components/image-banner/image-banner"
 import VideoList from "../components/video-list/video-list"
 
+export const Head = ({ location }) => <SEO pathname={location.pathname} />
+
 function getHomeVideos(allVideosJson, allHomePageJson) {
   let filteredVideos = []
   var pageNode = allHomePageJson[0]
@@ -24,7 +26,7 @@ function getHomeVideos(allVideosJson, allHomePageJson) {
 export const Home = () => {
   const data = useStaticQuery(graphql`
     query HomeQuery {
-      allArtistsJson(sort: { fields: displayOrder }) {
+      allArtistsJson(sort: { displayOrder: ASC }) {
         nodes {
           ...ArtistsFragment
         }
@@ -34,7 +36,7 @@ export const Home = () => {
           ...HomeFragment
         }
       }
-      allVideosJson(sort: { fields: displayOrder, order: ASC }) {
+      allVideosJson(sort: { displayOrder: ASC }) {
         nodes {
           ...VideosFragment
         }
@@ -51,7 +53,6 @@ export const Home = () => {
 
   return (
     <>
-      <SEO />
       <ImageBanner isFixed />
       <Layout>
         <PageIntro

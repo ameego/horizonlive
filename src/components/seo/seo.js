@@ -1,11 +1,8 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { Helmet } from "react-helmet"
-import { useLocation } from "@reach/router"
 import { useStaticQuery, graphql } from "gatsby"
 
-const SEO = ({ title, description, image }) => {
-  const { pathname } = useLocation()
+const SEO = ({ title, description, image, pathname }) => {
   const { site } = useStaticQuery(query)
 
   const {
@@ -20,32 +17,33 @@ const SEO = ({ title, description, image }) => {
     title: title || defaultTitle,
     description: description || defaultDescription,
     image: `${siteUrl}${image || defaultImage}`,
-    url: `${siteUrl}${pathname}`,
+    url: pathname ? `${siteUrl}${pathname}` : siteUrl,
   }
 
+  const fullTitle = titleTemplate
+    ? titleTemplate.replace("%s", seo.title)
+    : seo.title
+
   return (
-    <Helmet title={seo.title} titleTemplate={titleTemplate}>
+    <>
+      <title>{fullTitle}</title>
       <meta name="description" content={seo.description} />
       <meta name="image" content={seo.image} />
       <link
-        href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&amp;display=swap"
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&display=swap"
         rel="stylesheet"
       />
       <link
-        href="https://fonts.googleapis.com/css2?family=ABeeZee&amp;display=swap"
+        href="https://fonts.googleapis.com/css2?family=ABeeZee&display=swap"
         rel="stylesheet"
-      ></link>
-
+      />
       {seo.url && <meta property="og:url" content={seo.url} />}
-
       {seo.title && <meta property="og:title" content={seo.title} />}
-
       {seo.description && (
         <meta property="og:description" content={seo.description} />
       )}
-
       {seo.image && <meta property="og:image" content={seo.image} />}
-    </Helmet>
+    </>
   )
 }
 
@@ -55,12 +53,14 @@ SEO.propTypes = {
   title: PropTypes.string,
   description: PropTypes.string,
   image: PropTypes.string,
+  pathname: PropTypes.string,
 }
 
 SEO.defaultProps = {
   title: null,
   description: null,
   image: null,
+  pathname: null,
 }
 
 const query = graphql`
