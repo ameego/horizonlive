@@ -1,14 +1,20 @@
 {
-  "displayOrder": 200,
-  "artistName": "Violett Pi",
-  "slug": "violett-pi",
-  "category": [
-    "Live"
-  ],
-  "biography": "*La musique de VioleTT Pi est le projet créatif de Karl Gagnon.* \n\n*Son entrée en 2012 avec un premier EP suivi de l'album* «  *EV* » *(2013) a semé la confusion dans le monde musical des cousins, à l’époque où on ne voulait surtout pas s’égarer des sentiers battus.* \n\n« *Manifeste contre la peur* » * (2016) puis*  « *Baloney Suicide* » *(2023) viennent confirmer que l’univers de Karl s’étend et s’enracine dans une population de marginaux de plus en plus nombreux et assoiffé.es de différence.* \n\n*VioleTT s’entoure de Daniel Baillargeon à la guitare, Sylvain Deschamps à la basse et aux claviers (et à la co-réalisation), et Maxime Drouin à la batterie.* \n\n*En spectacle, le groupe offre une autre dimension, une décharge d’énergie et de sons, un exutoire, une performance qui marque au fer rouge.* \n\n *Debout depuis plus d’une quinzaine d’années d’expérimentation artistique où l’affirmation identitaire et la recherche sonore sont à l’avant-plan, VioleTT Pi poursuit une démarche évolutive repoussant toujours plus les cadres imposés de l’industrie et du bon goût.* \n\n*Avec son quatrième album ,*  « *Mythologie de la dérape* »*, qui voit le jour en mai 2026, il propose une nouvelle avenue, une expérience sensorielle toujours plus immersive et audacieuse. Nouveau chapitre dans les mathématiques florales, cet album réaffirme la place importante que prend VioleTT Pi dans le paysage musical québécois.*",
-  "introduction": "Le québécois VioleTT Pi est connu pour son audace et sa prise de risque, pour le flambeau de liberté qu’il porte bien haut et son univers qui ne ressemble à aucun autre.*",
   "citation": {
     "quote": "Aussi profond que brut. Un sons aussi puissant que sensible. Une claque venue du Québec."
   },
-  "banner": "/static/assets/banner/violett-pi/violett-pi-banniere-1080-par-712.jpg"
+  "galleryImages": [
+    {
+      "image": "/static/assets/gallery/violett-pi/violett-pi-banniere-1080-par-712.jpg",
+      "altText": "Violett Pi"
+    }
+  ],
+  "slug": "violett-pi",
+  "banner": "/static/assets/banner/violett-pi/violett-pi-banniere-1080-par-712.jpg",
+  "displayOrder": 200,
+  "artistName": "Violett Pi",
+  "biography": "*La musique de VioleTT Pi est le projet créatif de Karl Gagnon.* \n\n*Son entrée en 2012 avec un premier EP suivi de l'album* «  *EV* » *(2013) a semé la confusion dans le monde musical des cousins, à l’époque où on ne voulait surtout pas s’égarer des sentiers battus.* \n\n« *Manifeste contre la peur* » * (2016) puis*  « *Baloney Suicide* » *(2023) viennent confirmer que l’univers de Karl s’étend et s’enracine dans une population de marginaux de plus en plus nombreux et assoiffé.es de différence.* \n\n*VioleTT s’entoure de Daniel Baillargeon à la guitare, Sylvain Deschamps à la basse et aux claviers (et à la co-réalisation), et Maxime Drouin à la batterie.* \n\n*En spectacle, le groupe offre une autre dimension, une décharge d’énergie et de sons, un exutoire, une performance qui marque au fer rouge.* \n\n *Debout depuis plus d’une quinzaine d’années d’expérimentation artistique où l’affirmation identitaire et la recherche sonore sont à l’avant-plan, VioleTT Pi poursuit une démarche évolutive repoussant toujours plus les cadres imposés de l’industrie et du bon goût.* \n\n*Avec son quatrième album ,*  « *Mythologie de la dérape* »*, qui voit le jour en mai 2026, il propose une nouvelle avenue, une expérience sensorielle toujours plus immersive et audacieuse. Nouveau chapitre dans les mathématiques florales, cet album réaffirme la place importante que prend VioleTT Pi dans le paysage musical québécois.*",
+  "introduction": "Le québécois VioleTT Pi est connu pour son audace et sa prise de risque, pour le flambeau de liberté qu’il porte bien haut et son univers qui ne ressemble à aucun autre.*",
+  "category": [
+    "Live"
+  ]
 }
