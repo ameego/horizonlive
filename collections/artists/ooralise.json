@@ -11,6 +11,10 @@
     {
       "image": "/static/assets/gallery/ooralise/ooralise-site-hrz-galerie-grâce-kalonji.2.jpeg",
       "altText": "Crédit photo : Grâce Kalonji"
+    },
+    {
+      "image": "/static/assets/gallery/ooralise/ooralise-chamanka.png",
+      "altText": "OORALISE - Chamanka"
     }
   ],
   "slug": "ooralise",
