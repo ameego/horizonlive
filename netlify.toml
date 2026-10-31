@@ -1,5 +1,9 @@
+toml
 [build]
   publish = "public/"
+
+[build.environment]
+  NODE_VERSION = "14"
 
 [[plugins]]
   package = "netlify-plugin-gatsby-cache"
