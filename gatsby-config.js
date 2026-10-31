@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: "Horizon",
+    title: "Horizon Musiques",
     titleTemplate: "%s · Horizon Musiques produit des artistes libres",
     description:
       "Horizon produit des artistes libres et sans frontières. Horizon repère puis développe des artistes dès leurs tous premiers pas sur scène.",
